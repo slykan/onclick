@@ -16,4 +16,7 @@ echo "→ npm install + build..."
 npm install
 npm run build
 
+echo "→ popravljam vlasništvo (Apache/CloudLinux SuExec workaround)..."
+sudo chown -R www-data:www-data "$REPO/out"
+
 echo "✓ Deployed! Static files are in $REPO/out"
