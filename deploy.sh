@@ -1,7 +1,13 @@
 #!/bin/bash
+set -e
 REPO=~/onclick
 
-cd $REPO
+if [ ! -d "$REPO/.git" ]; then
+  echo "→ Repo ne postoji, kloniram..."
+  git clone https://github.com/slykan/onclick.git "$REPO"
+fi
+
+cd "$REPO"
 echo "→ git pull..."
 git checkout -- .
 git pull origin main
