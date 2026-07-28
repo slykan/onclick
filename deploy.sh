@@ -20,7 +20,4 @@ npm run build
 echo "→ sync u public_html (bez diranja invoice/ i oldweb/)..."
 rsync -a --delete --exclude=invoice --exclude=oldweb "$REPO/out/" "$DEST/"
 
-echo "→ popravljam vlasništvo (Apache/CloudLinux SuExec workaround)..."
-sudo find "$DEST" -mindepth 1 -maxdepth 1 ! -name invoice ! -name oldweb -exec chown -R www-data:www-data {} +
-
 echo "✓ Deployed!"

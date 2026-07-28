@@ -35,7 +35,8 @@ Rezultat je statični sajt u `out/` mapi (`output: "export"` u `next.config.ts`)
 1. Klonira/pull-a repo u `~/web`
 2. `npm install` + `npm run build` (izlaz u `~/web/out`)
 3. `rsync` izlaza u `~/public_html` (bez diranja `invoice/` i `oldweb/`)
-4. `chown` na `www-data` (CloudLinux SuExec workaround — Apache za ovu domenu ne prebacuje na `onclick` korisnika ispravno, pa fajlovi moraju biti u vlasništvu istog usera pod kojim Apache stvarno radi)
+
+Napomena: `public_html` mora ostati u vlasništvu `onclick:onclick` (isti user pod kojim se pokreće deploy). Ne chown-ati na `www-data` — to onclick korisniku zaključa pisanje u vlastiti public_html na sljedećem deployu (onclick nije u `www-data` grupi i nema sudo). Ako se to ikad dogodi, treba se ulogirati kao root i vratiti vlasništvo: `chown -R onclick:onclick ~onclick/public_html`.
 
 Prvi put: `git clone https://github.com/slykan/onclick.git ~/web && cd ~/web && chmod +x deploy.sh && ./deploy.sh`
 Nakon toga: `cd ~/web && ./deploy.sh`
