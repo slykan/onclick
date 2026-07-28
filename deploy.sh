@@ -1,6 +1,7 @@
 #!/bin/bash
 set -e
-REPO=~/onclick
+REPO=~/web
+DEST=~/public_html
 
 if [ ! -d "$REPO/.git" ]; then
   echo "→ Repo ne postoji, kloniram..."
@@ -16,7 +17,10 @@ echo "→ npm install + build..."
 npm install
 npm run build
 
-echo "→ popravljam vlasništvo (Apache/CloudLinux SuExec workaround)..."
-sudo chown -R www-data:www-data "$REPO/out"
+echo "→ sync u public_html (bez diranja invoice/ i oldweb/)..."
+rsync -a --delete --exclude=invoice --exclude=oldweb "$REPO/out/" "$DEST/"
 
-echo "✓ Deployed! Static files are in $REPO/out"
+echo "→ popravljam vlasništvo (Apache/CloudLinux SuExec workaround)..."
+sudo find "$DEST" -mindepth 1 -maxdepth 1 ! -name invoice ! -name oldweb -exec chown -R www-data:www-data {} +
+
+echo "✓ Deployed!"

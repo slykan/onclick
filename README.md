@@ -29,13 +29,19 @@ npm run build
 
 Rezultat je statični sajt u `out/` mapi (`output: "export"` u `next.config.ts`).
 
-## Deploy (VPS)
+## Deploy (cPanel/Apache — isti server kao ostali projekti)
 
-1. Git repo na serveru: `~/onclick` (git clone ovog repoa)
-2. `./deploy.sh` — povlači zadnji `main`, `npm install`, `npm run build`
-3. Nginx servira `~/onclick/out` — primjer konfiguracije: [nginx.conf.example](nginx.conf.example)
+`./deploy.sh` radi sve u jednom:
+1. Klonira/pull-a repo u `~/web`
+2. `npm install` + `npm run build` (izlaz u `~/web/out`)
+3. `rsync` izlaza u `~/public_html` (bez diranja `invoice/` i `oldweb/`)
+4. `chown` na `www-data` (CloudLinux SuExec workaround — Apache za ovu domenu ne prebacuje na `onclick` korisnika ispravno, pa fajlovi moraju biti u vlasništvu istog usera pod kojim Apache stvarno radi)
+
+Prvi put: `git clone https://github.com/slykan/onclick.git ~/web && cd ~/web && chmod +x deploy.sh && ./deploy.sh`
+Nakon toga: `cd ~/web && ./deploy.sh`
+
+Čisti URL-ovi (`/usluge` bez `.html`) i 301 redirect sa starih Joomla ruta (`/our-services`, `/contact`) rješava `public/.htaccess` — ide automatski u `out/` pri buildu.
 
 ## Napomene
 
-- Stari Joomla URL-ovi (`/our-services`, `/contact`) imaju 301 redirect na nove (`/usluge`, `/kontakt`) — vidi `nginx.conf.example`.
 - `ssh.txt` (ako postoji lokalno) je namjerno u `.gitignore` — nikad ne commitati pristupne podatke.
