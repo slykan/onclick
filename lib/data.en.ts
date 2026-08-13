@@ -317,6 +317,51 @@ export const portfolioProjects: PortfolioProject[] = [
     url: "https://agro-log.app",
     image: "/images/agrolog-cover.jpg",
   },
+  {
+    slug: "andeoske-sapice",
+    title: "Anđeoske šapice",
+    category: "Web application / animal welfare reporting",
+    description:
+      "A reporting system for neglected, abused and abandoned animals that connects citizens, volunteers, associations and authorities in one place, with transparent tracking of every case from report to resolution.",
+    highlights: [
+      "Case reporting with location and photos",
+      "Review and assignment to a volunteer or association",
+      "Case status tracking through to resolution",
+      "Custom-built web application",
+    ],
+    url: "https://andeoske-sapice.app",
+    image: "/images/andeoske-sapice-cover.jpg",
+  },
+  {
+    slug: "renovo-consulting",
+    title: "Renovo Consulting",
+    category: "Website / WordPress",
+    description:
+      "A business website built on WordPress, with light functionality customizations and a template built to match a design the client provided in advance.",
+    highlights: [
+      "Template built to the client's design",
+      "Light functionality customizations in WordPress",
+      "Fast turnaround on a clearly defined template",
+      "Easy content editing",
+    ],
+    url: "https://renovo-consulting.hr",
+    image: "/images/renovo-consulting-cover.jpg",
+  },
+  {
+    slug: "nkistra-shop",
+    title: "NK Istra shop",
+    category: "Webshop / PrestaShop",
+    description:
+      "A PrestaShop webshop with extensive customization — from personalizing jerseys with names, numbers and sponsors to automatically generating photorealistic previews of the finished product.",
+    highlights: [
+      "Jersey personalization (name, number, sponsors)",
+      "Automatic generation of realistic product previews",
+      "Extensively customized PrestaShop webshop",
+      "Customers see a clear preview of the finished jersey before ordering",
+    ],
+    url: "https://shop.nkistra.com",
+    image: "/images/nkistra-cover.jpg",
+  },
 ];
 
 export const pricingPlans: PricingPlan[] = [

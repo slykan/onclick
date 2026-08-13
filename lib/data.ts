@@ -343,6 +343,51 @@ export const portfolioProjects: PortfolioProject[] = [
     url: "https://agro-log.app",
     image: "/images/agrolog-cover.jpg",
   },
+  {
+    slug: "andeoske-sapice",
+    title: "Anđeoske šapice",
+    category: "Web aplikacija / prijava i zbrinjavanje životinja",
+    description:
+      "Sustav za prijavu zanemarenih, zlostavljanih i napuštenih životinja koji povezuje građane, volontere, udruge i nadležne institucije na jednom mjestu, uz transparentno praćenje svakog slučaja od prijave do rješenja.",
+    highlights: [
+      "Prijava slučaja uz lokaciju i fotografije",
+      "Provjera i dodjela volonteru ili udruzi",
+      "Praćenje statusa slučaja do rješenja",
+      "Web aplikacija izrađena po mjeri",
+    ],
+    url: "https://andeoske-sapice.app",
+    image: "/images/andeoske-sapice-cover.jpg",
+  },
+  {
+    slug: "renovo-consulting",
+    title: "Renovo Consulting",
+    category: "Web stranica / WordPress",
+    description:
+      "Poslovna web stranica izrađena u WordPressu, s manjim prilagodbama funkcionalnosti i predloškom razrađenim po dizajnu koji je klijent unaprijed pripremio.",
+    highlights: [
+      "Izrada predloška po klijentovom dizajnu",
+      "Sitne prilagodbe funkcionalnosti u WordPressu",
+      "Brza izrada uz jasno definiran predložak",
+      "Jednostavno uređivanje sadržaja",
+    ],
+    url: "https://renovo-consulting.hr",
+    image: "/images/renovo-consulting-cover.jpg",
+  },
+  {
+    slug: "nkistra-shop",
+    title: "NK Istra shop",
+    category: "Webshop / PrestaShop",
+    description:
+      "PrestaShop webshop s opsežnim kostumiziranjem — od personalizacije dresova imenom, brojem i sponzorima do automatskog generiranja fotorealističnih prikaza gotovog proizvoda.",
+    highlights: [
+      "Personalizacija dresova (ime, broj, sponzori)",
+      "Automatsko generiranje realnih prikaza proizvoda",
+      "Opsežno prilagođen PrestaShop webshop",
+      "Kupcima jasan prikaz gotovog dresa prije narudžbe",
+    ],
+    url: "https://shop.nkistra.com",
+    image: "/images/nkistra-cover.jpg",
+  },
 ];
 
 export type PricingPlan = {
