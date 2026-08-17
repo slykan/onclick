@@ -6,9 +6,19 @@ RewriteEngine On
 RewriteRule ^our-services/?$ /usluge [R=301,L]
 RewriteRule ^contact/?$ /kontakt [R=301,L]
 
+# --- /ruta/ (s kosom crtom na kraju) kad postoji ruta.html -> makni crtu ---
+# (npr. Google/Cloudflare je mogao indeksirati /cijene/ dok je stari .htaccess
+# tu mapu servirao kao directory listing)
+RewriteCond %{REQUEST_URI} ^/(.+)/$
+RewriteCond %{DOCUMENT_ROOT}/%1.html -f
+RewriteRule ^(.+)/$ /$1 [R=301,L]
+
 # --- Čisti URL-ovi bez .html ekstenzije (npr. /usluge -> usluge.html) ---
+# Napomena: NE isključujemo postojeće direktorije (bez !-d) — Next.js 16
+# static export uz "usluge.html" generira i mapu "usluge/" s RSC payload
+# fragmentima za client-side navigaciju, pa bi !-d spriječio ovo pravilo
+# i Apache bi servirao directory listing umjesto prave stranice.
 RewriteCond %{REQUEST_FILENAME} !-f
-RewriteCond %{REQUEST_FILENAME} !-d
 RewriteCond %{REQUEST_FILENAME}\.html -f
 RewriteRule ^(.*)$ $1.html [L]
 
