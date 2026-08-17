@@ -2,6 +2,14 @@
 
 RewriteEngine On
 
+# --- Isključi mod_dir automatski redirect /ruta -> /ruta/ ---
+# Next.js 16 export generira i "ruta/" mapu (RSC payload) uz "ruta.html".
+# mod_dir bi inače, prije nego RewriteRule ispod dobije priliku, sam
+# 301-redirectao /cijene -> /cijene/ i servirao directory listing te mape.
+<IfModule mod_dir.c>
+  DirectorySlash Off
+</IfModule>
+
 # --- 301 redirect sa starih Joomla URL-ova (SEO kontinuitet) ---
 RewriteRule ^our-services/?$ /usluge [R=301,L]
 RewriteRule ^contact/?$ /kontakt [R=301,L]
