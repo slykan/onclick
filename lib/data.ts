@@ -401,7 +401,7 @@ export type PricingPlan = {
 export const pricingPlans: PricingPlan[] = [
   {
     name: "Osnovni",
-    price: "od 490 €",
+    price: "od 990 €",
     description: "Za manje tvrtke i obrte kojima treba jednostavna, profesionalna prezentacija.",
     features: [
       "Do 5 stranica",

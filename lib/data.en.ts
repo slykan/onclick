@@ -367,7 +367,7 @@ export const portfolioProjects: PortfolioProject[] = [
 export const pricingPlans: PricingPlan[] = [
   {
     name: "Basic",
-    price: "from €490",
+    price: "from €990",
     description:
       "For small businesses and sole traders who need a simple, professional presence.",
     features: [
