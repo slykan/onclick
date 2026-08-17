@@ -412,7 +412,7 @@ export const pricingPlans: PricingPlan[] = [
   },
   {
     name: "Napredni",
-    price: "od 990 €",
+    price: "od 3.000 €",
     description: "Za tvrtke kojima treba webshop ili napredniji web nastup.",
     features: [
       "Webshop ili napredna web stranica",

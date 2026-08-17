@@ -379,7 +379,7 @@ export const pricingPlans: PricingPlan[] = [
   },
   {
     name: "Advanced",
-    price: "from €990",
+    price: "from €3,000",
     description:
       "For businesses that need a webshop or a more advanced web presence.",
     features: [
