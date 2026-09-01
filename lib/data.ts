@@ -443,6 +443,7 @@ export type Product = {
   features?: string[];
   note?: string[];
   demoUrl?: string;
+  downloadUrl?: string;
   price: string;
 };
 
@@ -537,6 +538,21 @@ export const products: Product[] = [
       "Kreiranje DPD naljepnica u PrestaShop",
     ],
     price: "100,00 €",
+  },
+  {
+    slug: "payondelivery-fee-oc2x",
+    title: "PayOnDelivery Fee modul za OpenCart 2.x",
+    image: "/images/products/payondelivery-fee-oc2x.png",
+    description:
+      "Dodajte naknadu za plaćanje pouzećem u svom OpenCart 2.x webshopu — jednostavno, jasno, učinkovito.",
+    features: [
+      "Fiksna naknada za plaćanje pouzećem",
+      "Naknada se automatski prikazuje u košarici i na blagajni",
+      "Naknada vidljiva na potvrdi narudžbe i računu",
+      "Brza instalacija i lako konfiguriranje, bez izmjene core datoteka",
+    ],
+    downloadUrl: "/apps/cod_fee_oc2302.ocmod.zip",
+    price: "Besplatno",
   },
 ];
 

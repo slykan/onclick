@@ -493,6 +493,21 @@ export const products: Product[] = [
     ],
     price: "100,00 €",
   },
+  {
+    slug: "payondelivery-fee-oc2x",
+    title: "PayOnDelivery Fee module for OpenCart 2.x",
+    image: "/images/products/payondelivery-fee-oc2x.png",
+    description:
+      "Add a cash-on-delivery payment fee to your OpenCart 2.x webshop — simple, clear, effective.",
+    features: [
+      "Fixed fee for cash-on-delivery payments",
+      "Fee automatically shown in the cart and at checkout",
+      "Fee visible on the order confirmation and invoice",
+      "Quick install and easy configuration, no core file changes",
+    ],
+    downloadUrl: "/apps/cod_fee_oc2302.ocmod.zip",
+    price: "Free",
+  },
 ];
 
 export const hostingPlans: HostingPlan[] = [

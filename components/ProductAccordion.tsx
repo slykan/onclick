@@ -2,7 +2,7 @@
 
 import { useState } from "react";
 import Image from "next/image";
-import { Plus, Check, ExternalLink } from "lucide-react";
+import { Plus, Check, ExternalLink, Download } from "lucide-react";
 import type { Product } from "@/lib/data";
 import { i18n, type Locale } from "@/lib/i18n";
 
@@ -37,16 +37,29 @@ export function ProductAccordion({
                 {product.price}
               </p>
 
-              <button
-                type="button"
-                onClick={() => setOpenSlug(isOpen ? null : product.slug)}
-                aria-label={isOpen ? t.closeDescription : t.openDescription}
-                className={`mt-4 flex h-9 w-9 items-center justify-center border border-line text-ink transition-transform ${
-                  isOpen ? "rotate-45" : ""
-                }`}
-              >
-                <Plus className="h-4 w-4" />
-              </button>
+              <div className="mt-4 flex items-center gap-3">
+                <button
+                  type="button"
+                  onClick={() => setOpenSlug(isOpen ? null : product.slug)}
+                  aria-label={isOpen ? t.closeDescription : t.openDescription}
+                  className={`flex h-9 w-9 shrink-0 items-center justify-center border border-line text-ink transition-transform ${
+                    isOpen ? "rotate-45" : ""
+                  }`}
+                >
+                  <Plus className="h-4 w-4" />
+                </button>
+
+                {product.downloadUrl && (
+                  <a
+                    href={product.downloadUrl}
+                    download
+                    className="inline-flex h-9 flex-1 items-center justify-center gap-2 bg-brand-green px-4 text-sm font-semibold text-ink transition-colors hover:bg-brand-green-dark hover:text-white"
+                  >
+                    <Download className="h-4 w-4" />
+                    {t.download}
+                  </a>
+                )}
+              </div>
 
               {isOpen && (
                 <div className="mt-4 space-y-3 border-t border-line pt-4">

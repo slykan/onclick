@@ -26,6 +26,7 @@ rsync -a --delete \
   --exclude=royal \
   --exclude=vrebac \
   --exclude=.well-known \
+  --exclude=apps \
   "$REPO/out/" "$DEST/"
 
 echo "✓ Deployed!"
