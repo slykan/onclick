@@ -596,6 +596,20 @@ export const products: Product[] = [
     ],
     price: "200,00 €",
   },
+  {
+    slug: "sidrena-cijena-j2store",
+    title: "Joomla + J2Store - Sidrena cijena i online cjenik",
+    image: "/images/products/J2Store.png",
+    description:
+      "Sidrena cijena je referentna cijena proizvoda na dan koji je odredila Vlada RH — ne najniža cijena u zadnjih 30 dana, nego fiksna vrijednost uz koju kupci vide je li i koliko se cijena promijenila. Zakonska obveza za sve trgovce i pružatelje usluga od 1. listopada 2026.",
+    features: [
+      "Automatski izračun i prikaz sidrene cijene uz redovnu cijenu",
+      "Javno dostupan online cjenik u XML/CSV formatu, ažuriran svaki radni dan do 8h",
+      "Usklađeno sa zakonskom obvezom od 1. listopada 2026.",
+      "Brza instalacija, bez izmjene core datoteka",
+    ],
+    price: "200,00 €",
+  },
 ];
 
 export type HostingPlan = {

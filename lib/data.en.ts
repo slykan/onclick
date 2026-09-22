@@ -550,6 +550,20 @@ export const products: Product[] = [
     ],
     price: "200,00 €",
   },
+  {
+    slug: "sidrena-cijena-j2store",
+    title: "Joomla + J2Store - Anchor Price and Online Price List",
+    image: "/images/products/J2Store.png",
+    description:
+      "The anchor price (sidrena cijena) is a fixed reference price from a date set by the Croatian Government — not the lowest price of the last 30 days, but a fixed value that lets shoppers see whether and how much the price has changed. Mandatory for all retailers and service providers in Croatia from 1 October 2026.",
+    features: [
+      "Automatic calculation and display of the anchor price alongside the regular price",
+      "Public online price list in XML/CSV format, updated every business day by 8 a.m.",
+      "Compliant with the legal obligation in force from 1 October 2026",
+      "Quick install, no core file changes",
+    ],
+    price: "200,00 €",
+  },
 ];
 
 export const hostingPlans: HostingPlan[] = [
