@@ -25,6 +25,7 @@ rsync -a --delete \
   --exclude=agrolog.on-click.hr \
   --exclude=royal \
   --exclude=vrebac \
+  --exclude=pzvrbnik \
   --exclude=.well-known \
   --exclude=apps \
   "$REPO/out/" "$DEST/"
