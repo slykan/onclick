@@ -508,6 +508,20 @@ export const products: Product[] = [
     downloadUrl: "/apps/cod_fee_oc2302.ocmod.zip",
     price: "Free",
   },
+  {
+    slug: "sidrena-cijena-opencart",
+    title: "Anchor Price module for OpenCart",
+    image: "/images/products/OC_Sidrena_CIjena.png",
+    description:
+      "Automatically show the anchor price below the regular price in your OpenCart webshop — Omnibus Directive compliant, no manual entry per product.",
+    features: [
+      "Automatic calculation and display of the anchor price",
+      "Omnibus Directive compliant (lowest price in the last 30 days)",
+      "Shown on the product page and in product listings",
+      "Quick install, no core file changes",
+    ],
+    price: "100,00 €",
+  },
 ];
 
 export const hostingPlans: HostingPlan[] = [

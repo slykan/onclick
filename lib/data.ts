@@ -554,6 +554,20 @@ export const products: Product[] = [
     downloadUrl: "/apps/cod_fee_oc2302.ocmod.zip",
     price: "Besplatno",
   },
+  {
+    slug: "sidrena-cijena-opencart",
+    title: "Sidrena cijena modul za OpenCart",
+    image: "/images/products/OC_Sidrena_CIjena.png",
+    description:
+      "Automatski prikaz sidrene cijene ispod redovne cijene u vašem OpenCart webshopu — usklađeno s Omnibus direktivom, bez ručnog unosa za svaki proizvod.",
+    features: [
+      "Automatski izračun i prikaz sidrene cijene",
+      "Usklađeno s Omnibus direktivom (najniža cijena u zadnjih 30 dana)",
+      "Prikaz na stranici proizvoda i u listama proizvoda",
+      "Brza instalacija, bez izmjene core datoteka",
+    ],
+    price: "100,00 €",
+  },
 ];
 
 export type HostingPlan = {

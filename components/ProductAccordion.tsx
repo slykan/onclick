@@ -36,6 +36,11 @@ export function ProductAccordion({
               <p className="mt-1 font-mono text-sm text-brand-green-dark">
                 {product.price}
               </p>
+              {/\d/.test(product.price) && (
+                <p className="mt-0.5 text-xs text-ink">
+                  {t.anchorPrice}: {product.price}
+                </p>
+              )}
 
               <div className="mt-4 flex items-center gap-3">
                 <button
