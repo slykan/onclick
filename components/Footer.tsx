@@ -17,6 +17,8 @@ const strings = {
     contact: "Kontakt",
     rights: "Sva prava pridržana.",
     tagline: "Izrada web stranica i IT podrška",
+    cjenikProizvoda: "Cjenik proizvoda (CSV)",
+    cjenikUsluga: "Cjenik usluga (CSV)",
   },
   en: {
     services: "Services",
@@ -24,6 +26,8 @@ const strings = {
     contact: "Contact",
     rights: "All rights reserved.",
     tagline: "Web design and IT support",
+    cjenikProizvoda: "Product price list (CSV)",
+    cjenikUsluga: "Service price list (CSV)",
   },
 };
 
@@ -141,7 +145,15 @@ export function Footer() {
           <p>
             © {year} {site.fullName}. {t.rights}
           </p>
-          <p>{t.tagline}</p>
+          <div className="flex items-center gap-4">
+            <a href="/cjenik-proizvodi.csv" className="hover:text-brand-green">
+              {t.cjenikProizvoda}
+            </a>
+            <a href="/cjenik-usluge.csv" className="hover:text-brand-green">
+              {t.cjenikUsluga}
+            </a>
+            <p>{t.tagline}</p>
+          </div>
         </Container>
       </div>
     </footer>
