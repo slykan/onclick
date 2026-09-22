@@ -559,14 +559,28 @@ export const products: Product[] = [
     title: "Sidrena cijena modul za OpenCart",
     image: "/images/products/OC_Sidrena_CIjena.png",
     description:
-      "Automatski prikaz sidrene cijene ispod redovne cijene u vašem OpenCart webshopu — usklađeno s Omnibus direktivom, bez ručnog unosa za svaki proizvod.",
+      "Sidrena cijena je referentna cijena proizvoda na dan koji je odredila Vlada RH — ne najniža cijena u zadnjih 30 dana, nego fiksna vrijednost uz koju kupci vide je li i koliko se cijena promijenila. Zakonska obveza za sve trgovce i pružatelje usluga od 1. listopada 2026.",
     features: [
-      "Automatski izračun i prikaz sidrene cijene",
-      "Usklađeno s Omnibus direktivom (najniža cijena u zadnjih 30 dana)",
-      "Prikaz na stranici proizvoda i u listama proizvoda",
+      "Automatski izračun i prikaz sidrene cijene uz redovnu cijenu",
+      "Javno dostupan cjenik u XML/CSV formatu, ažuriran svaki radni dan",
+      "Usklađeno sa zakonskom obvezom od 1. listopada 2026.",
       "Brza instalacija, bez izmjene core datoteka",
     ],
     price: "100,00 €",
+  },
+  {
+    slug: "sidrena-cijena-prestashop",
+    title: "PrestaShop - Sidrena cijena i online cjenik",
+    image: "/images/products/PS_sidrena_cijena.png",
+    description:
+      "Sidrena cijena je referentna cijena proizvoda na dan koji je odredila Vlada RH — ne najniža cijena u zadnjih 30 dana, nego fiksna vrijednost uz koju kupci vide je li i koliko se cijena promijenila. Zakonska obveza za sve trgovce i pružatelje usluga od 1. listopada 2026.",
+    features: [
+      "Automatski izračun i prikaz sidrene cijene uz redovnu cijenu",
+      "Javno dostupan online cjenik u XML/CSV formatu, ažuriran svaki radni dan do 8h",
+      "Usklađeno sa zakonskom obvezom od 1. listopada 2026.",
+      "Brza instalacija, bez izmjene core datoteka",
+    ],
+    price: "200,00 €",
   },
 ];
 

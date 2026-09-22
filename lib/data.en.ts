@@ -513,14 +513,28 @@ export const products: Product[] = [
     title: "Anchor Price module for OpenCart",
     image: "/images/products/OC_Sidrena_CIjena.png",
     description:
-      "Automatically show the anchor price below the regular price in your OpenCart webshop — Omnibus Directive compliant, no manual entry per product.",
+      "The anchor price (sidrena cijena) is a fixed reference price from a date set by the Croatian Government — not the lowest price of the last 30 days, but a fixed value that lets shoppers see whether and how much the price has changed. Mandatory for all retailers and service providers in Croatia from 1 October 2026.",
     features: [
-      "Automatic calculation and display of the anchor price",
-      "Omnibus Directive compliant (lowest price in the last 30 days)",
-      "Shown on the product page and in product listings",
+      "Automatic calculation and display of the anchor price alongside the regular price",
+      "Publicly available price list in XML/CSV format, updated every business day",
+      "Compliant with the legal obligation in force from 1 October 2026",
       "Quick install, no core file changes",
     ],
     price: "100,00 €",
+  },
+  {
+    slug: "sidrena-cijena-prestashop",
+    title: "PrestaShop - Anchor Price and Online Price List",
+    image: "/images/products/PS_sidrena_cijena.png",
+    description:
+      "The anchor price (sidrena cijena) is a fixed reference price from a date set by the Croatian Government — not the lowest price of the last 30 days, but a fixed value that lets shoppers see whether and how much the price has changed. Mandatory for all retailers and service providers in Croatia from 1 October 2026.",
+    features: [
+      "Automatic calculation and display of the anchor price alongside the regular price",
+      "Public online price list in XML/CSV format, updated every business day by 8 a.m.",
+      "Compliant with the legal obligation in force from 1 October 2026",
+      "Quick install, no core file changes",
+    ],
+    price: "200,00 €",
   },
 ];
 
