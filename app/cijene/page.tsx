@@ -46,6 +46,15 @@ export default function CijenePage() {
               >
                 {plan.price}
               </p>
+              {/\d/.test(plan.price) && (
+                <p
+                  className={`mt-1 text-xs ${
+                    plan.highlighted ? "text-white/70" : "text-ink"
+                  }`}
+                >
+                  Sidrena cijena: {plan.price}
+                </p>
+              )}
               <p
                 className={`mt-3 text-sm leading-relaxed ${
                   plan.highlighted ? "text-white/70" : "text-ink-light/70"
@@ -102,6 +111,11 @@ export default function CijenePage() {
                 </div>
                 <div className="bg-ink px-6 py-4 text-center text-sm font-semibold text-white">
                   Cijena: {plan.price}
+                  {/\d/.test(plan.price) && (
+                    <p className="mt-0.5 text-xs font-normal text-white/70">
+                      Sidrena cijena: {plan.price}
+                    </p>
+                  )}
                 </div>
               </div>
             ))}
