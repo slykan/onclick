@@ -1,5 +1,6 @@
 import Link from "next/link";
 import {
+  CalendarClock,
   CircleArrowUp,
   Info,
   Mail,
@@ -7,6 +8,7 @@ import {
   PencilLine,
   ScanSearch,
   ShieldCheck,
+  Zap,
   type LucideIcon,
 } from "lucide-react";
 import type { MaintenancePlan, MaintenanceIcon } from "@/lib/data";
@@ -79,14 +81,41 @@ export function MaintenancePlans({ plans, labels }: { plans: MaintenancePlan[]; 
             </ul>
 
             {plan.note && (
-              <p className={`mt-6 flex items-start gap-2 border-t pt-4 text-xs leading-relaxed ${
-                dark ? "border-white/15 text-white/70" : "border-line text-ink-light/70"
+              <p className={`mt-6 flex items-start gap-2 text-xs leading-relaxed ${
+                dark ? "text-white/60" : "text-ink-light/60"
               }`}
               >
                 <Info className="mt-0.5 h-3.5 w-3.5 shrink-0" />
                 {plan.note}
               </p>
             )}
+
+            {(() => {
+              const Deadline = plan.turnaround.kind === "priority" ? Zap : CalendarClock;
+              return (
+                <div
+                  className={`mt-4 flex items-start gap-3 rounded-xl border p-4 ${
+                    dark ? "border-brand-green/40 bg-brand-green/10" : "border-brand-green-dark/30 bg-muted"
+                  }`}
+                >
+                  <span
+                    className={`flex h-9 w-9 shrink-0 items-center justify-center rounded-lg ${
+                      dark ? "bg-brand-green text-ink" : "bg-ink text-brand-green"
+                    }`}
+                  >
+                    <Deadline className="h-4 w-4" />
+                  </span>
+                  <div>
+                    <p className={`text-sm font-semibold ${dark ? "text-brand-green" : "text-ink"}`}>
+                      {plan.turnaround.title}
+                    </p>
+                    <p className={`mt-0.5 text-xs leading-relaxed ${dark ? "text-white/75" : "text-ink-light/70"}`}>
+                      {plan.turnaround.text}
+                    </p>
+                  </div>
+                </div>
+              );
+            })()}
 
             <Link
               href={labels.contactHref}

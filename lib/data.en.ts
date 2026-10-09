@@ -647,6 +647,7 @@ export type MaintenancePlan = {
   csvName: string;
   tagline: string;
   features: { icon: MaintenanceIcon; text: string; detail?: string }[];
+  turnaround: { kind: "priority" | "standard"; title: string; text: string };
   note?: string;
   highlighted?: boolean;
 };
@@ -666,7 +667,12 @@ export const maintenancePlans: MaintenancePlan[] = [
       { icon: "scan", text: "Virus scanning and cleanup", detail: "1× a week" },
       { icon: "shield", text: "Antivirus and firewall updates", detail: "1× a week" },
     ],
-    note: "Development of new modules and features is not included in the price.",
+    turnaround: {
+      kind: "priority",
+      title: "Priority turnaround: 24 – 48 h",
+      text: "Agreed requests are handled with priority, within 48 hours at the latest.",
+    },
+    note: "Note: development of new modules and features is not included in the price.",
     highlighted: true,
   },
   {
@@ -683,6 +689,11 @@ export const maintenancePlans: MaintenancePlan[] = [
       { icon: "scan", text: "Virus scanning and cleanup" },
       { icon: "shield", text: "Antivirus and firewall updates" },
     ],
-    note: "Billed by the time spent.",
+    turnaround: {
+      kind: "standard",
+      title: "Turnaround: up to 7 days",
+      text: "Agreed work is completed within 7 days of your order.",
+    },
+    note: "Billed by the time actually spent.",
   },
 ];

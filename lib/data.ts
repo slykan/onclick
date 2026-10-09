@@ -708,6 +708,8 @@ export type MaintenancePlan = {
   csvName: string;
   tagline: string;
   features: { icon: MaintenanceIcon; text: string; detail?: string }[];
+  /** Rok izvedbe — istaknut na dnu kartice. */
+  turnaround: { kind: "priority" | "standard"; title: string; text: string };
   note?: string;
   highlighted?: boolean;
 };
@@ -727,7 +729,12 @@ export const maintenancePlans: MaintenancePlan[] = [
       { icon: "scan", text: "Skeniranje i čišćenje od virusa", detail: "1× tjedno" },
       { icon: "shield", text: "Nadogradnja antivirusa i firewalla", detail: "1× tjedno" },
     ],
-    note: "Izrada novih modula i razvoj novih funkcionalnosti nisu uključeni u cijenu.",
+    turnaround: {
+      kind: "priority",
+      title: "Prioritetni rok: 24 – 48 h",
+      text: "Dogovorene zahtjeve odrađujemo prioritetno, najkasnije u roku od 48 sati.",
+    },
+    note: "Napomena: izrada novih modula i razvoj novih funkcionalnosti nisu uključeni u cijenu.",
     highlighted: true,
   },
   {
@@ -744,6 +751,11 @@ export const maintenancePlans: MaintenancePlan[] = [
       { icon: "scan", text: "Skeniranje i čišćenje od virusa" },
       { icon: "shield", text: "Nadogradnja antivirusa i firewalla" },
     ],
-    note: "Obračun prema utrošenom vremenu.",
+    turnaround: {
+      kind: "standard",
+      title: "Rok izvedbe: do 7 dana",
+      text: "Dogovoreni posao odrađujemo u roku od 7 dana od narudžbe.",
+    },
+    note: "Obračun prema stvarno utrošenom vremenu.",
   },
 ];
