@@ -23,9 +23,9 @@ rsync -a --delete \
   --exclude=oldweb \
   --exclude=agro-log.on-click.hr \
   --exclude=agrolog.on-click.hr \
-  --exclude=royal \
   --exclude=vrebac \
   --exclude=pzvrbnik \
+  --exclude=geotopo \
   --exclude=.well-known \
   --exclude=apps \
   "$REPO/out/" "$DEST/"
