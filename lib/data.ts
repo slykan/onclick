@@ -697,3 +697,53 @@ export const newsPosts: NewsPost[] = [
     ],
   },
 ];
+
+export type MaintenanceIcon = "content" | "design" | "cms" | "mail" | "scan" | "shield";
+
+export type MaintenancePlan = {
+  name: string;
+  price: string;
+  unit: string;
+  /** Naziv u strojno čitljivom cjeniku (cjenik-usluge.csv). */
+  csvName: string;
+  tagline: string;
+  features: { icon: MaintenanceIcon; text: string; detail?: string }[];
+  note?: string;
+  highlighted?: boolean;
+};
+
+export const maintenancePlans: MaintenancePlan[] = [
+  {
+    name: "Godišnje održavanje",
+    price: "1.500 €",
+    unit: "godišnje",
+    csvName: "Godišnje održavanje (12 mjeseci)",
+    tagline: "Stalna briga o vašem webu — ugovor na minimalno 12 mjeseci.",
+    features: [
+      { icon: "content", text: "Redovito osvježavanje sadržaja", detail: "2× tjedno, do 2 h" },
+      { icon: "design", text: "Manje grafičke prilagodbe" },
+      { icon: "cms", text: "Nadogradnja kompletnog CMS sustava", detail: "2× mjesečno" },
+      { icon: "mail", text: "Održavanje e-mail računa i otvaranje novih", detail: "neograničeno" },
+      { icon: "scan", text: "Skeniranje i čišćenje od virusa", detail: "1× tjedno" },
+      { icon: "shield", text: "Nadogradnja antivirusa i firewalla", detail: "1× tjedno" },
+    ],
+    note: "Izrada novih modula i razvoj novih funkcionalnosti nisu uključeni u cijenu.",
+    highlighted: true,
+  },
+  {
+    name: "Jednokratno održavanje",
+    price: "200 €",
+    unit: "po satu",
+    csvName: "Jednokratno održavanje (1 sat)",
+    tagline: "Kad zatreba — plaćate samo stvarno utrošeno vrijeme.",
+    features: [
+      { icon: "content", text: "Unos i izmjena sadržaja" },
+      { icon: "design", text: "Manje grafičke prilagodbe" },
+      { icon: "cms", text: "Nadogradnja kompletnog CMS sustava" },
+      { icon: "mail", text: "Održavanje e-mail računa i otvaranje novih" },
+      { icon: "scan", text: "Skeniranje i čišćenje od virusa" },
+      { icon: "shield", text: "Nadogradnja antivirusa i firewalla" },
+    ],
+    note: "Obračun prema utrošenom vremenu.",
+  },
+];

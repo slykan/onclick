@@ -637,3 +637,52 @@ export const newsPosts: NewsPost[] = [
     ],
   },
 ];
+
+export type MaintenanceIcon = "content" | "design" | "cms" | "mail" | "scan" | "shield";
+
+export type MaintenancePlan = {
+  name: string;
+  price: string;
+  unit: string;
+  csvName: string;
+  tagline: string;
+  features: { icon: MaintenanceIcon; text: string; detail?: string }[];
+  note?: string;
+  highlighted?: boolean;
+};
+
+export const maintenancePlans: MaintenancePlan[] = [
+  {
+    name: "Annual maintenance",
+    price: "€1,500",
+    unit: "per year",
+    csvName: "Annual maintenance (12 months)",
+    tagline: "Ongoing care for your website — minimum 12-month contract.",
+    features: [
+      { icon: "content", text: "Regular content updates", detail: "2× a week, up to 2 h" },
+      { icon: "design", text: "Minor design adjustments" },
+      { icon: "cms", text: "Full CMS system updates", detail: "2× a month" },
+      { icon: "mail", text: "Email account maintenance and new accounts", detail: "unlimited" },
+      { icon: "scan", text: "Virus scanning and cleanup", detail: "1× a week" },
+      { icon: "shield", text: "Antivirus and firewall updates", detail: "1× a week" },
+    ],
+    note: "Development of new modules and features is not included in the price.",
+    highlighted: true,
+  },
+  {
+    name: "One-off maintenance",
+    price: "€200",
+    unit: "per hour",
+    csvName: "One-off maintenance (1 hour)",
+    tagline: "When you need it — you only pay for the time actually spent.",
+    features: [
+      { icon: "content", text: "Content entry and updates" },
+      { icon: "design", text: "Minor design adjustments" },
+      { icon: "cms", text: "Full CMS system updates" },
+      { icon: "mail", text: "Email account maintenance and new accounts" },
+      { icon: "scan", text: "Virus scanning and cleanup" },
+      { icon: "shield", text: "Antivirus and firewall updates" },
+    ],
+    note: "Billed by the time spent.",
+  },
+];

@@ -3,7 +3,8 @@ import Link from "next/link";
 import { Check } from "lucide-react";
 import { Container } from "@/components/Container";
 import { PageHero } from "@/components/PageHero";
-import { pricingPlans, hostingPlans } from "@/lib/data.en";
+import { MaintenancePlans } from "@/components/MaintenancePlans";
+import { pricingPlans, hostingPlans, maintenancePlans } from "@/lib/data.en";
 
 export const metadata: Metadata = {
   title: "Pricing | On-Click",
@@ -122,31 +123,28 @@ export default function CijenePageEn() {
           </div>
 
           <p className="mt-8 text-center text-sm text-ink-light/70">
-            Backup is included with every plan — created automatically twice
-            every 14 days.
+            Backup is included with every plan — created automatically
+            once every 7 days.
           </p>
         </Container>
       </section>
 
       <section className="py-16 sm:py-20">
-        <Container className="max-w-2xl text-center">
-          <h2 className="text-2xl font-semibold tracking-tight text-ink sm:text-3xl">
-            Maintenance <span className="text-brand-green-dark">by arrangement</span>
-          </h2>
-          <p className="mt-4 text-base leading-relaxed text-ink-light/70">
-            Every system needs regular attention. Whether it's a mobile app, a
-            server, a webshop or a website — we make sure everything runs
-            smoothly, securely and stays up to date. We handle regular content,
-            system and plugin updates, security patch monitoring, and minor
-            changes and upgrades as needed — all by arrangement, tailored to
-            you and your business.
-          </p>
-          <Link
-            href="/en/kontakt"
-            className="mt-8 inline-flex items-center justify-center rounded-none bg-ink px-6 py-3 text-sm font-semibold text-white transition-colors hover:bg-ink-light"
-          >
-            Let's set up maintenance
-          </Link>
+        <Container>
+          <div className="mx-auto max-w-2xl text-center">
+            <h2 className="text-2xl font-semibold tracking-tight text-ink sm:text-3xl">
+              Website <span className="text-brand-green-dark">maintenance</span>
+            </h2>
+            <p className="mt-4 text-base leading-relaxed text-ink-light/70">
+              Every system needs regular attention. We make sure your website,
+              webshop or app runs smoothly, securely and stays up to date — with
+              ongoing annual maintenance or one-off help whenever you need it.
+            </p>
+          </div>
+          <MaintenancePlans
+            plans={maintenancePlans}
+            labels={{ anchorPrice: "Anchor price", cta: "Let's set up maintenance", contactHref: "/en/kontakt" }}
+          />
         </Container>
       </section>
     </>

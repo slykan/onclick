@@ -3,7 +3,8 @@ import Link from "next/link";
 import { Check } from "lucide-react";
 import { Container } from "@/components/Container";
 import { PageHero } from "@/components/PageHero";
-import { pricingPlans, hostingPlans } from "@/lib/data";
+import { MaintenancePlans } from "@/components/MaintenancePlans";
+import { pricingPlans, hostingPlans, maintenancePlans } from "@/lib/data";
 
 export const metadata: Metadata = {
   title: "Cijene",
@@ -122,30 +123,27 @@ export default function CijenePage() {
           </div>
 
           <p className="mt-8 text-center text-sm text-ink-light/70">
-            Backup je uključen u svaki paket — automatski se izrađuje 2x u 14 dana.
+            Backup je uključen u svaki paket — automatski se izrađuje 1x u 7 dana.
           </p>
         </Container>
       </section>
 
       <section className="py-16 sm:py-20">
-        <Container className="max-w-2xl text-center">
-          <h2 className="text-2xl font-semibold tracking-tight text-ink sm:text-3xl">
-            Održavanje <span className="text-brand-green-dark">prema dogovoru</span>
-          </h2>
-          <p className="mt-4 text-base leading-relaxed text-ink-light/70">
-            Svaki sustav treba redovitu pažnju. Bez obzira radi li se o
-            mobilnoj aplikaciji, serveru, webshopu ili web stranici — brinemo
-            se da sve radi glatko, sigurno i ažurno. Preuzimamo redovito
-            ažuriranje sadržaja, sustava i dodataka, praćenje sigurnosnih
-            nadogradnji te manje izmjene i nadogradnje kada zatrebaju — sve
-            po dogovoru koji odgovara vama i vašem poslovanju.
-          </p>
-          <Link
-            href="/kontakt"
-            className="mt-8 inline-flex items-center justify-center rounded-none bg-ink px-6 py-3 text-sm font-semibold text-white transition-colors hover:bg-ink-light"
-          >
-            Dogovorimo održavanje
-          </Link>
+        <Container>
+          <div className="mx-auto max-w-2xl text-center">
+            <h2 className="text-2xl font-semibold tracking-tight text-ink sm:text-3xl">
+              Održavanje <span className="text-brand-green-dark">web stranica</span>
+            </h2>
+            <p className="mt-4 text-base leading-relaxed text-ink-light/70">
+              Svaki sustav treba redovitu pažnju. Brinemo se da vaša stranica,
+              webshop ili aplikacija radi glatko, sigurno i ažurno — uz stalno
+              održavanje na godinu dana ili jednokratno, kad vam zatreba.
+            </p>
+          </div>
+          <MaintenancePlans
+            plans={maintenancePlans}
+            labels={{ anchorPrice: "Sidrena cijena", cta: "Dogovorimo održavanje", contactHref: "/kontakt" }}
+          />
         </Container>
       </section>
     </>

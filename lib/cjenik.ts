@@ -1,4 +1,4 @@
-import { products, hostingPlans } from "@/lib/data";
+import { products, hostingPlans, maintenancePlans } from "@/lib/data";
 
 /**
  * Converts a price string like "100,00 €", "od 990 €" or "Besplatno" into the
@@ -75,6 +75,11 @@ export function generateUslugeCsv(): string {
     if (price === null) return [];
     return [csvRow([plan.name, price, "NE", "", price])];
   });
+
+  for (const plan of maintenancePlans) {
+    const price = toNumericPrice(plan.price);
+    if (price !== null) rows.push(csvRow([plan.csvName, price, "NE", "", price]));
+  }
 
   return BOM + [header, ...rows].join("\r\n") + "\r\n";
 }
