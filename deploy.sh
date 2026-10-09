@@ -17,7 +17,7 @@ echo "→ npm install + build..."
 npm install
 npm run build
 
-echo "→ sync u public_html (bez diranja invoice/, oldweb/ i drugih domena)..."
+echo "→ sync u public_html (bez diranja invoice/, oldweb/, pzvrbnik/, geotopo/ i drugih domena)..."
 rsync -a --delete \
   --exclude=invoice \
   --exclude=oldweb \
