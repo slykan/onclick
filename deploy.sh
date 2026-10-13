@@ -18,7 +18,7 @@ npm install
 npm run build
 
 echo "→ sync u public_html (bez diranja invoice/, oldweb/, pzvrbnik/, geotopo/ i drugih domena)..."
-rsync -a --delete \
+rsync -a --delete --chmod=D755,F644 \
   --exclude=invoice \
   --exclude=oldweb \
   --exclude=agro-log.on-click.hr \
@@ -29,5 +29,9 @@ rsync -a --delete \
   --exclude=.well-known \
   --exclude=apps \
   "$REPO/out/" "$DEST/"
+
+# suPHP (PHP 8.x u pzvrbnik/ i ostalim podfolderima) odbija skripte ispod
+# group-writable foldera -> public_html mora ostati 755, inace sve PHP stranice daju 500
+chmod 755 "$DEST"
 
 echo "✓ Deployed!"
