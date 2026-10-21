@@ -252,6 +252,8 @@ export type PortfolioProject = {
   highlights: string[];
   url?: string;
   image?: string;
+  /** samo na stranici Portfolio, ne na naslovnoj */
+  hideOnHome?: boolean;
 };
 
 export const portfolioProjects: PortfolioProject[] = [
@@ -296,7 +298,7 @@ export const portfolioProjects: PortfolioProject[] = [
       "Vlastiti admin CMS izrađen po mjeri",
     ],
     url: "https://placko.app",
-    image: "/images/placko-cover.jpg",
+    image: "/images/placko-cover-2.jpg",
   },
   {
     slug: "alivecheck",
@@ -341,7 +343,7 @@ export const portfolioProjects: PortfolioProject[] = [
       "Web aplikacija izrađena po mjeri",
     ],
     url: "https://agro-log.app",
-    image: "/images/agrolog-cover.jpg",
+    image: "/images/agrolog-cover-2.jpg",
   },
   {
     slug: "andeoske-sapice",
@@ -359,6 +361,37 @@ export const portfolioProjects: PortfolioProject[] = [
     image: "/images/andeoske-sapice-cover.jpg",
   },
   {
+    slug: "gajba",
+    title: "Gajba",
+    category: "Web + vlastiti CMS / kušaonica i veleprodaja",
+    description:
+      "Web za kušaonicu craft i trapističkih piva u Osijeku, na vlastitom CMS-u izrađenom od nule — ponuda od 80+ piva, veleprodaja s automatskim ponudama, QR cjenik za goste i TV cjenik točenih piva.",
+    highlights: [
+      "Vlastiti CMS: piva, države, stilovi, boje, aktualnosti",
+      "Veleprodaja: upiti, ponude po grupama kupaca i automatsko slanje e-mailom",
+      "Uvoz i izvoz cjenika iz Excela uz automatsko povezivanje proizvoda",
+      "QR cjenik za goste i TV cjenik točenih piva",
+      "Glasanje za piva, napredni filteri, PWA i SEO",
+    ],
+    url: "https://gajba.hr",
+    image: "/images/gajba-cover.jpg",
+  },
+  {
+    slug: "mijo",
+    title: "Mijo d.o.o.",
+    category: "Web stranica / redizajn",
+    description:
+      "Novi web za građevinsku tvrtku iz Osijeka (niskogradnja od 1990.) — moderan, brz i prilagođen mobitelu, s prikazom djelatnosti, referenci i izvedenih radova te obrascem za upit ponude.",
+    highlights: [
+      "Redizajn starog Joomla weba u brzu statičku stranicu",
+      "Djelatnosti, reference i galerija izvedenih radova s filterom",
+      "Obrazac za upit ponude sa slanjem na e-mail (SMTP)",
+      "Prilagođeno mobitelu i tražilicama (SEO)",
+    ],
+    url: "https://mijo.hr",
+    image: "/images/mijo-cover.jpg",
+    hideOnHome: true,
+  },  {
     slug: "renovo-consulting",
     title: "Renovo Consulting",
     category: "Web stranica / WordPress",
@@ -372,6 +405,7 @@ export const portfolioProjects: PortfolioProject[] = [
     ],
     url: "https://renovo-consulting.hr",
     image: "/images/renovo-consulting-cover.jpg",
+    hideOnHome: true,
   },
   {
     slug: "nkistra-shop",
@@ -386,7 +420,7 @@ export const portfolioProjects: PortfolioProject[] = [
       "Kupcima jasan prikaz gotovog dresa prije narudžbe",
     ],
     url: "https://shop.nkistra.com",
-    image: "/images/nkistra-cover.jpg",
+    image: "/images/nkistra-cover-neon.jpg",
   },
 ];
 

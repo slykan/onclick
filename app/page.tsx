@@ -236,7 +236,7 @@ export default function Home() {
           </div>
 
           <div className="mt-10">
-            <WorkTabs projects={portfolioProjects} />
+            <WorkTabs projects={portfolioProjects.filter((p) => !p.hideOnHome)} />
           </div>
         </Container>
       </section>

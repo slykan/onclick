@@ -270,7 +270,7 @@ export const portfolioProjects: PortfolioProject[] = [
       "Custom-built admin CMS",
     ],
     url: "https://placko.app",
-    image: "/images/placko-cover.jpg",
+    image: "/images/placko-cover-2.jpg",
   },
   {
     slug: "alivecheck",
@@ -315,7 +315,7 @@ export const portfolioProjects: PortfolioProject[] = [
       "Custom-built web application",
     ],
     url: "https://agro-log.app",
-    image: "/images/agrolog-cover.jpg",
+    image: "/images/agrolog-cover-2.jpg",
   },
   {
     slug: "andeoske-sapice",
@@ -333,6 +333,37 @@ export const portfolioProjects: PortfolioProject[] = [
     image: "/images/andeoske-sapice-cover.jpg",
   },
   {
+    slug: "gajba",
+    title: "Gajba",
+    category: "Website + custom CMS / taproom and wholesale",
+    description:
+      "Website for a craft and Trappist beer taproom in Osijek, running on a custom CMS built from scratch — an 80+ beer range, wholesale with automated quotes, a QR price list for guests and a TV board for beers on tap.",
+    highlights: [
+      "Custom CMS: beers, countries, styles, colours, news",
+      "Wholesale: inquiries, quotes by customer group and automatic email delivery",
+      "Excel price list import and export with automatic product matching",
+      "QR price list for guests and TV board for beers on tap",
+      "Beer voting, advanced filters, PWA and SEO",
+    ],
+    url: "https://gajba.hr",
+    image: "/images/gajba-cover.jpg",
+  },
+  {
+    slug: "mijo",
+    title: "Mijo d.o.o.",
+    category: "Website / redesign",
+    description:
+      "A new website for a construction company from Osijek (civil engineering since 1990) — modern, fast and mobile-friendly, presenting services, references and completed projects, with a quote request form.",
+    highlights: [
+      "Redesign of an old Joomla site into a fast static website",
+      "Services, references and a filterable gallery of completed work",
+      "Quote request form with email delivery (SMTP)",
+      "Mobile-friendly and search-engine optimized (SEO)",
+    ],
+    url: "https://mijo.hr",
+    image: "/images/mijo-cover.jpg",
+    hideOnHome: true,
+  },  {
     slug: "renovo-consulting",
     title: "Renovo Consulting",
     category: "Website / WordPress",
@@ -346,6 +377,7 @@ export const portfolioProjects: PortfolioProject[] = [
     ],
     url: "https://renovo-consulting.hr",
     image: "/images/renovo-consulting-cover.jpg",
+    hideOnHome: true,
   },
   {
     slug: "nkistra-shop",
@@ -360,7 +392,7 @@ export const portfolioProjects: PortfolioProject[] = [
       "Customers see a clear preview of the finished jersey before ordering",
     ],
     url: "https://shop.nkistra.com",
-    image: "/images/nkistra-cover.jpg",
+    image: "/images/nkistra-cover-neon.jpg",
   },
 ];
 
