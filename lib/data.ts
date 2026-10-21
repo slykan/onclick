@@ -343,7 +343,7 @@ export const portfolioProjects: PortfolioProject[] = [
       "Web aplikacija izrađena po mjeri",
     ],
     url: "https://agro-log.app",
-    image: "/images/agrolog-cover-2.jpg",
+    image: "/images/agrolog-cover-3.jpg",
   },
   {
     slug: "andeoske-sapice",

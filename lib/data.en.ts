@@ -315,7 +315,7 @@ export const portfolioProjects: PortfolioProject[] = [
       "Custom-built web application",
     ],
     url: "https://agro-log.app",
-    image: "/images/agrolog-cover-2.jpg",
+    image: "/images/agrolog-cover-3.jpg",
   },
   {
     slug: "andeoske-sapice",
