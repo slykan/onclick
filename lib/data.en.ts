@@ -853,6 +853,7 @@ export const newsPosts: NewsPost[] = [
           { label: "Nacrt pravilnika o isticanju bazne cijene proizvoda", href: "https://esavjetovanja.gov.hr/Econ/10333", note: "e-Savjetovanja (public consultation), Ministry of Economy" },
           { label: "Nacrt pravilnika o načinu objave cjenika proizvoda", href: "https://esavjetovanja.gov.hr/Econ/10332", note: "e-Savjetovanja (public consultation), Ministry of Economy" },
           { label: "Ministry of Economy – clarifications", href: "https://mingo.gov.hr/vijesti/pojasnjenja-za-primjenu-dodatne-cijene-i-objavu-cjenika-od-1-listopada/10440" },
+          { label: "plačko.app – Anchor (base) price and service price list", href: "https://placko.app/novosti/sidrena-cijena-i-cjenik-usluga-2026", note: "Practical guide for sole traders and service providers, with a CSV price list example (in Croatian)" },
         ],
       },
       "Status as of 23 October 2026. This is a summary, not legal advice – the text published in the Official Gazette (Narodne novine) prevails.",

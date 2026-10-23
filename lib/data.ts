@@ -923,6 +923,7 @@ export const newsPosts: NewsPost[] = [
           { label: "Nacrt pravilnika o isticanju bazne cijene proizvoda", href: "https://esavjetovanja.gov.hr/Econ/10333", note: "e-Savjetovanja, Ministarstvo gospodarstva" },
           { label: "Nacrt pravilnika o načinu objave cjenika proizvoda", href: "https://esavjetovanja.gov.hr/Econ/10332", note: "e-Savjetovanja, Ministarstvo gospodarstva" },
           { label: "Pojašnjenja Ministarstva gospodarstva", href: "https://mingo.gov.hr/vijesti/pojasnjenja-za-primjenu-dodatne-cijene-i-objavu-cjenika-od-1-listopada/10440" },
+          { label: "plačko.app – Sidrena (bazna) cijena i cjenik usluga", href: "https://placko.app/novosti/sidrena-cijena-i-cjenik-usluga-2026", note: "Praktični vodič za obrtnike i pružatelje usluga, s primjerom cjenika u CSV-u" },
         ],
       },
       "Stanje na dan 23. listopada 2026. Ovo je sažetak, a ne pravni savjet – mjerodavan je tekst objavljen u Narodnim novinama.",
