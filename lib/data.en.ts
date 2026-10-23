@@ -36,6 +36,7 @@ export const navItems: NavItem[] = [
   { label: "Portfolio", href: "/en/portfolio" },
   { label: "Products", href: "/en/proizvodi" },
   { label: "Pricing", href: "/en/cijene" },
+  { label: "News", href: "/en/novosti" },
   { label: "Contact", href: "/en/kontakt" },
 ];
 
@@ -806,6 +807,63 @@ export const hostingPlans: HostingPlan[] = [
 ];
 
 export const newsPosts: NewsPost[] = [
+  {
+    slug: "bazna-cijena-od-17-studenoga-2026",
+    title: "Base price from 17 November 2026 – what it means for your webshop",
+    excerpt:
+      "Croatia's anchor price rule has been postponed to 17 November 2026, and from then on the Consumer Protection Act calls it the base price. What changes for webshops, fines and all official documents.",
+    date: "2026-10-23",
+    content: [
+      "The obligation to display the anchor price (sidrena cijena) did not start on 1 October. The Croatian Government postponed it to 17 November 2026, and on the same day the amended Consumer Protection Act takes effect, making the same price a permanent legal requirement under the name base price (bazna cijena).",
+      { type: "h2", text: "What changed" },
+      {
+        type: "ul",
+        items: [
+          "Name: the law uses “base price” instead of “anchor (additional) price”.",
+          "Start date: 17 November 2026 instead of 1 October (Official Gazette NN 110/2026).",
+          "Legal basis: in addition to the Government decisions, Article 7 of the Consumer Protection Act (NN 59/2026).",
+          "The reference date stays the same: 10 September 2026, or 2 May 2025 for food, drinks, cosmetics, cleaning products, toiletries and household products.",
+        ],
+      },
+      { type: "h2", text: "What it means for a webshop" },
+      {
+        type: "ul",
+        items: [
+          "Every product price in the webshop must be shown together with the base price – clearly, visibly and legibly.",
+          "The base price must also appear in ads that show a price (banners, newsletters, flyers).",
+          "If the price has not changed since the reference date, the base price equals the current price, but it still has to be shown.",
+          "The webshop must publish a current machine-readable price list (CSV or XML) that includes the base price, and keep it up to date.",
+          "For products added after the reference date, the base price is the price on the day they were introduced (per the draft regulation).",
+        ],
+      },
+      {
+        type: "note",
+        text: "Fines: a trader that is a legal entity and fails to display the base price or to publish a current price list on its website faces a fine of EUR 1,500 to 50,000 (Consumer Protection Act, NN 59/2026).",
+      },
+      { type: "h2", text: "The regulations are still drafts" },
+      "In October 2026 the Ministry of Economy opened a public consultation on the regulation on displaying the base price and the regulation on publishing price lists. Until they are published in the Official Gazette, details such as the exact price list format may still change – so it pays to have a solution that is easy to adjust.",
+      { type: "h2", text: "Official documents (in Croatian)" },
+      {
+        type: "links",
+        items: [
+          { label: "NN 59/2026 – Zakon o izmjenama i dopunama Zakona o zaštiti potrošača", href: "https://narodne-novine.nn.hr/clanci/sluzbeni/2026_06_59_728.html", note: "Introduces the base price (Art. 7), applies from 17 Nov 2026" },
+          { label: "NN 101/2026 – Odluka o isticanju dodatne cijene kao mjera izravne kontrole cijena", href: "https://narodne-novine.nn.hr/clanci/sluzbeni/2026_09_101_1212.html", note: "Reference dates 10 Sep 2026 and 2 May 2025" },
+          { label: "NN 101/2026 – Odluka o objavi cjenika proizvoda i usluga kao mjera izravne kontrole cijena", href: "https://narodne-novine.nn.hr/clanci/sluzbeni/full/2026_09_101_1213.html", note: "Machine-readable price list (CSV or XML) on the website" },
+          { label: "NN 110/2026 – Odluka o izmjeni Odluke o isticanju dodatne cijene", href: "https://narodne-novine.nn.hr/clanci/sluzbeni/2026_09_110_1309.html", note: "Start moved from 1 Oct to 17 Nov 2026" },
+          { label: "Nacrt pravilnika o isticanju bazne cijene proizvoda", href: "https://esavjetovanja.gov.hr/Econ/10333", note: "e-Savjetovanja (public consultation), Ministry of Economy" },
+          { label: "Nacrt pravilnika o načinu objave cjenika proizvoda", href: "https://esavjetovanja.gov.hr/Econ/10332", note: "e-Savjetovanja (public consultation), Ministry of Economy" },
+          { label: "Ministry of Economy – clarifications", href: "https://mingo.gov.hr/vijesti/pojasnjenja-za-primjenu-dodatne-cijene-i-objavu-cjenika-od-1-listopada/10440" },
+        ],
+      },
+      "Status as of 23 October 2026. This is a summary, not legal advice – the text published in the Official Gazette (Narodne novine) prevails.",
+      {
+        type: "cta",
+        text: "For OpenCart, PrestaShop and Joomla (VirtueMart, J2Store) we have ready-made modules that show the anchor and base price next to every price and automatically publish an online price list in CSV/XML.",
+        label: "See the base price modules",
+        href: "/en/proizvodi",
+      },
+    ],
+  },
   {
     slug: "kako-odabrati-platformu-za-webshop",
     title: "How to choose the right platform for your webshop?",

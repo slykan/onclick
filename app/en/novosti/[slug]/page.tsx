@@ -3,6 +3,7 @@ import Link from "next/link";
 import { notFound } from "next/navigation";
 import { ArrowLeft } from "lucide-react";
 import { Container } from "@/components/Container";
+import { NewsContent } from "@/components/NewsContent";
 import { newsPosts } from "@/lib/data.en";
 
 export function generateStaticParams() {
@@ -18,7 +19,7 @@ export async function generateMetadata({
   const post = newsPosts.find((p) => p.slug === slug);
   if (!post) return {};
   return {
-    title: `${post.title} | On-Click`,
+    title: post.title,
     description: post.excerpt,
     alternates: {
       canonical: `https://www.on-click.hr/en/novosti/${slug}`,
@@ -61,11 +62,7 @@ export default async function NovostDetailPageEn({
           {post.title}
         </h1>
 
-        <div className="mt-6 space-y-4 text-base leading-relaxed text-ink-light/80">
-          {post.content.map((paragraph, i) => (
-            <p key={i}>{paragraph}</p>
-          ))}
-        </div>
+        <NewsContent content={post.content} />
       </Container>
     </section>
   );

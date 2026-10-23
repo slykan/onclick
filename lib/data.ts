@@ -28,6 +28,7 @@ export const navItems: NavItem[] = [
   { label: "Portfolio", href: "/portfolio" },
   { label: "Proizvodi", href: "/proizvodi" },
   { label: "Cijene", href: "/cijene" },
+  { label: "Novosti", href: "/novosti" },
   { label: "Kontakt", href: "/kontakt" },
 ];
 
@@ -859,15 +860,80 @@ export const hostingPlans: HostingPlan[] = [
   },
 ];
 
+/** Blok u članku; običan string je odlomak. */
+export type NewsBlock =
+  | { type: "h2"; text: string }
+  | { type: "ul"; items: string[] }
+  | { type: "note"; text: string }
+  | { type: "links"; items: { label: string; href: string; note?: string }[] }
+  | { type: "cta"; text: string; label: string; href: string };
+
 export type NewsPost = {
   slug: string;
   title: string;
   excerpt: string;
   date: string;
-  content: string[];
+  content: (string | NewsBlock)[];
 };
 
 export const newsPosts: NewsPost[] = [
+  {
+    slug: "bazna-cijena-od-17-studenoga-2026",
+    title: "Bazna cijena od 17. studenoga 2026. – što to znači za vaš webshop",
+    excerpt:
+      "Sidrena cijena odgođena je na 17. studenoga 2026., a Zakon o zaštiti potrošača od tada je naziva bazna cijena. Što se mijenja za webshopove, kazne i svi službeni dokumenti.",
+    date: "2026-10-23",
+    content: [
+      "Obveza isticanja sidrene cijene nije krenula 1. listopada. Vlada ju je odgodila na 17. studenoga 2026., a od istog dana na snagu stupa i izmijenjeni Zakon o zaštiti potrošača, koji tu cijenu trajno uvodi u zakon pod imenom bazna cijena.",
+      { type: "h2", text: "Što se promijenilo" },
+      {
+        type: "ul",
+        items: [
+          "Naziv: umjesto „sidrena (dodatna) cijena” zakon koristi pojam „bazna cijena”.",
+          "Početak obveze: 17. studenoga 2026. umjesto 1. listopada (NN 110/2026).",
+          "Pravna osnova: uz odluke Vlade, sada i članak 7. Zakona o zaštiti potrošača (NN 59/2026).",
+          "Referentni dan ostaje isti: 10. rujna 2026., odnosno 2. svibnja 2025. za hranu, piće, kozmetiku, sredstva za čišćenje, toaletne potrepštine i proizvode za kućanstvo.",
+        ],
+      },
+      { type: "h2", text: "Što to znači za webshop" },
+      {
+        type: "ul",
+        items: [
+          "Uz svaku cijenu proizvoda u webshopu mora stajati i bazna cijena – jasno, vidljivo i čitljivo.",
+          "Bazna cijena mora biti i u oglasima s cijenom (bannerima, newsletterima, letcima).",
+          "Ako cijenu od referentnog dana niste mijenjali, bazna cijena jednaka je trenutnoj, ali se i dalje mora istaknuti.",
+          "Webshop mora objaviti važeći cjenik u strojno čitljivom obliku (CSV ili XML) koji sadrži i baznu cijenu, i redovito ga ažurirati.",
+          "Za proizvode uvedene nakon referentnog dana bazna je cijena ona s dana uvođenja u ponudu (prema nacrtu pravilnika).",
+        ],
+      },
+      {
+        type: "note",
+        text: "Kazne: trgovac – pravna osoba koji ne istakne baznu cijenu ili ne objavi važeći cjenik na svojim mrežnim stranicama kažnjava se s 1.500 do 50.000 eura (Zakon o zaštiti potrošača, NN 59/2026).",
+      },
+      { type: "h2", text: "Pravilnici su još nacrti" },
+      "Ministarstvo gospodarstva u listopadu 2026. otvorilo je javno savjetovanje o pravilniku o isticanju bazne cijene i pravilniku o objavi cjenika. Dok ne budu objavljeni u Narodnim novinama, detalji (npr. točan format cjenika) još se mogu promijeniti – zato je dobro imati rješenje koje se lako prilagodi.",
+      { type: "h2", text: "Službeni dokumenti" },
+      {
+        type: "links",
+        items: [
+          { label: "NN 59/2026 – Zakon o izmjenama i dopunama Zakona o zaštiti potrošača", href: "https://narodne-novine.nn.hr/clanci/sluzbeni/2026_06_59_728.html", note: "Uvodi baznu cijenu (čl. 7.), primjenjuje se od 17. 11. 2026." },
+          { label: "NN 101/2026 – Odluka o isticanju dodatne cijene kao mjera izravne kontrole cijena", href: "https://narodne-novine.nn.hr/clanci/sluzbeni/2026_09_101_1212.html", note: "Referentni dani 10. 9. 2026. i 2. 5. 2025." },
+          { label: "NN 101/2026 – Odluka o objavi cjenika proizvoda i usluga kao mjera izravne kontrole cijena", href: "https://narodne-novine.nn.hr/clanci/sluzbeni/full/2026_09_101_1213.html", note: "Strojno čitljiv cjenik (CSV ili XML) na webu" },
+          { label: "NN 110/2026 – Odluka o izmjeni Odluke o isticanju dodatne cijene", href: "https://narodne-novine.nn.hr/clanci/sluzbeni/2026_09_110_1309.html", note: "Početak pomaknut s 1. 10. na 17. 11. 2026." },
+          { label: "Nacrt pravilnika o isticanju bazne cijene proizvoda", href: "https://esavjetovanja.gov.hr/Econ/10333", note: "e-Savjetovanja, Ministarstvo gospodarstva" },
+          { label: "Nacrt pravilnika o načinu objave cjenika proizvoda", href: "https://esavjetovanja.gov.hr/Econ/10332", note: "e-Savjetovanja, Ministarstvo gospodarstva" },
+          { label: "Pojašnjenja Ministarstva gospodarstva", href: "https://mingo.gov.hr/vijesti/pojasnjenja-za-primjenu-dodatne-cijene-i-objavu-cjenika-od-1-listopada/10440" },
+        ],
+      },
+      "Stanje na dan 23. listopada 2026. Ovo je sažetak, a ne pravni savjet – mjerodavan je tekst objavljen u Narodnim novinama.",
+      {
+        type: "cta",
+        text: "Za OpenCart, PrestaShop i Joomlu (VirtueMart, J2Store) imamo gotove module koji uz cijenu prikazuju sidrenu i baznu cijenu i automatski objavljuju online cjenik u CSV/XML formatu.",
+        label: "Pogledajte module za baznu cijenu",
+        href: "/proizvodi",
+      },
+    ],
+  },
   {
     slug: "kako-odabrati-platformu-za-webshop",
     title: "Kako odabrati pravu platformu za webshop?",
