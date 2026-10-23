@@ -409,6 +409,22 @@ export const portfolioProjects: PortfolioProject[] = [
     hideOnHome: true,
   },
   {
+    slug: "superbia-osijek",
+    title: "Superbia Osijek",
+    category: "Web stranica / apartman (HR + EN)",
+    description:
+      "Dvojezični web za apartman od 85 m² na promenadi uz Dravu: pregled smještaja, galerija profesionalnih fotografija, recenzije s Bookinga i upit za rezervaciju, uz vodič kroz Osijek koji privlači goste s tražilica.",
+    highlights: [
+      "Hrvatska i engleska verzija",
+      "Galerija fotografija, sadržaji apartmana i kućni red",
+      "Vodič kroz Osijek: članci za goste i SEO",
+      "Upit za rezervaciju sa slanjem na e-mail i poveznica na Booking",
+    ],
+    url: "https://superbia-osijek.com",
+    image: "/images/superbia-cover.jpg",
+    hideOnHome: true,
+  },
+  {
     slug: "mijo",
     title: "Mijo d.o.o.",
     category: "Web stranica / redizajn",
