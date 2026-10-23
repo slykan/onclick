@@ -393,6 +393,22 @@ export const portfolioProjects: PortfolioProject[] = [
     image: "/images/hns-osijek-cover.jpg",
   },
   {
+    slug: "babic-servis",
+    title: "Autoservis Babić",
+    category: "Web stranica / redizajn + online prijava servisa",
+    description:
+      "Novi web za autoservis iz Donjeg Miholjca: brza stranica prilagođena mobitelu, s pregledom usluga i online prijavom servisa u 3 koraka, koja servisu i kupcu odmah šalje uredne e-mail potvrde.",
+    highlights: [
+      "Online prijava servisa u 3 koraka: vozilo, termin i usluge, kontakt",
+      "HTML e-mailovi servisu i kupcu, uz potvrdu e-mailom ili telefonom",
+      "Usluge, uvoz vozila i prijevoz vozila na jednoj preglednoj stranici",
+      "Prilagođeno mobitelu i tražilicama (SEO, strukturirani podaci)",
+    ],
+    url: "https://babic-servis.hr",
+    image: "/images/babic-servis-cover.jpg",
+    hideOnHome: true,
+  },
+  {
     slug: "mijo",
     title: "Mijo d.o.o.",
     category: "Web stranica / redizajn",

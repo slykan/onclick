@@ -365,6 +365,22 @@ export const portfolioProjects: PortfolioProject[] = [
     image: "/images/hns-osijek-cover.jpg",
   },
   {
+    slug: "babic-servis",
+    title: "Autoservis Babić",
+    category: "Website / redesign + online service booking",
+    description:
+      "A new website for a car service in Donji Miholjac: a fast, mobile-friendly page with an overview of services and a 3-step online service booking that instantly sends clean email confirmations to both the garage and the customer.",
+    highlights: [
+      "3-step online service booking: vehicle, date and services, contact",
+      "HTML emails to the garage and the customer, confirmation by email or phone",
+      "Services, vehicle import and vehicle transport on one clear page",
+      "Mobile-friendly and search-optimised (SEO, structured data)",
+    ],
+    url: "https://babic-servis.hr",
+    image: "/images/babic-servis-cover.jpg",
+    hideOnHome: true,
+  },
+  {
     slug: "mijo",
     title: "Mijo d.o.o.",
     category: "Website / redesign",
