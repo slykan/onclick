@@ -473,6 +473,22 @@ export const portfolioProjects: PortfolioProject[] = [
     hideOnHome: true,
   },
   {
+    slug: "mmc",
+    title: "MMC d.o.o.",
+    category: "Web stranica / redizajn",
+    description:
+      "Novi web za prodaju i servis profesionalne ugostiteljske opreme iz Splita (od 1991.): stari Joomla web s mnogo podstranica zamijenjen je jednom preglednom stranicom s proizvođačima, servisom i upitima.",
+    highlights: [
+      "Proizvođači po karticama: Convotherm, MKN, Meiko, Liebherr, KOPA i drugi",
+      "Posebna sekcija za KOPA peći na ugljen",
+      "Obrazac za ponudu ili prijavu servisa (vrsta upita, marka, uređaj) sa slanjem na e-mail",
+      "Prilagođeno mobitelu i tražilicama (SEO)",
+    ],
+    url: "https://mmc-ugostiteljskaoprema.hr",
+    image: "/images/mmc-cover.jpg",
+    hideOnHome: true,
+  },
+  {
     slug: "mijo",
     title: "Mijo d.o.o.",
     category: "Web stranica / redizajn",

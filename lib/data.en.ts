@@ -445,6 +445,22 @@ export const portfolioProjects: PortfolioProject[] = [
     hideOnHome: true,
   },
   {
+    slug: "mmc",
+    title: "MMC d.o.o.",
+    category: "Website / redesign",
+    description:
+      "A new website for a professional catering equipment sales and service company from Split (since 1991): an old multi-page Joomla site replaced with one clear page covering manufacturers, service and enquiries.",
+    highlights: [
+      "Manufacturers in tabs: Convotherm, MKN, Meiko, Liebherr, KOPA and more",
+      "Dedicated section for KOPA charcoal ovens",
+      "Quote or service request form (request type, brand, appliance) with email delivery",
+      "Mobile-friendly and search-optimised (SEO)",
+    ],
+    url: "https://mmc-ugostiteljskaoprema.hr",
+    image: "/images/mmc-cover.jpg",
+    hideOnHome: true,
+  },
+  {
     slug: "mijo",
     title: "Mijo d.o.o.",
     category: "Website / redesign",
