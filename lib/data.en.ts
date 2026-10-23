@@ -413,6 +413,22 @@ export const portfolioProjects: PortfolioProject[] = [
     hideOnHome: true,
   },
   {
+    slug: "el-paso",
+    title: "Restaurant El Paso",
+    category: "Website / redesign + digital menu",
+    description:
+      "A new website for a restaurant and pizzeria on the Drava river in Osijek. The 170+ item menu is generated from the restaurant price list, in four languages and with the reference price under every price, and guests book a table through a form.",
+    highlights: [
+      "Digital menu in 4 languages (HR, EN, IT, DE)",
+      "Menu generated from the price list (Word), with legally required reference prices",
+      "Table reservations with email delivery",
+      "Photos of the restaurant’s actual dishes; mobile-friendly and SEO",
+    ],
+    url: "https://el-paso.co",
+    image: "/images/elpaso-cover.jpg",
+    hideOnHome: true,
+  },
+  {
     slug: "mijo",
     title: "Mijo d.o.o.",
     category: "Website / redesign",

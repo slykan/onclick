@@ -441,6 +441,22 @@ export const portfolioProjects: PortfolioProject[] = [
     hideOnHome: true,
   },
   {
+    slug: "el-paso",
+    title: "Restoran El Paso",
+    category: "Web stranica / redizajn + digitalni jelovnik",
+    description:
+      "Novi web za restoran i pizzeriju na Dravi u Osijeku. Jelovnik od 170+ jela generira se iz restoranskog cjenika, na četiri jezika i sa sidrenom cijenom ispod svake cijene, a gosti stol rezerviraju putem obrasca.",
+    highlights: [
+      "Digitalni jelovnik na 4 jezika (HR, EN, IT, DE)",
+      "Jelovnik se generira iz cjenika (Word), uz sidrene cijene po propisu",
+      "Rezervacija stola sa slanjem na e-mail",
+      "Fotografije stvarnih jela iz restorana; prilagođeno mobitelu i SEO",
+    ],
+    url: "https://el-paso.co",
+    image: "/images/elpaso-cover.jpg",
+    hideOnHome: true,
+  },
+  {
     slug: "mijo",
     title: "Mijo d.o.o.",
     category: "Web stranica / redizajn",
