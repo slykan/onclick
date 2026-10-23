@@ -6,8 +6,10 @@ import { CTASection } from "@/components/CTASection";
 import { products } from "@/lib/data";
 
 export const metadata: Metadata = {
-  title: "Proizvodi",
-  description: "Naši proizvodi u ponudi — gotova rješenja spremna za vaše poslovanje.",
+  title: "Proizvodi – moduli za sidrenu i baznu cijenu",
+  description:
+    "Moduli za sidrenu i baznu cijenu s online cjenikom za OpenCart, PrestaShop te Joomlu (VirtueMart i J2Store) — usklađeno sa zakonskom obvezom od 1. listopada 2026. Uz to gotova rješenja za vaš webshop.",
+  keywords: ["sidrena cijena", "bazna cijena", "online cjenik", "OpenCart", "PrestaShop", "Joomla", "VirtueMart", "J2Store"],
   alternates: {
     canonical: "https://www.on-click.hr/proizvodi",
     languages: {

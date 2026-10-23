@@ -38,7 +38,7 @@ export function ProductAccordion({
               </p>
               {/\d/.test(product.price) && (
                 <p className="mt-0.5 text-xs text-ink">
-                  {t.anchorPrice}: {product.price}
+                  {t.basePrice}: {product.price}
                 </p>
               )}
 

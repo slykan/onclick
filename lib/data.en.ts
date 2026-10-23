@@ -702,7 +702,7 @@ export const products: Product[] = [
   },
   {
     slug: "sidrena-cijena-opencart",
-    title: "Anchor Price module for OpenCart",
+    title: "Anchor & Base Price – OpenCart module",
     image: "/images/products/OC_Sidrena_CIjena.png",
     description:
       "The anchor price (sidrena cijena) is a fixed reference price from a date set by the Croatian Government — not the lowest price of the last 30 days, but a fixed value that lets shoppers see whether and how much the price has changed. Mandatory for all retailers and service providers in Croatia from 1 October 2026.",
@@ -716,7 +716,7 @@ export const products: Product[] = [
   },
   {
     slug: "sidrena-cijena-prestashop",
-    title: "PrestaShop - Anchor Price and Online Price List",
+    title: "PrestaShop – Anchor & Base Price + online price list",
     image: "/images/products/PS_sidrena_cijena.png",
     description:
       "The anchor price (sidrena cijena) is a fixed reference price from a date set by the Croatian Government — not the lowest price of the last 30 days, but a fixed value that lets shoppers see whether and how much the price has changed. Mandatory for all retailers and service providers in Croatia from 1 October 2026.",
@@ -730,7 +730,7 @@ export const products: Product[] = [
   },
   {
     slug: "sidrena-cijena-virtuemart",
-    title: "Joomla + VirtueMart - Anchor Price and Online Price List",
+    title: "VirtueMart – Anchor & Base Price + online price list",
     image: "/images/products/VM.png",
     description:
       "The anchor price (sidrena cijena) is a fixed reference price from a date set by the Croatian Government — not the lowest price of the last 30 days, but a fixed value that lets shoppers see whether and how much the price has changed. Mandatory for all retailers and service providers in Croatia from 1 October 2026.",
@@ -744,7 +744,7 @@ export const products: Product[] = [
   },
   {
     slug: "sidrena-cijena-j2store",
-    title: "Joomla + J2Store - Anchor Price and Online Price List",
+    title: "J2Store – Anchor & Base Price + online price list",
     image: "/images/products/J2Store.png",
     description:
       "The anchor price (sidrena cijena) is a fixed reference price from a date set by the Croatian Government — not the lowest price of the last 30 days, but a fixed value that lets shoppers see whether and how much the price has changed. Mandatory for all retailers and service providers in Croatia from 1 October 2026.",
