@@ -505,6 +505,22 @@ export const portfolioProjects: PortfolioProject[] = [
     hideOnHome: true,
   },
   {
+    slug: "apartman-ana",
+    title: "Apartman Ana",
+    category: "Web stranica / apartman (HR, EN, DE)",
+    description:
+      "Novi trojezični web za apartman s bazenom u Crikvenici, 30 m od plaže. Stari web više nije radio, pa je sadržaj vraćen iz web arhive i složen u brzu stranicu s upitom za rezervaciju.",
+    highlights: [
+      "Hrvatska, engleska i njemačka verzija",
+      "Upit za rezervaciju (datumi, broj noćenja, odrasli i djeca); gost dobiva odgovor na svom jeziku",
+      "Sadržaj starog weba vraćen iz web arhive",
+      "Prilagođeno mobitelu i tražilicama (SEO)",
+    ],
+    url: "https://apartment-ana.com",
+    image: "/images/apartman-ana-cover.jpg",
+    hideOnHome: true,
+  },
+  {
     slug: "mijo",
     title: "Mijo d.o.o.",
     category: "Web stranica / redizajn",
