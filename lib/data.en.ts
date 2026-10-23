@@ -869,22 +869,154 @@ export const newsPosts: NewsPost[] = [
     slug: "kako-odabrati-platformu-za-webshop",
     title: "How to choose the right platform for your webshop?",
     excerpt:
-      "An overview of the pros and cons of the most popular webshop platforms.",
+      "WooCommerce, OpenCart, PrestaShop or Magento? Pros and cons, five questions to ask before choosing, and which platform suits which shop.",
     date: "2026-05-12",
     content: [
-      "Choosing a webshop platform depends on your catalog size, budget and growth plans.",
-      "In this article we'll soon bring a detailed comparison of OpenCart, PrestaShop, Magento and WooCommerce.",
+      "The platform is the foundation of a webshop: it determines speed, maintenance costs, how easily you add products and how much growth will cost you. There is no single “best” one – there is the one that fits your catalog, budget and plans. These are the four platforms we work with most, and when we recommend each.",
+      { type: "h2", text: "Before you choose: five questions" },
+      {
+        type: "ul",
+        items: [
+          "How many products do you have now, and how many in two years – dozens, hundreds or tens of thousands?",
+          "Do you sell only in Croatia or abroad too, in several languages and currencies?",
+          "What needs to be connected: fiscalisation, accounting or ERP software, couriers, card payments?",
+          "Who will edit the webshop day to day, and how technical are they?",
+          "What is the budget – not only for the build, but also for hosting, paid modules and maintenance?",
+        ],
+      },
+      { type: "h2", text: "WooCommerce" },
+      "A plugin for WordPress, which makes it a great choice when content matters as much as the shop – a blog, guides, landing pages. Many people already know the interface, and there is a plugin for almost anything.",
+      {
+        type: "ul",
+        items: [
+          "Pros: easy editing, a huge choice of plugins and themes, strong content and SEO.",
+          "Cons: with too many plugins it gets slow and vulnerable, so it needs regular updates and maintenance.",
+          "Best for: small and mid-sized shops where content is as important as sales.",
+        ],
+      },
+      { type: "h2", text: "OpenCart" },
+      "A lightweight, fast platform with a clear admin panel. For a smaller catalog it works very well, even on modest hosting.",
+      {
+        type: "ul",
+        items: [
+          "Pros: speed, simplicity, low start-up costs.",
+          "Cons: a smaller choice of good ready-made modules, and moving to a new major version can be demanding.",
+          "Best for: small and mid-sized shops with a clear, not overly complex catalog.",
+        ],
+      },
+      { type: "h2", text: "PrestaShop" },
+      "A platform built purely for e-commerce, with many built-in features: multiple languages and currencies, product combinations (sizes, colours), advanced shipping and discount rules.",
+      {
+        type: "ul",
+        items: [
+          "Pros: rich built-in features, good multi-market support, a large module marketplace.",
+          "Cons: many of the good modules are paid, and higher traffic needs more serious hosting.",
+          "Best for: mid-sized shops, especially those selling in several languages or with many product variants.",
+        ],
+      },
+      { type: "h2", text: "Magento (Adobe Commerce)" },
+      "The most powerful of the four, with the free Magento Open Source and the commercial Adobe Commerce. Excellent for large catalogs, several stores from one admin and complex B2B sales.",
+      {
+        type: "ul",
+        items: [
+          "Pros: scalability, advanced B2B features, almost unlimited customisation.",
+          "Cons: the most expensive to build and maintain, demanding hosting, needs experienced developers.",
+          "Best for: large retailers and companies with thousands of products and complex processes.",
+        ],
+      },
+      { type: "h2", text: "In short" },
+      {
+        type: "ul",
+        items: [
+          "Content + shop, small to mid-sized catalog → WooCommerce.",
+          "A fast, simple webshop at low cost → OpenCart.",
+          "Several languages, many product variants, mid-sized shop → PrestaShop.",
+          "Large catalog, B2B and complex processes → Magento.",
+        ],
+      },
+      {
+        type: "note",
+        text: "The platform is only half the job. Fast hosting, SEO, regular maintenance and Croatian requirements matter just as much – fiscalisation and, from 17 November 2026, displaying the base price and publishing a price list online.",
+      },
+      {
+        type: "cta",
+        text: "Not sure which platform fits your business? We work with OpenCart, PrestaShop, WooCommerce and Magento – we'll help you choose and build a webshop that grows with you.",
+        label: "See webshop development",
+        href: "/en/usluge#webshop",
+      },
     ],
   },
   {
     slug: "zasto-je-brzina-stranice-vazna-za-seo",
     title: "Why is page speed important for SEO?",
     excerpt:
-      "Loading speed directly affects search engine ranking and visitor satisfaction.",
+      "How Google measures speed (Core Web Vitals: LCP, INP, CLS), why a slow site loses visitors, the most common causes and what you can do.",
     date: "2026-04-02",
     content: [
-      "Google's ranking takes Core Web Vitals metrics like loading speed into account.",
-      "A slower page means a higher bounce rate and worse search rankings.",
+      "Page speed is not just a technical detail. It affects how Google ranks you, how many visitors stay on the page and, in the end, how many of them become customers. And most visitors now come from mobile, often on a slower connection.",
+      { type: "h2", text: "How Google measures speed: Core Web Vitals" },
+      "Google measures speed and user experience with three metrics, based on data from real visitors in Chrome. A page passes when the values are good for at least 75% of visits:",
+      {
+        type: "ul",
+        items: [
+          "LCP (Largest Contentful Paint) – how quickly the main content appears. Good: up to 2.5 seconds.",
+          "INP (Interaction to Next Paint) – how quickly the page responds to a click or tap. Good: up to 200 milliseconds. INP replaced the older FID metric in March 2024.",
+          "CLS (Cumulative Layout Shift) – how much the content “jumps” while the page loads. Good: up to 0.1.",
+        ],
+      },
+      {
+        type: "note",
+        text: "Speed is not the most important ranking factor – high-quality, useful content still comes first. But when two pages are similar in content, a better experience can tip the balance, and a slow page loses visitors whatever its position.",
+      },
+      { type: "h2", text: "Why speed matters even without Google" },
+      {
+        type: "ul",
+        items: [
+          "Visitors don't wait: the longer a page takes to load, the more of them leave before they see anything.",
+          "In a webshop, every second of waiting means fewer completed purchases.",
+          "A fast site feels professional and builds trust.",
+          "Paid ads pay off better when the page they lead to loads quickly.",
+        ],
+      },
+      { type: "h2", text: "The most common causes of a slow site" },
+      {
+        type: "ul",
+        items: [
+          "Oversized images – multi-megabyte phone photos shown in a small frame.",
+          "Too many plugins and scripts – chat, tracking, social widgets, sliders, all loading at once.",
+          "Slow or overloaded hosting and an outdated PHP version.",
+          "No caching – the page is rebuilt from scratch for every visitor.",
+          "Images and ads without set dimensions, which make content jump while loading.",
+        ],
+      },
+      { type: "h2", text: "What you can do" },
+      {
+        type: "ul",
+        items: [
+          "Convert images to modern formats (WebP or AVIF) and resize them to their actual display size.",
+          "Enable lazy loading for images below the first screen.",
+          "Add caching and, where it makes sense, a CDN.",
+          "Remove plugins you don't use and defer scripts that aren't essential.",
+          "Move to quality hosting with a current PHP version.",
+          "Give images, videos and ads fixed dimensions so the content doesn't shift.",
+        ],
+      },
+      { type: "h2", text: "How to measure your site" },
+      {
+        type: "links",
+        items: [
+          { label: "PageSpeed Insights", href: "https://pagespeed.web.dev/", note: "Enter an address and get a score for mobile and desktop, with concrete recommendations." },
+          { label: "Google Search Console – Core Web Vitals report", href: "https://search.google.com/search-console", note: "Shows which pages of your site don't pass, based on real visitor data." },
+          { label: "web.dev – Web Vitals", href: "https://web.dev/articles/vitals", note: "Google's explanation of the metrics and thresholds." },
+          { label: "Google Search Central – page experience", href: "https://developers.google.com/search/docs/appearance/page-experience", note: "How Google uses page experience in ranking." },
+        ],
+      },
+      {
+        type: "cta",
+        text: "Is your site slow or failing Core Web Vitals? We'll analyse it, speed it up and sort out the SEO – without losing your content or the rankings you already have.",
+        label: "See SEO and optimisation",
+        href: "/en/usluge#seo",
+      },
     ],
   },
 ];

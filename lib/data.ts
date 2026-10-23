@@ -939,22 +939,154 @@ export const newsPosts: NewsPost[] = [
     slug: "kako-odabrati-platformu-za-webshop",
     title: "Kako odabrati pravu platformu za webshop?",
     excerpt:
-      "Pregled prednosti i mana najpopularnijih platformi za izradu webshopova.",
+      "WooCommerce, OpenCart, PrestaShop ili Magento? Usporedba prednosti i mana, pet pitanja prije odabira i preporuka koja platforma odgovara kojoj trgovini.",
     date: "2026-05-12",
     content: [
-      "Odabir platforme za webshop ovisi o veličini kataloga, budžetu i planovima za rast.",
-      "U ovom članku uskoro donosimo detaljnu usporedbu OpenCarta, PrestaShopa, Magenta i WooCommercea.",
+      "Platforma je temelj webshopa: o njoj ovise brzina, cijena održavanja, koliko lako dodajete proizvode i koliko će vas koštati rast. Ne postoji jedna „najbolja” – postoji ona koja odgovara vašem katalogu, budžetu i planovima. Ovo su četiri platforme s kojima najčešće radimo i kada koju preporučujemo.",
+      { type: "h2", text: "Prije odabira: pet pitanja" },
+      {
+        type: "ul",
+        items: [
+          "Koliko proizvoda imate sada, a koliko ćete imati za dvije godine – desetke, stotine ili desetke tisuća?",
+          "Prodajete li samo u Hrvatskoj ili i vani, na više jezika i u više valuta?",
+          "Što se mora povezati: fiskalizacija, knjigovodstveni ili ERP program, kurirske službe, kartično plaćanje?",
+          "Tko će webshop svakodnevno uređivati i koliko je tehnički potkovan?",
+          "Koliki je budžet ne samo za izradu, nego i za hosting, plaćene module i održavanje?",
+        ],
+      },
+      { type: "h2", text: "WooCommerce" },
+      "Dodatak za WordPress, pa je odličan izbor kad je uz trgovinu važan i sadržaj – blog, vodiči, landing stranice. Sučelje je poznato velikom broju ljudi, a dodataka ima za gotovo sve.",
+      {
+        type: "ul",
+        items: [
+          "Prednosti: jednostavno uređivanje, ogroman izbor dodataka i tema, jak sadržaj i SEO.",
+          "Mane: s previše dodataka postaje spor i ranjiv, pa traži redovite nadogradnje i održavanje.",
+          "Za koga: male i srednje trgovine kojima je sadržaj jednako važan kao prodaja.",
+        ],
+      },
+      { type: "h2", text: "OpenCart" },
+      "Lagana i brza platforma s preglednim administracijskim sučeljem. Za manji katalog radi odlično i na skromnijem hostingu.",
+      {
+        type: "ul",
+        items: [
+          "Prednosti: brzina, jednostavnost, niski troškovi pokretanja.",
+          "Mane: manji izbor kvalitetnih gotovih modula, a prelazak na novu glavnu verziju zna biti zahtjevan.",
+          "Za koga: male i srednje trgovine s jasnim, ne previše složenim katalogom.",
+        ],
+      },
+      { type: "h2", text: "PrestaShop" },
+      "Platforma napravljena isključivo za e-trgovinu, s puno ugrađenih mogućnosti: više jezika i valuta, kombinacije proizvoda (veličine, boje), napredna pravila dostave i popusta.",
+      {
+        type: "ul",
+        items: [
+          "Prednosti: bogate ugrađene funkcije, dobra podrška za više tržišta, velik izbor modula.",
+          "Mane: dobar dio kvalitetnih modula se plaća, a za veći promet treba ozbiljniji hosting.",
+          "Za koga: srednje trgovine, osobito one koje prodaju na više jezika ili s puno varijanti proizvoda.",
+        ],
+      },
+      { type: "h2", text: "Magento (Adobe Commerce)" },
+      "Najmoćnija od četiri platforme, s besplatnom verzijom Magento Open Source i komercijalnom Adobe Commerce. Izvrsna za velike kataloge, više trgovina iz jednog sučelja i složenu B2B prodaju.",
+      {
+        type: "ul",
+        items: [
+          "Prednosti: skalabilnost, napredne B2B mogućnosti, gotovo neograničena prilagodba.",
+          "Mane: najskuplji razvoj i održavanje, zahtjevan hosting, trebaju iskusni developeri.",
+          "Za koga: veliki trgovci i tvrtke s tisućama proizvoda i složenim procesima.",
+        ],
+      },
+      { type: "h2", text: "Ukratko" },
+      {
+        type: "ul",
+        items: [
+          "Sadržaj + trgovina, mali do srednji katalog → WooCommerce.",
+          "Brz i jednostavan webshop uz niske troškove → OpenCart.",
+          "Više jezika, puno varijanti proizvoda, srednja trgovina → PrestaShop.",
+          "Velik katalog, B2B i složeni procesi → Magento.",
+        ],
+      },
+      {
+        type: "note",
+        text: "Platforma je tek pola posla. Jednako su važni brz hosting, SEO, redovito održavanje i hrvatske obveze – fiskalizacija i, od 17. studenoga 2026., isticanje bazne cijene i objava cjenika na webu.",
+      },
+      {
+        type: "cta",
+        text: "Niste sigurni koja platforma odgovara vašem poslu? Radimo s OpenCartom, PrestaShopom, WooCommerceom i Magentom – pomoći ćemo vam odabrati i napraviti webshop koji raste s vama.",
+        label: "Pogledajte izradu webshopa",
+        href: "/usluge#webshop",
+      },
     ],
   },
   {
     slug: "zasto-je-brzina-stranice-vazna-za-seo",
     title: "Zašto je brzina stranice važna za SEO?",
     excerpt:
-      "Brzina učitavanja izravno utječe na poziciju u tražilicama i zadovoljstvo posjetitelja.",
+      "Kako Google mjeri brzinu (Core Web Vitals: LCP, INP, CLS), zašto spora stranica gubi posjetitelje, najčešći uzroci i što možete napraviti.",
     date: "2026-04-02",
     content: [
-      "Google pri rangiranju uzima u obzir Core Web Vitals metrike poput brzine učitavanja.",
-      "Sporija stranica znači veći postotak napuštanja i lošije pozicije u pretrazi.",
+      "Brzina stranice nije samo tehnički detalj. Utječe na to kako vas Google rangira, koliko posjetitelja ostane na stranici i, na kraju, koliko ih postane kupci. A većina posjetitelja danas dolazi s mobitela, često na sporijoj vezi.",
+      { type: "h2", text: "Kako Google mjeri brzinu: Core Web Vitals" },
+      "Google brzinu i korisničko iskustvo mjeri trima metrikama, na podacima stvarnih posjetitelja u Chromeu. Stranica prolazi kad su vrijednosti dobre za najmanje 75 % posjeta:",
+      {
+        type: "ul",
+        items: [
+          "LCP (Largest Contentful Paint) – koliko brzo se prikaže glavni sadržaj. Dobro: do 2,5 sekunde.",
+          "INP (Interaction to Next Paint) – koliko brzo stranica reagira na klik ili dodir. Dobro: do 200 milisekundi. INP je u ožujku 2024. zamijenio stariju metriku FID.",
+          "CLS (Cumulative Layout Shift) – koliko sadržaj „skače” dok se stranica učitava. Dobro: do 0,1.",
+        ],
+      },
+      {
+        type: "note",
+        text: "Brzina nije najvažniji faktor rangiranja – kvalitetan, koristan sadržaj i dalje je na prvom mjestu. Ali kad su dvije stranice slične po sadržaju, bolje korisničko iskustvo može presuditi, a spora stranica gubi posjetitelje bez obzira na poziciju.",
+      },
+      { type: "h2", text: "Zašto je brzina važna i bez Googlea" },
+      {
+        type: "ul",
+        items: [
+          "Posjetitelji ne čekaju: što se stranica duže učitava, to ih više odustane prije nego što išta vide.",
+          "U webshopu svaka sekunda čekanja znači manje dovršenih kupnji.",
+          "Brza stranica djeluje profesionalno i ulijeva povjerenje.",
+          "Plaćeni oglasi su isplativiji kad stranica na koju vode brzo radi.",
+        ],
+      },
+      { type: "h2", text: "Najčešći uzroci spore stranice" },
+      {
+        type: "ul",
+        items: [
+          "Prevelike slike – fotografije s mobitela od nekoliko megabajta prikazane u malom okviru.",
+          "Previše dodataka i skripti – chat, praćenje, društvene mreže, slideri, sve se učitava odjednom.",
+          "Spor ili prenatrpan hosting i zastarjela verzija PHP-a.",
+          "Bez cachea – stranica se za svakog posjetitelja ponovno slaže od nule.",
+          "Slike i oglasi bez zadanih dimenzija, zbog kojih sadržaj skače dok se učitava.",
+        ],
+      },
+      { type: "h2", text: "Što možete napraviti" },
+      {
+        type: "ul",
+        items: [
+          "Slike pretvorite u moderne formate (WebP ili AVIF) i smanjite ih na stvarnu veličinu prikaza.",
+          "Uključite lijeno učitavanje (lazy loading) za slike ispod prvog ekrana.",
+          "Uvedite cache i, gdje ima smisla, CDN.",
+          "Maknite dodatke koje ne koristite, a skripte koje nisu nužne učitajte kasnije.",
+          "Prebacite se na kvalitetan hosting s aktualnom verzijom PHP-a.",
+          "Slikama, videima i oglasima zadajte dimenzije kako se sadržaj ne bi pomicao.",
+        ],
+      },
+      { type: "h2", text: "Kako izmjeriti svoju stranicu" },
+      {
+        type: "links",
+        items: [
+          { label: "PageSpeed Insights", href: "https://pagespeed.web.dev/", note: "Upišite adresu i dobit ćete ocjenu za mobitel i računalo, uz konkretne preporuke." },
+          { label: "Google Search Console – izvješće Core Web Vitals", href: "https://search.google.com/search-console", note: "Pokazuje koje stranice vašeg weba ne prolaze, na podacima stvarnih posjetitelja." },
+          { label: "web.dev – Web Vitals", href: "https://web.dev/articles/vitals", note: "Googleovo objašnjenje metrika i graničnih vrijednosti." },
+          { label: "Google Search Central – doživljaj stranice", href: "https://developers.google.com/search/docs/appearance/page-experience", note: "Kako Google koristi korisničko iskustvo pri rangiranju." },
+        ],
+      },
+      {
+        type: "cta",
+        text: "Vaša stranica je spora ili ne prolazi Core Web Vitals? Napravit ćemo analizu, ubrzati stranicu i srediti SEO – bez gubitka sadržaja i pozicija koje već imate.",
+        label: "Pogledajte SEO i optimizaciju",
+        href: "/usluge#seo",
+      },
     ],
   },
 ];
