@@ -7,7 +7,7 @@ import { Icon } from "@/components/Icon";
 import { services } from "@/lib/data.en";
 
 export const metadata: Metadata = {
-  title: "Services | On-Click",
+  title: "Services",
   description:
     "Website, webshop and mobile app development, maintenance, hosting and SEO optimization.",
   alternates: {

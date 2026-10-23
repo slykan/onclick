@@ -6,7 +6,7 @@ import { CTASection } from "@/components/CTASection";
 import { portfolioProjects } from "@/lib/data.en";
 
 export const metadata: Metadata = {
-  title: "Portfolio | On-Click",
+  title: "Portfolio",
   description: "An overview of the projects we've built — websites, webshops and apps.",
   alternates: {
     canonical: "https://www.on-click.hr/en/portfolio",

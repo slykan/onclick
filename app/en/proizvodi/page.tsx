@@ -6,7 +6,7 @@ import { CTASection } from "@/components/CTASection";
 import { products } from "@/lib/data.en";
 
 export const metadata: Metadata = {
-  title: "Products – anchor & base price modules | On-Click",
+  title: "Products – anchor & base price modules",
   description:
     "Anchor price and base price modules with an online price list for OpenCart, PrestaShop and Joomla (VirtueMart and J2Store) — compliant with the Croatian requirement from 1 October 2026. Plus ready-made webshop solutions.",
   keywords: ["anchor price", "base price", "sidrena cijena", "bazna cijena", "OpenCart", "PrestaShop", "Joomla", "VirtueMart", "J2Store"],

@@ -6,7 +6,7 @@ import { CTASection } from "@/components/CTASection";
 import { whyUs } from "@/lib/data.en";
 
 export const metadata: Metadata = {
-  title: "About | On-Click",
+  title: "About",
   description:
     "On-Click is an IT company from Osijek with years of experience building websites, webshops and mobile apps.",
   alternates: {

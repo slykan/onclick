@@ -6,7 +6,7 @@ import { PageHero } from "@/components/PageHero";
 import { newsPosts } from "@/lib/data.en";
 
 export const metadata: Metadata = {
-  title: "News | On-Click",
+  title: "News",
   description: "News, tips and useful information from the world of web development and IT.",
   alternates: {
     canonical: "https://www.on-click.hr/en/novosti",

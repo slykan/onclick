@@ -7,7 +7,7 @@ import { MaintenancePlans } from "@/components/MaintenancePlans";
 import { pricingPlans, hostingPlans, maintenancePlans } from "@/lib/data.en";
 
 export const metadata: Metadata = {
-  title: "Pricing | On-Click",
+  title: "Pricing",
   description:
     "Flexible website, webshop and mobile app packages with no hidden costs.",
   alternates: {
