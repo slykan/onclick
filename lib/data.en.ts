@@ -397,6 +397,22 @@ export const portfolioProjects: PortfolioProject[] = [
     hideOnHome: true,
   },
   {
+    slug: "folding",
+    title: "Folding d.o.o.",
+    category: "Website / redesign",
+    description:
+      "A new website for a non-hazardous waste management company from Josipovac: clearly presented disposal services, a buy-back price list, certificates and a gallery of the facility, plus a pickup request form.",
+    highlights: [
+      "Waste disposal and document shredding services in one place",
+      "Buy-back price list for paper and foil",
+      "Certificates and permits (ISO 9001, ISO 14001, HACCP) as clear cards",
+      "Pickup request form with email delivery; mobile-friendly and SEO",
+    ],
+    url: "https://folding.hr",
+    image: "/images/folding-cover.jpg",
+    hideOnHome: true,
+  },
+  {
     slug: "mijo",
     title: "Mijo d.o.o.",
     category: "Website / redesign",

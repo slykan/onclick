@@ -425,6 +425,22 @@ export const portfolioProjects: PortfolioProject[] = [
     hideOnHome: true,
   },
   {
+    slug: "folding",
+    title: "Folding d.o.o.",
+    category: "Web stranica / redizajn",
+    description:
+      "Novi web za tvrtku za gospodarenje neopasnim otpadom iz Josipovca: jasno predstavljene usluge zbrinjavanja, cjenik malootkupa, certifikati i galerija pogona, uz obrazac za narudžbu odvoza.",
+    highlights: [
+      "Usluge zbrinjavanja otpada i uništenja arhive na jednom mjestu",
+      "Cjenik malootkupa papira i folije za građane",
+      "Certifikati i dozvole (ISO 9001, ISO 14001, HACCP) kao pregledne kartice",
+      "Obrazac za narudžbu odvoza sa slanjem na e-mail; prilagođeno mobitelu i SEO",
+    ],
+    url: "https://folding.hr",
+    image: "/images/folding-cover.jpg",
+    hideOnHome: true,
+  },
+  {
     slug: "mijo",
     title: "Mijo d.o.o.",
     category: "Web stranica / redizajn",
