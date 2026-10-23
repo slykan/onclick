@@ -493,6 +493,22 @@ export const portfolioProjects: PortfolioProject[] = [
     hideOnHome: true,
   },
   {
+    slug: "zrk-osijek",
+    title: "ŽRK Osijek",
+    category: "Website / sports club with automated content",
+    description:
+      "A new website for women’s handball club Osijek (since 1954). Nobody at the club has time to enter content by hand, so the site updates itself: fixtures, results, standings and news come in automatically from official sources.",
+    highlights: [
+      "Fixtures, results and the 1st Croatian Women’s League table pulled automatically from the Croatian Handball Federation API",
+      "Countdown to the next match and the latest result on the homepage",
+      "Automated news: match previews and reports, plus news from the federation and local portals",
+      "Handball school sign-up and contact form with email delivery; SEO",
+    ],
+    url: "https://zrkosijek.hr",
+    image: "/images/zrk-osijek-cover.jpg",
+    hideOnHome: true,
+  },
+  {
     slug: "mijo",
     title: "Mijo d.o.o.",
     category: "Website / redesign",

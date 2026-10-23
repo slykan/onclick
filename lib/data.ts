@@ -521,6 +521,22 @@ export const portfolioProjects: PortfolioProject[] = [
     hideOnHome: true,
   },
   {
+    slug: "zrk-osijek",
+    title: "ŽRK Osijek",
+    category: "Web stranica / sportski klub s automatskim sadržajem",
+    description:
+      "Novi web za Ženski rukometni klub Osijek (od 1954.). U klubu nema nikoga tko bi ručno unosio sadržaj, pa se web puni sam: raspored, rezultati, ljestvica i novosti stižu automatski sa službenih izvora.",
+    highlights: [
+      "Raspored, rezultati i ljestvica 1. HRL žene automatski iz službenog API-ja Hrvatskog rukometnog saveza",
+      "Odbrojavanje do sljedeće utakmice i zadnji rezultat na naslovnoj",
+      "Automatske novosti: najave i izvještaji utakmica te vijesti s HRS-a i lokalnih portala",
+      "Upis u školu rukometa i kontakt obrazac sa slanjem na e-mail; SEO",
+    ],
+    url: "https://zrkosijek.hr",
+    image: "/images/zrk-osijek-cover.jpg",
+    hideOnHome: true,
+  },
+  {
     slug: "mijo",
     title: "Mijo d.o.o.",
     category: "Web stranica / redizajn",
