@@ -441,7 +441,7 @@ export const portfolioProjects: PortfolioProject[] = [
       "Mobile-friendly and search-optimised (SEO)",
     ],
     url: "https://medihom.hr",
-    image: "/images/medihom-cover.jpg",
+    image: "/images/medihom-cover-2.jpg",
     hideOnHome: true,
   },
   {

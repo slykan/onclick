@@ -469,7 +469,7 @@ export const portfolioProjects: PortfolioProject[] = [
       "Prilagođeno mobitelu i tražilicama (SEO)",
     ],
     url: "https://medihom.hr",
-    image: "/images/medihom-cover.jpg",
+    image: "/images/medihom-cover-2.jpg",
     hideOnHome: true,
   },
   {
