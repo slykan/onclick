@@ -429,6 +429,22 @@ export const portfolioProjects: PortfolioProject[] = [
     hideOnHome: true,
   },
   {
+    slug: "medihom",
+    title: "Medihom",
+    category: "Website / redesign",
+    description:
+      "A new website for a homeopathy and integrative medicine centre in Zagreb: clearly presented methods and Dr. Ivana Blažević’s expertise, articles for patients and simple booking of appointments or online consultations.",
+    highlights: [
+      "Pages for homeopathy, iridology, Bio-Quantum, Bach flower remedies and tissue salts",
+      "News and expert articles for patients",
+      "Appointment and online consultation forms with email delivery",
+      "Mobile-friendly and search-optimised (SEO)",
+    ],
+    url: "https://medihom.hr",
+    image: "/images/medihom-cover.jpg",
+    hideOnHome: true,
+  },
+  {
     slug: "mijo",
     title: "Mijo d.o.o.",
     category: "Website / redesign",

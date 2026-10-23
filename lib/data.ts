@@ -457,6 +457,22 @@ export const portfolioProjects: PortfolioProject[] = [
     hideOnHome: true,
   },
   {
+    slug: "medihom",
+    title: "Medihom",
+    category: "Web stranica / redizajn",
+    description:
+      "Novi web za centar za homeopatiju i integrativnu medicinu u Zagrebu: pregledno predstavljene metode i stručnost dr. Ivane Blažević, članci za pacijente i jednostavno naručivanje termina ili online konzultacija.",
+    highlights: [
+      "Stranice za homeopatiju, iridologiju, Bio-Quantum, Bachove kapi i tissue salts",
+      "Novosti i stručni članci za pacijente",
+      "Obrasci za termin i online konzultacije sa slanjem na e-mail",
+      "Prilagođeno mobitelu i tražilicama (SEO)",
+    ],
+    url: "https://medihom.hr",
+    image: "/images/medihom-cover.jpg",
+    hideOnHome: true,
+  },
+  {
     slug: "mijo",
     title: "Mijo d.o.o.",
     category: "Web stranica / redizajn",
