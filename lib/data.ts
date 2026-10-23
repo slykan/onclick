@@ -489,6 +489,22 @@ export const portfolioProjects: PortfolioProject[] = [
     hideOnHome: true,
   },
   {
+    slug: "limbo",
+    title: "Limbo d.o.o.",
+    category: "Web stranica / redizajn",
+    description:
+      "Novi web za distributera sredstava za higijenu, dezinfekciju i zaštitnu opremu iz Osijeka: stara Joomla stranica s nedovršenim sadržajem zamijenjena je preglednom stranicom na kojoj tvrtke biraju proizvode i odmah šalju upit.",
+    highlights: [
+      "Asortiman po kategorijama s pakiranjima i certifikatima",
+      "„Dodaj u upit” na svakom proizvodu: odabrani proizvodi sami se upišu u obrazac",
+      "Upit za tvrtke (naziv i OIB za R1) ili privatne osobe, sa slanjem na e-mail",
+      "Prilagođeno mobitelu i tražilicama (SEO, strukturirani podaci)",
+    ],
+    url: "https://limbo.hr",
+    image: "/images/limbo-cover.jpg",
+    hideOnHome: true,
+  },
+  {
     slug: "mijo",
     title: "Mijo d.o.o.",
     category: "Web stranica / redizajn",

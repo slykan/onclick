@@ -461,6 +461,22 @@ export const portfolioProjects: PortfolioProject[] = [
     hideOnHome: true,
   },
   {
+    slug: "limbo",
+    title: "Limbo d.o.o.",
+    category: "Website / redesign",
+    description:
+      "A new website for a hygiene, disinfection and protective equipment distributor from Osijek: an old Joomla site with unfinished content replaced with a clear page where businesses pick products and send an enquiry right away.",
+    highlights: [
+      "Product range by category, with pack sizes and certificates",
+      "“Add to enquiry” on every product: chosen products fill the form automatically",
+      "Enquiries for companies (name and VAT ID for invoicing) or individuals, with email delivery",
+      "Mobile-friendly and search-optimised (SEO, structured data)",
+    ],
+    url: "https://limbo.hr",
+    image: "/images/limbo-cover.jpg",
+    hideOnHome: true,
+  },
+  {
     slug: "mijo",
     title: "Mijo d.o.o.",
     category: "Website / redesign",
