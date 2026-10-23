@@ -377,6 +377,22 @@ export const portfolioProjects: PortfolioProject[] = [
     image: "/images/gajba-cover.jpg",
   },
   {
+    slug: "hns-osijek",
+    title: "HNS Osijek",
+    category: "Web + vlastiti CMS / političko udruženje",
+    description:
+      "Novi web podružnice HNS-a u Osijeku: stara Joomla stranica zamijenjena je vlastitim CMS-om izrađenim od nule. Prenesene su 404 novosti i sve stranice, a stare adrese i dalje vode na novi sadržaj.",
+    highlights: [
+      "Vlastiti CMS: novosti, stranice, izbornik, popup obavijesti i privitci za preuzimanje",
+      "Galerije slika uz novosti, sa smanjivanjem fotografija pri učitavanju",
+      "Uvoz cijelog starog weba (K2) i automatska preusmjeravanja starih adresa",
+      "Pristupnica u 3 koraka i kontakt obrazac sa slanjem na e-mail",
+      "SEO: sitemap, RSS i strukturirani podaci; prilagođeno mobitelu",
+    ],
+    url: "https://hns-osijek.com",
+    image: "/images/hns-osijek-cover.jpg",
+  },
+  {
     slug: "mijo",
     title: "Mijo d.o.o.",
     category: "Web stranica / redizajn",
