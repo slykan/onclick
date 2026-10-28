@@ -630,6 +630,7 @@ export const pricingPlans: PricingPlan[] = [
       "API integracije",
       "Dugoročna podrška i održavanje",
       "Namjenski projektni tim",
+      "AI driven",
     ],
   },
 ];

@@ -594,6 +594,7 @@ export const pricingPlans: PricingPlan[] = [
       "API integrations",
       "Long-term support and maintenance",
       "Dedicated project team",
+      "AI driven",
     ],
   },
 ];
