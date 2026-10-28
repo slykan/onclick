@@ -53,7 +53,7 @@ export default function CijenePage() {
                     plan.highlighted ? "text-white/70" : "text-ink"
                   }`}
                 >
-                  Sidrena cijena: {plan.price}
+                  Sidrena cijena: {plan.anchorPrice ?? plan.price}
                 </p>
               )}
               <p

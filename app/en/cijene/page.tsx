@@ -53,7 +53,7 @@ export default function CijenePageEn() {
                     plan.highlighted ? "text-white/70" : "text-ink"
                   }`}
                 >
-                  Anchor price: {plan.price}
+                  Anchor price: {plan.anchorPrice ?? plan.price}
                 </p>
               )}
               <p

@@ -588,6 +588,8 @@ export const portfolioProjects: PortfolioProject[] = [
 export type PricingPlan = {
   name: string;
   price: string;
+  /** Sidrena cijena kad se razlikuje od cijene (npr. nakon sniženja); inače se prikazuje price. */
+  anchorPrice?: string;
   description: string;
   features: string[];
   highlighted?: boolean;
@@ -596,7 +598,8 @@ export type PricingPlan = {
 export const pricingPlans: PricingPlan[] = [
   {
     name: "Osnovni",
-    price: "od 990 €",
+    price: "od 550 €",
+    anchorPrice: "od 990 €",
     description: "Za manje tvrtke i obrte kojima treba jednostavna, profesionalna prezentacija.",
     features: [
       "Do 5 stranica",
@@ -607,7 +610,8 @@ export const pricingPlans: PricingPlan[] = [
   },
   {
     name: "Napredni",
-    price: "od 3.000 €",
+    price: "od 1.500 €",
+    anchorPrice: "od 3.000 €",
     description: "Za tvrtke kojima treba webshop ili napredniji web nastup.",
     features: [
       "Webshop ili napredna web stranica",
