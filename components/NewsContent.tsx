@@ -1,5 +1,5 @@
 import Link from "next/link";
-import { ArrowRight, ExternalLink } from "lucide-react";
+import { ArrowRight, ExternalLink, Minus, Plus } from "lucide-react";
 import type { NewsPost } from "@/lib/data";
 
 /** Sadržaj članka: odlomci (string) i blokovi (podnaslov, popis, napomena, poveznice, CTA). */
@@ -47,6 +47,39 @@ export function NewsContent({ content }: { content: NewsPost["content"] }) {
                   </li>
                 ))}
               </ul>
+            );
+          case "proscons":
+            return (
+              <div key={i} className="space-y-4">
+                {block.items.map((item, j) => (
+                  <div
+                    key={j}
+                    className={`border p-5 ${
+                      item.recommended ? "border-2 border-brand-green bg-brand-green/10" : "border-line bg-paper"
+                    }`}
+                  >
+                    <h3 className="font-semibold text-ink">{item.title}</h3>
+                    <div className="mt-3 grid grid-cols-1 gap-x-6 gap-y-1.5 text-sm sm:grid-cols-2">
+                      <ul className="space-y-1.5">
+                        {item.pros.map((p, k) => (
+                          <li key={k} className="flex gap-2">
+                            <Plus className="mt-0.5 h-4 w-4 shrink-0 text-brand-green-dark" />
+                            {p}
+                          </li>
+                        ))}
+                      </ul>
+                      <ul className="space-y-1.5">
+                        {item.cons.map((c, k) => (
+                          <li key={k} className="flex gap-2">
+                            <Minus className="mt-0.5 h-4 w-4 shrink-0 text-red-600" />
+                            {c}
+                          </li>
+                        ))}
+                      </ul>
+                    </div>
+                  </div>
+                ))}
+              </div>
             );
           case "cta":
             return (

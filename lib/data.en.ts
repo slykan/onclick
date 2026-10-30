@@ -811,6 +811,95 @@ export const hostingPlans: HostingPlan[] = [
 
 export const newsPosts: NewsPost[] = [
   {
+    slug: "ai-webshop-ili-provjereni-engine-s-ai-frontom",
+    title: "A fully AI-built webshop or a proven engine with an AI front?",
+    excerpt:
+      "AI can now build an entire webshop in a few hours. Why we still recommend a proven engine for orders, payments and stock, AI for what customers see – and when a custom CMS makes sense.",
+    date: "2026-10-30",
+    content: [
+      "AI tools can now generate an entire webshop in a few hours: design, cart, checkout, admin. It sounds like a shortcut, but a webshop is more than a shop window – behind it are money, taxes, stock and customer data. That is why we combine the two: a proven engine for everything that must work without fail, and AI for what customers see and what changes often.",
+      { type: "h2", text: "Where a fully AI-built webshop falls short" },
+      {
+        type: "ul",
+        items: [
+          "Cart and checkout: edge cases (coupons, VAT, shipping abroad, partial refunds) only show up once real customers start buying.",
+          "Security: nobody has reviewed the generated code line by line, yet the shop handles payments and personal data (GDPR).",
+          "Maintenance: when something breaks there is no documentation or community that has already solved the same problem – every fix starts from scratch.",
+          "Legal requirements: fiscalization, the base price, a machine-readable price list and consumer protection rules have to be built in and maintained by hand.",
+          "Lock-in: some AI builder platforms keep your shop on their side, so moving or customizing it means rebuilding.",
+        ],
+      },
+      { type: "h2", text: "What a proven engine gives you" },
+      "WooCommerce, OpenCart, PrestaShop and Magento have processed millions of orders over the years. Orders, payments, stock, taxes, customer accounts and admin are already tested, receive security updates and come with ready-made modules for Croatian banks, couriers and fiscalization.",
+      { type: "h2", text: "Where AI really makes a difference: the front" },
+      {
+        type: "ul",
+        items: [
+          "Homepage, landing pages and campaigns built to measure, free from the limits of an off-the-shelf theme.",
+          "Faster loading and better Google results (Core Web Vitals, SEO).",
+          "New pages and design changes in days rather than weeks.",
+          "If the front changes or something goes wrong, orders and data stay safe in the engine.",
+        ],
+      },
+      { type: "h2", text: "When to go with a custom CMS" },
+      "When a business does not fit any ready-made engine – special processes, categories, results, bookings or content edited in its own way – we build a lightweight CMS exactly to measure, as we did for HNS Osijek and Gajba. The admin then has only what you need, without hundreds of options nobody uses.",
+      { type: "h2", text: "In short: pros (+) and cons (–) of each option" },
+      {
+        type: "proscons",
+        items: [
+          {
+            title: "Fully AI-built webshop",
+            pros: ["Fastest start and lowest initial cost.", "Completely custom design."],
+            cons: [
+              "Untested checkout, taxes and security.",
+              "Hard to maintain and upgrade.",
+              "You build in and track legal requirements yourself.",
+            ],
+          },
+          {
+            title: "Proven engine + AI front",
+            recommended: true,
+            pros: [
+              "Orders, payments and stock work reliably from day one.",
+              "Regular security updates and ready-made modules (banks, couriers, fiscalization).",
+              "Fast, modern custom look.",
+            ],
+            cons: [
+              "The engine needs regular maintenance.",
+              "Front and engine must be kept in sync, so the build is a bit more demanding than an off-the-shelf theme.",
+            ],
+          },
+          {
+            title: "Custom CMS",
+            pros: ["Built exactly around your process, with no unnecessary options.", "Lightweight and fast, simple admin."],
+            cons: ["Higher initial investment.", "New features have to be developed, there are no ready-made add-ons."],
+          },
+        ],
+      },
+      { type: "h2", text: "Connectivity and integrations" },
+      {
+        type: "ul",
+        items: [
+          "ERP and accounting software – products, prices and stock in one place.",
+          "Fiscalization and e-invoices.",
+          "Card payments and courier services.",
+          "Base price and an automatic CSV/XML price list.",
+          "Google Merchant, Facebook catalogue and price comparison sites.",
+        ],
+      },
+      {
+        type: "note",
+        text: "In short: an engine for money and data, AI for looks and speed, a custom CMS when ready-made solutions do not fit. Pricing is agreed based on the project's scope.",
+      },
+      {
+        type: "cta",
+        text: "Is your webshop slow or outdated, or are you just planning a new one? Get in touch and we will suggest the combination that suits your business.",
+        label: "Let's talk about your project",
+        href: "/en/kontakt",
+      },
+    ],
+  },
+  {
     slug: "bazna-cijena-od-17-studenoga-2026",
     title: "Base price from 17 November 2026 – what it means for your webshop",
     excerpt:

@@ -871,7 +871,8 @@ export type NewsBlock =
   | { type: "ul"; items: string[] }
   | { type: "note"; text: string }
   | { type: "links"; items: { label: string; href: string; note?: string }[] }
-  | { type: "cta"; text: string; label: string; href: string };
+  | { type: "cta"; text: string; label: string; href: string }
+  | { type: "proscons"; items: { title: string; recommended?: boolean; pros: string[]; cons: string[] }[] };
 
 export type NewsPost = {
   slug: string;
@@ -882,6 +883,95 @@ export type NewsPost = {
 };
 
 export const newsPosts: NewsPost[] = [
+  {
+    slug: "ai-webshop-ili-provjereni-engine-s-ai-frontom",
+    title: "Webshop „u potpunosti AI” ili provjereni engine s AI frontom?",
+    excerpt:
+      "AI danas može izraditi cijeli webshop u nekoliko sati. Zašto ipak preporučujemo provjereni engine za narudžbe, plaćanja i zalihe, a AI za ono što kupac vidi – i kada ima smisla custom CMS.",
+    date: "2026-10-30",
+    content: [
+      "Alati umjetne inteligencije danas mogu u nekoliko sati izgenerirati cijeli webshop: dizajn, košaricu, naplatu, administraciju. Zvuči kao prečac, ali webshop nije samo izlog – iza njega su novac, porezi, zalihe i podaci kupaca. Zato radimo kombinaciju: dokazani engine za ono što mora raditi bez greške, a AI za ono što kupac vidi i što se često mijenja.",
+      { type: "h2", text: "Gdje „sve AI” webshop zapinje" },
+      {
+        type: "ul",
+        items: [
+          "Košarica i naplata: rubni slučajevi (kuponi, PDV, dostava u inozemstvo, djelomični povrati) otkrivaju se tek kad pravi kupci počnu kupovati.",
+          "Sigurnost: generirani kod nitko nije pregledao redak po redak, a webshop obrađuje plaćanja i osobne podatke (GDPR).",
+          "Održavanje: kad nešto zapne, nema dokumentacije ni zajednice koja je isti problem već riješila – sve se popravlja ispočetka.",
+          "Zakonske obveze: fiskalizacija, bazna cijena, strojno čitljiv cjenik i pravila zaštite potrošača moraju se svaki put ručno ugraditi i održavati.",
+          "Vezanost uz alat: dio „AI builder” platformi drži trgovinu kod sebe, pa selidba ili prilagodba znači izradu ispočetka.",
+        ],
+      },
+      { type: "h2", text: "Što dobivate s provjerenim engineom" },
+      "WooCommerce, OpenCart, PrestaShop ili Magento godinama obrađuju milijune narudžbi. Narudžbe, plaćanja, zalihe, porezi, korisnički računi i administracija već su testirani, dobivaju sigurnosne nadogradnje i imaju gotove module za hrvatske banke, kurirske službe i fiskalizaciju.",
+      { type: "h2", text: "Gdje AI zaista donosi razliku: front" },
+      {
+        type: "ul",
+        items: [
+          "Naslovnica, landing stranice i kampanje izrađene po mjeri, bez ograničenja gotove teme.",
+          "Brže učitavanje i bolji rezultati u Googleu (Core Web Vitals, SEO).",
+          "Nove stranice i promjene dizajna u danima umjesto tjednima.",
+          "Ako se front mijenja ili nešto pođe po zlu, narudžbe i podaci ostaju sigurni u engineu.",
+        ],
+      },
+      { type: "h2", text: "Kada custom CMS" },
+      "Kad poslovanje ne stane ni u jedan gotov engine – posebni procesi, kategorije, rezultati, rezervacije ili sadržaj koji se uređuje na svoj način – izrađujemo lagani CMS točno po mjeri, kao za HNS Osijek ili Gajbu. Administracija tada ima samo ono što vam treba, bez stotina opcija koje nitko ne koristi.",
+      { type: "h2", text: "Ukratko: + i – za svaku opciju" },
+      {
+        type: "proscons",
+        items: [
+          {
+            title: "„Sve AI” webshop",
+            pros: ["Najbrži početak i najniža početna cijena.", "Dizajn potpuno po želji."],
+            cons: [
+              "Neprovjerena naplata, porezi i sigurnost.",
+              "Teško održavanje i nadogradnja.",
+              "Zakonske obveze ugrađujete i pratite sami.",
+            ],
+          },
+          {
+            title: "Provjereni engine + AI front",
+            recommended: true,
+            pros: [
+              "Narudžbe, plaćanja i zalihe rade pouzdano od prvog dana.",
+              "Redovite sigurnosne nadogradnje i gotovi moduli (banke, kuriri, fiskalizacija).",
+              "Brz i moderan izgled po mjeri.",
+            ],
+            cons: [
+              "Engine traži redovito održavanje.",
+              "Front i engine treba uskladiti, pa je izrada malo zahtjevnija od gotove teme.",
+            ],
+          },
+          {
+            title: "Custom CMS",
+            pros: ["Točno po vašem procesu, bez suvišnih opcija.", "Lagan i brz, jednostavna administracija."],
+            cons: ["Veća početna investicija.", "Nove funkcije treba razviti, nema gotovih dodataka."],
+          },
+        ],
+      },
+      { type: "h2", text: "Povezivost i integracije" },
+      {
+        type: "ul",
+        items: [
+          "ERP i knjigovodstveni programi – artikli, cijene i zalihe na jednom mjestu.",
+          "Fiskalizacija i e-računi.",
+          "Kartična plaćanja i kurirske službe.",
+          "Bazna cijena i automatski cjenik u CSV/XML formatu.",
+          "Google Merchant, Facebook katalog i usporednici cijena.",
+        ],
+      },
+      {
+        type: "note",
+        text: "Ukratko: engine za novac i podatke, AI za izgled i brzinu, custom CMS kad gotova rješenja ne odgovaraju. Cijenu dogovaramo prema opsegu projekta.",
+      },
+      {
+        type: "cta",
+        text: "Imate webshop koji je spor ili zastario, ili tek planirate novi? Javite nam se i predložit ćemo kombinaciju koja odgovara vašem poslovanju.",
+        label: "Razgovarajmo o projektu",
+        href: "/kontakt",
+      },
+    ],
+  },
   {
     slug: "bazna-cijena-od-17-studenoga-2026",
     title: "Bazna cijena od 17. studenoga 2026. – što to znači za vaš webshop",
