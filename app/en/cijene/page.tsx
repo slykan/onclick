@@ -1,6 +1,6 @@
 import type { Metadata } from "next";
 import Link from "next/link";
-import { Check } from "lucide-react";
+import { Check, Sparkles } from "lucide-react";
 import { Container } from "@/components/Container";
 import { PageHero } from "@/components/PageHero";
 import { MaintenancePlans } from "@/components/MaintenancePlans";
@@ -87,6 +87,46 @@ export default function CijenePageEn() {
               </Link>
             </div>
           ))}
+
+          <div className="flex flex-col gap-8 rounded-2xl bg-brand-green p-8 text-ink lg:col-span-3 lg:flex-row lg:items-center lg:justify-between lg:p-10">
+            <div className="max-w-3xl">
+              <p className="inline-flex items-center gap-2 text-xs font-semibold uppercase tracking-widest">
+                <Sparkles className="h-4 w-4" />
+                Tailor-made
+              </p>
+              <h3 className="mt-3 text-2xl font-semibold tracking-tight sm:text-3xl">
+                AI-driven custom CMS for webshops and websites
+              </h3>
+              <p className="mt-3 text-base leading-relaxed text-ink/80">
+                A CMS built exactly around your business, or a proven engine
+                (WooCommerce, Shopify, Laravel…) combined with fast AI-built
+                front pages. We connect everything you already use.
+              </p>
+              <ul className="mt-5 flex flex-wrap gap-2 text-sm font-medium">
+                {[
+                  "Custom CMS",
+                  "Proven engine + AI front",
+                  "Connectivity and integrations",
+                  "ERP, fiscalization, payments, shipping",
+                ].map((item) => (
+                  <li key={item} className="inline-flex items-center gap-1.5 bg-ink/10 px-3 py-1.5">
+                    <Check className="h-4 w-4 shrink-0" />
+                    {item}
+                  </li>
+                ))}
+              </ul>
+            </div>
+            <div className="shrink-0 lg:text-right">
+              <p className="text-sm font-medium text-ink/70">Price</p>
+              <p className="text-3xl font-semibold">On request</p>
+              <Link
+                href="/en/kontakt"
+                className="mt-4 inline-flex items-center justify-center rounded-none bg-ink px-5 py-3 text-sm font-semibold text-white transition-colors hover:bg-ink-light"
+              >
+                Let&apos;s talk about your project
+              </Link>
+            </div>
+          </div>
         </Container>
       </section>
 
