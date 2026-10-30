@@ -125,6 +125,12 @@ export default function CijenePageEn() {
               >
                 Let&apos;s talk about your project
               </Link>
+              <Link
+                href="/en/novosti/ai-webshop-ili-provjereni-engine-s-ai-frontom"
+                className="mt-3 block text-sm font-semibold underline underline-offset-4 hover:text-white"
+              >
+                Read why engine + AI front →
+              </Link>
             </div>
           </div>
         </Container>
