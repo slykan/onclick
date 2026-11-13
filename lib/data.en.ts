@@ -828,6 +828,53 @@ export const hostingPlans: HostingPlan[] = [
 
 export const newsPosts: NewsPost[] = [
   {
+    slug: "puls-nas-novi-proizvod",
+    title: "Puls: see who is on your website right now, and reply instantly",
+    excerpt:
+      "Introducing Puls, our own product. It shows who is on your website right now, where they came from and what they are looking at, and the chat lets you reply on the spot. No cookies and no cookie banner.",
+    date: "2026-11-13",
+    content: [
+      "Most analytics tools tell you how many people visited your website last week. Puls tells you who is on it right now: which page they came from, what they are looking at and which city they are in. If they have a question, they can message you in the chat and you reply from Puls or your phone. We built Puls for ourselves and our clients, and from today we offer it to everyone.",
+      { type: "h2", text: "What Puls does" },
+      {
+        type: "ul",
+        items: [
+          "Live view: visitors who are on your site right now, with the full link of the page they are viewing, city, source and device.",
+          "Analytics: visits, pageviews and visitors by hour, day, week and month, for one site or all together, with a chart and comparison to the previous period.",
+          "Where they come from: Google, Facebook, Instagram, campaigns (UTM) and the exact pages that linked to your site.",
+          "Chat widget: a bubble in your brand colour, in the corner you choose. Visitors enter their name and email, and the whole conversation is saved with date and time.",
+          "Notifications: a sound and a push notification on your phone for every new visit or message. When you are offline, messages arrive by email, and so do your replies to the visitor.",
+        ],
+      },
+      { type: "h2", text: "No cookies, no cookie banner" },
+      "Puls does not track visitors with cookies and does not store IP addresses. Each visit is recognised by an anonymous code that changes every day, so analytics need no consent and no cookie banner. The chat stores only what the visitor types in, and only with their explicit confirmation.",
+      { type: "h2", text: "One line of code" },
+      "You add a single line of code to your site, whether it is WordPress, a webshop, a landing page or a custom app. The chat is switched on with a checkbox in Puls, with no changes to the site. The script is small and loads after your content, so it does not slow the page down.",
+      { type: "h2", text: "Web and mobile app" },
+      "Puls works in any browser, and on a phone it can be added to the home screen, where it behaves like an app with push notifications. A native iOS and Android app is in development.",
+      { type: "h2", text: "Who it is for" },
+      {
+        type: "ul",
+        items: [
+          "Webshops that want to answer a customer while they are still on the product page.",
+          "Service businesses (restaurants, apartments, repair shops, clinics) where one quick reply means a booking.",
+          "Landing pages and campaigns, to see which ad really brings people in.",
+          "Anyone who gave up on Google Analytics because it is too complicated or requires a cookie banner.",
+        ],
+      },
+      {
+        type: "links",
+        items: [{ label: "puls.on-click.hr", href: "https://puls.on-click.hr", note: "sign in to Puls" }],
+      },
+      {
+        type: "cta",
+        text: "Want Puls on your website, or see it in action first? Get in touch and we will show it to you on your own site.",
+        label: "Request a demo",
+        href: "/en/kontakt",
+      },
+    ],
+  },
+  {
     slug: "ai-webshop-ili-provjereni-engine-s-ai-frontom",
     title: "A fully AI-built webshop or a proven engine with an AI front?",
     excerpt:

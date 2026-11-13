@@ -901,6 +901,53 @@ export type NewsPost = {
 
 export const newsPosts: NewsPost[] = [
   {
+    slug: "puls-nas-novi-proizvod",
+    title: "Puls: tko vam je sada na stranici, i kako mu odmah odgovoriti",
+    excerpt:
+      "Predstavljamo Puls, naš vlastiti proizvod. Pokazuje tko je upravo na vašoj stranici, odakle je došao i što gleda, a preko chata mu možete odgovoriti u istom trenutku. Bez kolačića i bez cookie bannera.",
+    date: "2026-11-13",
+    content: [
+      "Većina alata za statistiku kaže vam koliko je ljudi bilo na stranici prošli tjedan. Puls vam kaže tko je na njoj sada: s koje stranice je došao, što trenutno gleda i iz kojeg je grada. Ako ima pitanje, može vam napisati u chat, a vi mu odgovarate iz Pulsa ili s mobitela. Puls smo napravili za sebe i svoje klijente, a od danas ga nudimo svima.",
+      { type: "h2", text: "Što Puls radi" },
+      {
+        type: "ul",
+        items: [
+          "Uživo: popis posjetitelja koji su trenutno na stranici, s punim linkom stranice koju gledaju, gradom, izvorom i uređajem.",
+          "Statistika: posjeti, pregledi i posjetitelji po satu, danu, tjednu i mjesecu, za jednu stranicu ili sve zajedno, s grafom i usporedbom s prethodnim razdobljem.",
+          "Odakle dolaze: Google, Facebook, Instagram, kampanje (UTM) i točne adrese s kojih su kliknuli na vašu stranicu.",
+          "Chat widget: oblačić u boji vaše stranice, u kutu koji odaberete. Posjetitelj upiše ime i e-mail, a cijeli razgovor ostaje spremljen s datumom i vremenom.",
+          "Obavijesti: zvuk i push na mobitel za svaki novi posjet ili poruku. Kad niste online, poruka stiže na e-mail, a vaš odgovor posjetitelju također.",
+        ],
+      },
+      { type: "h2", text: "Bez kolačića, bez cookie bannera" },
+      "Puls posjetitelje ne prati kolačićima i ne sprema IP adrese. Svaki posjet prepoznaje se anonimnim kodom koji se mijenja svaki dan, pa za statistiku ne treba pristanak ni cookie banner. Chat sprema samo ono što posjetitelj sam upiše, i to uz njegovu izričitu potvrdu.",
+      { type: "h2", text: "Ugradnja jednim redom koda" },
+      "Na stranicu se dodaje jedan red koda, bilo da je riječ o WordPressu, webshopu, landing stranici ili aplikaciji po mjeri. Chat se uključuje kvačicom u Pulsu, bez ikakvih promjena na stranici. Skripta je mala i učitava se nakon sadržaja, pa ne usporava stranicu.",
+      { type: "h2", text: "Web i mobilna aplikacija" },
+      "Puls radi u svakom pregledniku, a na mobitelu se može dodati na početni zaslon i ponaša se kao aplikacija, s push obavijestima. Izvorna mobilna aplikacija za iOS i Android je u izradi.",
+      { type: "h2", text: "Kome je namijenjen" },
+      {
+        type: "ul",
+        items: [
+          "Webshopovima koji žele kupcu odgovoriti dok je još na stranici proizvoda.",
+          "Uslužnim djelatnostima (restorani, apartmani, servisi, ordinacije) gdje jedan brzi odgovor znači rezervaciju.",
+          "Landing stranicama i kampanjama, da se vidi koji oglas stvarno dovodi ljude.",
+          "Svima koji su odustali od Google Analyticsa jer je prekompliciran ili traži cookie banner.",
+        ],
+      },
+      {
+        type: "links",
+        items: [{ label: "puls.on-click.hr", href: "https://puls.on-click.hr", note: "prijava u Puls" }],
+      },
+      {
+        type: "cta",
+        text: "Želite Puls na svojoj stranici ili prvo vidjeti kako radi? Javite nam se i pokazat ćemo vam ga na vašoj stranici.",
+        label: "Zatražite demo",
+        href: "/kontakt",
+      },
+    ],
+  },
+  {
     slug: "ai-webshop-ili-provjereni-engine-s-ai-frontom",
     title: "Webshop „u potpunosti AI” ili provjereni engine s AI frontom?",
     excerpt:
