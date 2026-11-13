@@ -620,6 +620,15 @@ const corvuspayNote = [
   "Installation, communication with CorvusPay, testing and configuration of the CorvusPay interface (charged separately if required).",
 ];
 
+/** Puls pricing, shown in the description of both plans */
+const pulsPricing = [
+  "Pricing (per website):",
+  "Puls Analytics: €9.00 per month or €90.00 per year",
+  "Puls Pro (analytics + chat): €19.00 per month or €190.00 per year",
+  "Annual billing = two months free.",
+  "14-day free trial, no obligation. Setup is included for our clients, €50.00 one-off for others.",
+];
+
 export const products: Product[] = [
   {
     slug: "puls-statistika",
@@ -634,10 +643,7 @@ export const products: Product[] = [
       "Push notifications and a sound for every new visit",
       "Web and mobile, no cookies and no cookie banner",
     ],
-    note: [
-      "Price is per website, per month. Annual billing: €90.00 (two months free).",
-      "14-day free trial; setup is included for our clients.",
-    ],
+    note: pulsPricing,
     demoUrl: "https://puls.on-click.hr",
     price: "9,00 € / mo",
   },
@@ -654,10 +660,7 @@ export const products: Product[] = [
       "Full conversation saved with date and time",
       "Email alerts when you are offline, replies reach the visitor by email",
     ],
-    note: [
-      "Price is per website, per month. Annual billing: €190.00 (two months free).",
-      "14-day free trial; setup is included for our clients.",
-    ],
+    note: pulsPricing,
     demoUrl: "https://puls.on-click.hr",
     price: "19,00 € / mo",
   },
@@ -892,6 +895,16 @@ export const newsPosts: NewsPost[] = [
       "You add a single line of code to your site, whether it is WordPress, a webshop, a landing page or a custom app. The chat is switched on with a checkbox in Puls, with no changes to the site. The script is small and loads after your content, so it does not slow the page down.",
       { type: "h2", text: "Web and mobile app" },
       "Puls works in any browser, and on a phone it can be added to the home screen, where it behaves like an app with push notifications. A native iOS and Android app is in development.",
+      { type: "h2", text: "Pricing" },
+      {
+        type: "ul",
+        items: [
+          "Puls Analytics: €9.00 per month or €90.00 per year per website (live view, analytics, sources and referrers, notifications).",
+          "Puls Pro: €19.00 per month or €190.00 per year per website (everything in Analytics + chat widget, file sharing and email alerts).",
+          "14-day free trial, no obligation. Annual billing gives you two months free.",
+          "Setup is included for our clients, €50.00 one-off for others.",
+        ],
+      },
       { type: "h2", text: "Who it is for" },
       {
         type: "ul",

@@ -668,6 +668,15 @@ const corvuspayNote = [
   "Instalacija, komunikacija sa CorvusPay, testiranje i podešavanje CorvusPay sučelja (ukoliko je potrebno dodatno naplaćujemo).",
 ];
 
+/** Cjenik Pulsa, prikazuje se u opisu oba paketa */
+const pulsCjenik = [
+  "Cjenik (po web stranici):",
+  "Puls Statistika: 9,00 € mjesečno ili 90,00 € godišnje",
+  "Puls Pro (statistika + chat): 19,00 € mjesečno ili 190,00 € godišnje",
+  "Godišnje plaćanje = dva mjeseca gratis.",
+  "14 dana besplatne probe, bez obveze. Za naše klijente postavljanje je uključeno, za ostale jednokratno 50,00 €.",
+];
+
 export const products: Product[] = [
   {
     slug: "puls-statistika",
@@ -682,10 +691,7 @@ export const products: Product[] = [
       "Push obavijesti na mobitel i zvuk za svaki novi posjet",
       "Web i mobilno, bez kolačića i cookie bannera",
     ],
-    note: [
-      "Cijena je po web stranici, mjesečno. Godišnje plaćanje: 90,00 € (dva mjeseca gratis).",
-      "14 dana besplatne probe, a za naše klijente postavljanje je uključeno.",
-    ],
+    note: pulsCjenik,
     demoUrl: "https://puls.on-click.hr",
     price: "9,00 € / mj",
   },
@@ -702,10 +708,7 @@ export const products: Product[] = [
       "Cijeli razgovor spremljen s datumom i vremenom",
       "Obavijesti na e-mail kad niste online, odgovor posjetitelju i na mail",
     ],
-    note: [
-      "Cijena je po web stranici, mjesečno. Godišnje plaćanje: 190,00 € (dva mjeseca gratis).",
-      "14 dana besplatne probe, a za naše klijente postavljanje je uključeno.",
-    ],
+    note: pulsCjenik,
     demoUrl: "https://puls.on-click.hr",
     price: "19,00 € / mj",
   },
@@ -965,6 +968,16 @@ export const newsPosts: NewsPost[] = [
       "Na stranicu se dodaje jedan red koda, bilo da je riječ o WordPressu, webshopu, landing stranici ili aplikaciji po mjeri. Chat se uključuje kvačicom u Pulsu, bez ikakvih promjena na stranici. Skripta je mala i učitava se nakon sadržaja, pa ne usporava stranicu.",
       { type: "h2", text: "Web i mobilna aplikacija" },
       "Puls radi u svakom pregledniku, a na mobitelu se može dodati na početni zaslon i ponaša se kao aplikacija, s push obavijestima. Izvorna mobilna aplikacija za iOS i Android je u izradi.",
+      { type: "h2", text: "Cjenik" },
+      {
+        type: "ul",
+        items: [
+          "Puls Statistika: 9,00 € mjesečno ili 90,00 € godišnje po web stranici (uživo, statistika, izvori i referali, obavijesti).",
+          "Puls Pro: 19,00 € mjesečno ili 190,00 € godišnje po web stranici (sve iz Statistike + chat widget, slanje datoteka i obavijesti na e-mail).",
+          "14 dana besplatne probe, bez obveze. Godišnje plaćanje donosi dva mjeseca gratis.",
+          "Za naše klijente postavljanje je uključeno, za ostale jednokratno 50,00 €.",
+        ],
+      },
       { type: "h2", text: "Kome je namijenjen" },
       {
         type: "ul",
