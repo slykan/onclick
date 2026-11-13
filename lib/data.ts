@@ -670,6 +670,46 @@ const corvuspayNote = [
 
 export const products: Product[] = [
   {
+    slug: "puls-statistika",
+    title: "Puls Statistika",
+    image: "/images/products/puls.jpg",
+    description:
+      "Tko vam je sada na stranici, odakle je došao i što gleda. Statistika posjeta bez kolačića i bez cookie bannera, ugradnja jednim redom koda.",
+    features: [
+      "Posjetitelji uživo s punim linkom stranice, gradom i izvorom",
+      "Statistika po satu, danu, tjednu i mjesecu, s grafom",
+      "Izvori i referali: Google, Facebook, kampanje (UTM), točni linkovi",
+      "Push obavijesti na mobitel i zvuk za svaki novi posjet",
+      "Web i mobilno, bez kolačića i cookie bannera",
+    ],
+    note: [
+      "Cijena je po web stranici, mjesečno. Godišnje plaćanje: 90,00 € (dva mjeseca gratis).",
+      "14 dana besplatne probe, a za naše klijente postavljanje je uključeno.",
+    ],
+    demoUrl: "https://puls.on-click.hr",
+    price: "9,00 € / mj",
+  },
+  {
+    slug: "puls-pro",
+    title: "Puls Pro (statistika + chat)",
+    image: "/images/products/puls.jpg",
+    description:
+      "Sve iz Puls Statistike i chat widget: posjetitelju odgovarate dok je još na stranici, iz Pulsa ili s mobitela.",
+    features: [
+      "Sve iz paketa Puls Statistika",
+      "Chat widget u boji vaše stranice, u kutu koji odaberete",
+      "Slanje datoteka u oba smjera: cjenici, ponude, slike (do 10 MB)",
+      "Cijeli razgovor spremljen s datumom i vremenom",
+      "Obavijesti na e-mail kad niste online, odgovor posjetitelju i na mail",
+    ],
+    note: [
+      "Cijena je po web stranici, mjesečno. Godišnje plaćanje: 190,00 € (dva mjeseca gratis).",
+      "14 dana besplatne probe, a za naše klijente postavljanje je uključeno.",
+    ],
+    demoUrl: "https://puls.on-click.hr",
+    price: "19,00 € / mj",
+  },
+  {
     slug: "corvuspay-prestashop",
     title: "CorvusPay modul za PrestaShop 1.6 i 1.7",
     image: "/images/products/corvuspay-prestashop.jpg",

@@ -622,6 +622,46 @@ const corvuspayNote = [
 
 export const products: Product[] = [
   {
+    slug: "puls-statistika",
+    title: "Puls Analytics",
+    image: "/images/products/puls.jpg",
+    description:
+      "Who is on your website right now, where they came from and what they are viewing. Visitor analytics without cookies or a cookie banner, installed with one line of code.",
+    features: [
+      "Live visitors with the full page link, city and source",
+      "Stats by hour, day, week and month, with a chart",
+      "Sources and referrers: Google, Facebook, campaigns (UTM), exact links",
+      "Push notifications and a sound for every new visit",
+      "Web and mobile, no cookies and no cookie banner",
+    ],
+    note: [
+      "Price is per website, per month. Annual billing: €90.00 (two months free).",
+      "14-day free trial; setup is included for our clients.",
+    ],
+    demoUrl: "https://puls.on-click.hr",
+    price: "9,00 € / mo",
+  },
+  {
+    slug: "puls-pro",
+    title: "Puls Pro (analytics + chat)",
+    image: "/images/products/puls.jpg",
+    description:
+      "Everything in Puls Analytics plus a chat widget: reply to visitors while they are still on your site, from Puls or your phone.",
+    features: [
+      "Everything in Puls Analytics",
+      "Chat widget in your brand colour, in the corner you choose",
+      "File sharing both ways: price lists, quotes, images (up to 10 MB)",
+      "Full conversation saved with date and time",
+      "Email alerts when you are offline, replies reach the visitor by email",
+    ],
+    note: [
+      "Price is per website, per month. Annual billing: €190.00 (two months free).",
+      "14-day free trial; setup is included for our clients.",
+    ],
+    demoUrl: "https://puls.on-click.hr",
+    price: "19,00 € / mo",
+  },
+  {
     slug: "corvuspay-prestashop",
     title: "CorvusPay module for PrestaShop 1.6 and 1.7",
     image: "/images/products/corvuspay-prestashop.jpg",
