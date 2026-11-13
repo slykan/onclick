@@ -231,6 +231,22 @@ export const heroStats: HeroStat[] = [
 
 export const portfolioProjects: PortfolioProject[] = [
   {
+    slug: "puls",
+    title: "Puls",
+    category: "Our product · web + mobile app",
+    description:
+      "Our own platform for visitor analytics and live chat. It shows who is on your website right now, where they came from and what they are looking at, and the chat widget lets you reply instantly. It works without cookies, so no cookie banner is needed, and it is added to a website with a single line of code.",
+    highlights: [
+      "Live view: who is on the site, where they came from, what they see",
+      "Daily, weekly and monthly stats, sources and referrers",
+      "Chat widget in your brand colour, replies from Puls and by email",
+      "Push notifications and sound for every new visit and message",
+      "No cookies or cookie banner, one line of code to install",
+    ],
+    url: "https://puls.on-click.hr",
+    image: "/images/puls-cover.jpg",
+  },
+  {
     slug: "fitmeet",
     title: "FitMeet",
     category: "Web + mobile app (iOS and Android)",
@@ -332,6 +348,7 @@ export const portfolioProjects: PortfolioProject[] = [
     ],
     url: "https://andeoske-sapice.app",
     image: "/images/andeoske-sapice-cover.jpg",
+    hideOnHome: true,
   },
   {
     slug: "gajba",

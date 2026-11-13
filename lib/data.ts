@@ -259,6 +259,22 @@ export type PortfolioProject = {
 
 export const portfolioProjects: PortfolioProject[] = [
   {
+    slug: "puls",
+    title: "Puls",
+    category: "Naš proizvod · web + mobilna aplikacija",
+    description:
+      "Naša vlastita platforma za praćenje posjeta i chat s posjetiteljima. Pokazuje tko je upravo na stranici, odakle je došao i što gleda, a preko chat widgeta mu možete odmah odgovoriti. Radi bez kolačića, pa ne treba cookie banner. Na stranicu se ugrađuje jednim redom koda.",
+    highlights: [
+      "Uživo: tko je na stranici, odakle je došao i što gleda",
+      "Statistika po danu, tjednu i mjesecu, izvori i referali",
+      "Chat widget u boji stranice, odgovori iz Pulsa i na e-mail",
+      "Push obavijesti i zvuk za svaki novi posjet i poruku",
+      "Bez kolačića i cookie bannera, ugradnja jednim redom koda",
+    ],
+    url: "https://puls.on-click.hr",
+    image: "/images/puls-cover.jpg",
+  },
+  {
     slug: "fitmeet",
     title: "FitMeet",
     category: "Web + mobilna aplikacija (iOS i Android)",
@@ -360,6 +376,7 @@ export const portfolioProjects: PortfolioProject[] = [
     ],
     url: "https://andeoske-sapice.app",
     image: "/images/andeoske-sapice-cover.jpg",
+    hideOnHome: true,
   },
   {
     slug: "gajba",
