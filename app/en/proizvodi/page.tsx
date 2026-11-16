@@ -3,6 +3,7 @@ import { Container } from "@/components/Container";
 import { PageHero } from "@/components/PageHero";
 import { ProductAccordion } from "@/components/ProductAccordion";
 import { CTASection } from "@/components/CTASection";
+import { PulsBanner } from "@/components/PulsBanner";
 import { products } from "@/lib/data.en";
 
 export const metadata: Metadata = {
@@ -30,6 +31,7 @@ export default function ProizvodiPageEn() {
 
       <section className="py-16 sm:py-20">
         <Container>
+          <PulsBanner locale="en" />
           <ProductAccordion products={products} locale="en" />
         </Container>
       </section>
