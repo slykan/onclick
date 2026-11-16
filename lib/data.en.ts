@@ -32,6 +32,17 @@ export const site = {
 export const navItems: NavItem[] = [
   { label: "Home", href: "/en" },
   { label: "Services", href: "/en/usluge" },
+  {
+    label: "Puls",
+    href: "/en#puls",
+    badge: "New",
+    children: [
+      { label: "Puls Analytics", desc: "Live visitors, analytics, push alerts", price: "€9 / mo", href: "/en/proizvodi" },
+      { label: "Puls Pro", desc: "Analytics + chat with visitors", price: "€19 / mo", href: "/en/proizvodi" },
+      { label: "Try it free for 14 days", href: "/en/kontakt", highlight: true },
+      { label: "Log in to Puls", href: "https://puls.on-click.hr", external: true },
+    ],
+  },
   { label: "About", href: "/en/o-nama" },
   { label: "Portfolio", href: "/en/portfolio" },
   { label: "Products", href: "/en/proizvodi" },
@@ -115,6 +126,20 @@ export const services: Service[] = [
       "Technical SEO analysis and optimization",
       "Content and keyword optimization",
       "Rank tracking and reporting",
+    ],
+  },
+  {
+    slug: "puls",
+    icon: "pulse",
+    title: "Puls app",
+    description:
+      "Our cookieless visitor analytics and live chat app: see who is on your website and reply right away. From €9 per month per website.",
+    details: [
+      "Live visitors with city and source",
+      "Analytics by day, week and month",
+      "Chat widget on your website",
+      "Push notifications to your phone",
+      "No cookies, no cookie banner",
     ],
   },
 ];

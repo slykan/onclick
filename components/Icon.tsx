@@ -12,6 +12,7 @@ import {
   ShieldCheck,
   Zap,
   Layers,
+  Activity,
   type LucideIcon,
 } from "lucide-react";
 
@@ -29,6 +30,7 @@ const icons: Record<string, LucideIcon> = {
   shield: ShieldCheck,
   bolt: Zap,
   layers: Layers,
+  pulse: Activity,
 };
 
 export function Icon({

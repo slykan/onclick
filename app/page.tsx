@@ -10,6 +10,7 @@ import { NetworkBackground } from "@/components/NetworkBackground";
 import { StatCounter } from "@/components/StatCounter";
 import { ScrollHint } from "@/components/ScrollHint";
 import { RotatingMesh } from "@/components/RotatingMesh";
+import { PulsHighlight } from "@/components/PulsHighlight";
 import { pyramidPoints, pyramidEdges, meshPoints, meshEdges } from "@/lib/shapes3d";
 import { services, techStack, heroStats, portfolioProjects } from "@/lib/data";
 
@@ -73,8 +74,11 @@ export default function Home() {
           </div>
         </Container>
 
-        <ScrollHint targetId="about" />
+        <ScrollHint targetId="puls" />
       </section>
+
+      {/* Puls */}
+      <PulsHighlight />
 
       {/* About */}
       <section id="about" className="scroll-mt-20 py-20 sm:py-24">

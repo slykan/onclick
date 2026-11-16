@@ -18,12 +18,25 @@ export const site = {
 export type NavItem = {
   label: string;
   href: string;
-  children?: { label: string; href: string }[];
+  /** istaknuta stavka (zelena točkica) */
+  badge?: string;
+  children?: { label: string; href: string; price?: string; desc?: string; external?: boolean; highlight?: boolean }[];
 };
 
 export const navItems: NavItem[] = [
   { label: "Naslovnica", href: "/" },
   { label: "Usluge", href: "/usluge" },
+  {
+    label: "Puls",
+    href: "/#puls",
+    badge: "Novo",
+    children: [
+      { label: "Puls Statistika", desc: "Posjetitelji uživo, statistika, push obavijesti", price: "9 € / mj", href: "/proizvodi" },
+      { label: "Puls Pro", desc: "Statistika + chat s posjetiteljima", price: "19 € / mj", href: "/proizvodi" },
+      { label: "Isprobaj 14 dana besplatno", href: "/kontakt", highlight: true },
+      { label: "Prijava u Puls", href: "https://puls.on-click.hr", external: true },
+    ],
+  },
   { label: "O nama", href: "/o-nama" },
   { label: "Portfolio", href: "/portfolio" },
   { label: "Proizvodi", href: "/proizvodi" },
@@ -115,6 +128,20 @@ export const services: Service[] = [
       "Tehnička SEO analiza i optimizacija",
       "Optimizacija sadržaja i ključnih riječi",
       "Praćenje pozicija i izvještavanje",
+    ],
+  },
+  {
+    slug: "puls",
+    icon: "pulse",
+    title: "Puls aplikacija",
+    description:
+      "Naša aplikacija za praćenje posjeta bez kolačića i chat s posjetiteljima: vidite tko je na stranici i odgovorite mu odmah. Od 9 € mjesečno po stranici.",
+    details: [
+      "Posjetitelji uživo s gradom i izvorom",
+      "Statistika po danu, tjednu i mjesecu",
+      "Chat widget na vašoj stranici",
+      "Push obavijesti na mobitel",
+      "Bez kolačića i cookie bannera",
     ],
   },
 ];

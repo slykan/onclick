@@ -104,8 +104,38 @@ function GrowthChart() {
   );
 }
 
+function PulsLive() {
+  const rows = [
+    ["HR", "/jelovnik", "Google · mobitel", "w-2/3"],
+    ["DE", "/apartmani", "Instagram", "w-1/2"],
+    ["HR", "/kontakt", "Direktno", "w-3/4"],
+  ];
+  return (
+    <div className="space-y-3">
+      <div className="flex items-center gap-2 font-mono text-[11px] text-white/60">
+        <span className="h-2 w-2 animate-pulse rounded-full bg-brand-green" />
+        3 uživo
+      </div>
+      <svg viewBox="0 0 200 40" className="h-10 w-full" aria-hidden="true">
+        <path d="M0 24h50l8-14 10 26 8-18 5 6h40l8-20 10 30 8-18 5 8h48" fill="none" stroke="#7cb63f" strokeWidth="2" strokeLinejoin="round" strokeLinecap="round" />
+      </svg>
+      {rows.map(([c, p, s, w]) => (
+        <div key={p} className="flex items-center gap-2 border border-white/10 p-2">
+          <span className="font-mono text-[10px] text-white/50">{c}</span>
+          <div className="flex-1">
+            <div className={`h-2 rounded-full bg-white/25 ${w}`} />
+            <p className="mt-1 font-mono text-[10px] text-white/40">{p} · {s}</p>
+          </div>
+        </div>
+      ))}
+    </div>
+  );
+}
+
 export function ServiceMockup({ slug }: { slug: string }) {
   switch (slug) {
+    case "puls":
+      return <PulsLive />;
     case "webshop":
       return <ShopGrid />;
     case "odrzavanje":

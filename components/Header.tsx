@@ -6,9 +6,33 @@ import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { ChevronDown, Menu, X } from "lucide-react";
 import { Container } from "./Container";
-import { navItems as navItemsHr, site } from "@/lib/data";
+import { navItems as navItemsHr, site, type NavItem } from "@/lib/data";
 import { navItems as navItemsEn } from "@/lib/data.en";
 import { i18n, type Locale } from "@/lib/i18n";
+
+type NavChild = NonNullable<NavItem["children"]>[number];
+
+/** Stavka padajućeg izbornika: naziv, opis i cijena (Puls), istaknuti CTA ili vanjski link. */
+function DropdownLink({ child }: { child: NavChild }) {
+  const cls = child.highlight
+    ? "mt-1 flex items-center justify-between bg-brand-green px-3 py-2.5 text-sm font-semibold text-ink hover:bg-brand-green-dark hover:text-white"
+    : "flex items-start justify-between gap-3 px-3 py-2.5 text-sm text-ink-light hover:bg-muted hover:text-ink";
+  const body = (
+    <>
+      <span>
+        <span className={child.price ? "block font-semibold text-ink" : ""}>{child.label}</span>
+        {child.desc && <span className="mt-0.5 block text-xs text-ink-light/60">{child.desc}</span>}
+      </span>
+      {child.price && <span className="shrink-0 font-mono text-xs font-semibold text-brand-green-dark">{child.price}</span>}
+      {(child.highlight || child.external) && <span aria-hidden="true">{child.external ? "↗" : "→"}</span>}
+    </>
+  );
+  return child.external ? (
+    <a href={child.href} target="_blank" rel="noopener" className={cls}>{body}</a>
+  ) : (
+    <Link href={child.href} className={cls}>{body}</Link>
+  );
+}
 
 export function Header() {
   const [mobileOpen, setMobileOpen] = useState(false);
@@ -54,19 +78,19 @@ export function Header() {
                   href={item.href}
                   className="flex items-center gap-1 text-sm font-medium text-ink-light transition-colors hover:text-ink"
                 >
+                  {item.badge && <span className="relative mr-0.5 flex h-2 w-2"><span className="absolute inline-flex h-full w-full animate-ping rounded-full bg-brand-green opacity-60" /><span className="relative inline-flex h-2 w-2 rounded-full bg-brand-green" /></span>}
                   {item.label}
                   <ChevronDown className="h-3.5 w-3.5" strokeWidth={2} />
                 </Link>
-                <div className="invisible absolute left-0 top-full z-10 w-64 translate-y-2 rounded-xl border border-line bg-paper p-2 opacity-0 shadow-xl shadow-black/5 transition-all group-hover:visible group-hover:translate-y-0 group-hover:opacity-100">
-                  {item.children.map((child) => (
-                    <Link
-                      key={child.href}
-                      href={child.href}
-                      className="block rounded-lg px-3 py-2 text-sm text-ink-light hover:bg-muted hover:text-ink"
-                    >
-                      {child.label}
-                    </Link>
-                  ))}
+                <div className="invisible absolute left-1/2 top-full z-10 w-80 -translate-x-1/2 pt-3 opacity-0 transition-all group-hover:visible group-hover:opacity-100">
+                  <div className="border border-line bg-paper p-2 shadow-xl shadow-black/10">
+                    {item.badge && (
+                      <p className="px-3 pb-1 pt-2 font-mono text-[11px] uppercase tracking-widest text-brand-green-dark">
+                        {item.badge} · {locale === "en" ? "per website" : "po web stranici"}
+                      </p>
+                    )}
+                    {item.children.map((child) => <DropdownLink key={child.label} child={child} />)}
+                  </div>
                 </div>
               </div>
             ) : (
@@ -143,7 +167,10 @@ export function Header() {
                       className="flex w-full items-center justify-between rounded-lg px-3 py-3 text-left text-base font-medium text-ink"
                       onClick={() => setMobileServicesOpen((v) => !v)}
                     >
-                      {item.label}
+                      <span className="flex items-center gap-2">
+                        {item.label}
+                        {item.badge && <span className="bg-brand-green px-1.5 py-0.5 font-mono text-[10px] font-semibold uppercase text-ink">{item.badge}</span>}
+                      </span>
                       <ChevronDown
                         className={`h-4 w-4 transition-transform ${
                           mobileServicesOpen ? "rotate-180" : ""
@@ -151,17 +178,8 @@ export function Header() {
                       />
                     </button>
                     {mobileServicesOpen && (
-                      <div className="ml-3 flex flex-col gap-1 border-l border-line pl-3">
-                        {item.children.map((child) => (
-                          <Link
-                            key={child.href}
-                            href={child.href}
-                            onClick={() => setMobileOpen(false)}
-                            className="rounded-lg px-3 py-2 text-sm text-ink-light hover:text-ink"
-                          >
-                            {child.label}
-                          </Link>
-                        ))}
+                      <div className="ml-3 flex flex-col gap-1 border-l border-line pl-1" onClick={() => setMobileOpen(false)}>
+                        {item.children.map((child) => <DropdownLink key={child.label} child={child} />)}
                       </div>
                     )}
                   </div>
