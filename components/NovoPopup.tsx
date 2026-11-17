@@ -63,10 +63,20 @@ export function NovoPopup() {
 
   useEffect(() => {
     if (preskoci || procitaj()) return;
-    const id = window.setTimeout(() => {
-      if (window.location.hash === "#puls") return;
-      setOpen(true);
-    }, ODGODA_MS);
+    let id: number;
+    // Pričekaj da posjetitelj zatvori Googleov prozor za privolu (AdSense CMP), pa tek onda popup.
+    const pokusaj = (cekanje: number) => {
+      id = window.setTimeout(() => {
+        if (window.location.hash === "#puls") return;
+        const cmp = document.querySelector(".fc-consent-root, .fc-dialog-overlay");
+        if (cmp && (cmp as HTMLElement).offsetParent !== null) {
+          pokusaj(1500);
+          return;
+        }
+        setOpen(true);
+      }, cekanje);
+    };
+    pokusaj(ODGODA_MS);
     return () => window.clearTimeout(id);
   }, [preskoci]);
 
