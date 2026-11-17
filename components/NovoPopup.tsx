@@ -70,10 +70,11 @@ export function NovoPopup() {
     const pokusaj = (cekanje: number) => {
       id = window.setTimeout(() => {
         if (window.location.hash === "#puls") return;
-        const cmp = document.querySelector<HTMLElement>(".fc-consent-root");
-        const cmpVidljiv = !!cmp && cmp.offsetParent !== null && cmp.childElementCount > 0;
+        // Prozor je position: fixed, pa offsetParent ne vrijedi; gleda se ima li ga na ekranu.
+        const cmp = document.querySelector<HTMLElement>(".fc-consent-root, .fc-dialog-container");
+        const cmpVidljiv = !!cmp && cmp.getClientRects().length > 0 && getComputedStyle(cmp).display !== "none";
         const odlucio = document.cookie.includes("FCCDCF=");
-        if (cmpVidljiv || (!odlucio && Date.now() - start < 10000)) {
+        if (cmpVidljiv || (!odlucio && Date.now() - start < 15000)) {
           pokusaj(1000);
           return;
         }
