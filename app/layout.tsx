@@ -3,6 +3,7 @@ import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
 import { Header } from "@/components/Header";
 import { Footer } from "@/components/Footer";
+import { NovoPopup } from "@/components/NovoPopup";
 import { site } from "@/lib/data";
 
 const geistSans = Geist({
@@ -82,6 +83,7 @@ export default function RootLayout({
         <Header />
         <main className="flex-1">{children}</main>
         <Footer />
+        <NovoPopup />
         <script defer src="https://puls.on-click.hr/p.js" data-site="xgzwkljhuz" />
       </body>
     </html>
