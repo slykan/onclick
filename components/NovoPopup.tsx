@@ -64,13 +64,17 @@ export function NovoPopup() {
   useEffect(() => {
     if (preskoci || procitaj()) return;
     let id: number;
-    // Pričekaj da posjetitelj zatvori Googleov prozor za privolu (AdSense CMP), pa tek onda popup.
+    const start = Date.now();
+    // Googleov prozor za privolu (AdSense CMP) učitava se sporije od stranice. Popup čeka dok
+    // posjetitelj ne odluči o privoli (kolačić FCCDCF), a ako prozora nema ni nakon 10 s, ide bez njega.
     const pokusaj = (cekanje: number) => {
       id = window.setTimeout(() => {
         if (window.location.hash === "#puls") return;
-        const cmp = document.querySelector(".fc-consent-root, .fc-dialog-overlay");
-        if (cmp && (cmp as HTMLElement).offsetParent !== null) {
-          pokusaj(1500);
+        const cmp = document.querySelector<HTMLElement>(".fc-consent-root");
+        const cmpVidljiv = !!cmp && cmp.offsetParent !== null && cmp.childElementCount > 0;
+        const odlucio = document.cookie.includes("FCCDCF=");
+        if (cmpVidljiv || (!odlucio && Date.now() - start < 10000)) {
+          pokusaj(1000);
           return;
         }
         setOpen(true);
