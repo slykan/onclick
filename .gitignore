@@ -46,3 +46,6 @@ ssh.txt
 
 # design reference (not needed in deploy)
 design/
+
+# računi i fakture (privatno, ne ide na GitHub)
+/2026/
