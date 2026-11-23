@@ -4,7 +4,7 @@ import { useEffect, useState } from "react";
 import Image from "next/image";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
-import { ChevronDown, Menu, X } from "lucide-react";
+import { ChevronDown, CircleUserRound, Menu, X } from "lucide-react";
 import { Container } from "./Container";
 import { navItems as navItemsHr, site, type NavItem } from "@/lib/data";
 import { navItems as navItemsEn } from "@/lib/data.en";
@@ -54,6 +54,8 @@ export function Header() {
   }, [locale]);
 
   const desktopNavItems = navItems.filter((item) => item.href !== homeHref);
+  const panelHref = "https://vps.on-click.hr:8083/";
+  const panelLabel = locale === "en" ? "Client panel" : "Korisnički panel";
 
   return (
     <>
@@ -114,6 +116,17 @@ export function Header() {
             <span className="text-line">|</span>
             <span className={locale === "en" ? "text-ink" : "hover:text-ink"}>EN</span>
           </Link>
+
+          <a
+            href={panelHref}
+            target="_blank"
+            rel="noopener"
+            aria-label={panelLabel}
+            title={panelLabel}
+            className="hidden h-10 w-10 items-center justify-center text-ink-light transition-colors hover:text-ink sm:inline-flex"
+          >
+            <CircleUserRound className="h-6 w-6" strokeWidth={1.75} />
+          </a>
 
           <Link
             href={contactHref}
@@ -205,6 +218,17 @@ export function Header() {
               <span className="text-line">|</span>
               <span className={locale === "en" ? "text-ink" : ""}>EN</span>
             </Link>
+
+            <a
+              href={panelHref}
+              target="_blank"
+              rel="noopener"
+              onClick={() => setMobileOpen(false)}
+              className="mt-4 inline-flex items-center gap-2 px-3 text-sm font-medium text-ink-light hover:text-ink"
+            >
+              <CircleUserRound className="h-5 w-5" strokeWidth={1.75} />
+              {panelLabel}
+            </a>
 
             <Link
               href={contactHref}
