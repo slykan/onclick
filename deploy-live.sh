@@ -14,9 +14,9 @@ if [ -n "$(git log origin/main..HEAD --oneline)" ]; then
   exit 1
 fi
 
-HOST=$(sed -n 's/^host:[[:space:]]*//p' ssh.txt | head -1 | tr -d '\r\n')
+# host iz ssh.txt se NE koristi (tamo je stari on-click.hr:22, nedostupan)
+HOST=vps.on-click.hr
 USR=$(sed -n 's/^user:[[:space:]]*//p' ssh.txt | head -1 | tr -d '\r\n')
-HOST=${HOST:-vps.on-click.hr}
 USR=${USR:-onclick}
 
 ASK=$(mktemp)

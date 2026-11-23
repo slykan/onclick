@@ -33,7 +33,7 @@ Stari cPanel server (`old.on-click.hr`) više se ne koristi za deploy. Tamo je r
 ## Pristup
 
 - Prijava lozinkom (korisnik `onclick` nema SSH ključ).
-- Lozinka je u `ssh.txt` (u `.gitignore`, nikad ne ide na GitHub), s redovima `host:`, `user:`, `pass:`.
+- Lozinka je u `ssh.txt` (u `.gitignore`, nikad ne ide na GitHub), s redovima `host:`, `user:`, `pass:`. Red `host:` je zastario (`on-click.hr:22`); `deploy-live.sh` ga ignorira i uvijek koristi `vps.on-click.hr`.
 - **Pazi:** nekoliko pogrešnih pokušaja lozinke zaključa IP (fail2ban + CrowdSec, i do 4 sata). `deploy-live.sh` zato šalje samo vrijednost iz retka `pass:` i pokušava samo jednom. Za otključavanje: Hestia panel (admin) → Server → Firewall → Banned IPs, ili na serveru `fail2ban-client unban IP` i `cscli decisions delete -i IP`.
 - Nakon selidbe servera SSH javlja da se ključ promijenio: `ssh-keygen -R vps.on-click.hr`, zatim ponovno spajanje.
 
