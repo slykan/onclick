@@ -690,6 +690,26 @@ export const products: Product[] = [
     price: "19,00 € / mo",
   },
   {
+    slug: "woocommerce-provjera-punoljetnosti",
+    title: "WooCommerce – age verification via e-Građani (m-Građani)",
+    image: "/images/products/woocommerce-provjera-punoljetnosti.jpg",
+    description:
+      "Since 15 September 2026, Croatian webshops selling alcoholic and energy drinks must verify the buyer's age through the state e-Građani system (Trade Act, Art. 11.a, OG 59/2026). Our WordPress/WooCommerce plugin implements this according to the official technical guide of the Ministry of Economy: the customer confirms their age in the m-Građani app and the shop receives only a YES/NO confirmation — no name, ID number or date of birth.",
+    features: [
+      "Official e-Građani flow: OpenID Connect with PKCE and signed token validation",
+      "18+ products by category or individually — verification only when needed",
+      "Notice on the product page, box in the cart and on checkout above the order button",
+      "Orders without verification are blocked on the server, not just in the browser",
+      "Classic and block-based (WooCommerce Blocks) cart and checkout, guest checkout",
+      "Croatian, English and German (Polylang / WPML)",
+      "Test and production modes, registration guide for the Ministry",
+    ],
+    note: [
+      "The webshop must be registered with the Ministry of Economy (client_id is issued by the Ministry of Justice, Administration and Digital Transformation) — we help with the form, setup and testing.",
+    ],
+    price: "On request",
+  },
+  {
     slug: "corvuspay-prestashop",
     title: "CorvusPay module for PrestaShop 1.6 and 1.7",
     image: "/images/products/corvuspay-prestashop.jpg",

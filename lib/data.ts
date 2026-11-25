@@ -740,6 +740,26 @@ export const products: Product[] = [
     price: "19,00 € / mj",
   },
   {
+    slug: "woocommerce-provjera-punoljetnosti",
+    title: "WooCommerce – provjera punoljetnosti putem e-Građana (m-Građani)",
+    image: "/images/products/woocommerce-provjera-punoljetnosti.jpg",
+    description:
+      "Od 15. rujna 2026. webshopovi koji prodaju alkoholna i energetska pića moraju provjeriti punoljetnost kupca putem sustava e-Građani (Zakon o trgovini, čl. 11.a, NN 59/2026). Naš WordPress/WooCommerce plugin to rješava prema službenoj tehničkoj uputi Ministarstva gospodarstva: kupac potvrdi dob u aplikaciji m-Građani, a trgovina dobije samo potvrdu DA/NE — bez imena, OIB-a i datuma rođenja.",
+    features: [
+      "Službeni postupak e-Građana: OpenID Connect s PKCE zaštitom i provjerom potpisanog tokena",
+      "Proizvodi 18+ po kategorijama ili pojedinačno — provjera samo kad je potrebna",
+      "Obavijest na proizvodu, okvir u košarici i na blagajni iznad gumba narudžbe",
+      "Narudžba bez potvrde blokira se na serveru, ne samo u pregledniku",
+      "Klasična i blokovska (WooCommerce Blocks) košarica i blagajna, kupnja bez računa",
+      "Hrvatski, engleski i njemački (Polylang / WPML)",
+      "Testni i produkcijski način rada, upute za registraciju u Ministarstvu",
+    ],
+    note: [
+      "Za rad je potrebna registracija web shopa u Ministarstvu gospodarstva (client_id dodjeljuje MPUDT) — pomažemo s obrascem, podešavanjem i testiranjem.",
+    ],
+    price: "Na upit",
+  },
+  {
     slug: "corvuspay-prestashop",
     title: "CorvusPay modul za PrestaShop 1.6 i 1.7",
     image: "/images/products/corvuspay-prestashop.jpg",
