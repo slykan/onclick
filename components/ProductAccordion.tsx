@@ -2,9 +2,10 @@
 
 import { useState } from "react";
 import Image from "next/image";
-import { Plus, Check, ExternalLink, Download } from "lucide-react";
+import { Plus, Check, ExternalLink, Download, ShoppingCart } from "lucide-react";
 import type { Product } from "@/lib/data";
 import { i18n, type Locale } from "@/lib/i18n";
+import { mozeNaruciti } from "@/lib/narudzba";
 
 export function ProductAccordion({
   products,
@@ -53,6 +54,16 @@ export function ProductAccordion({
                 >
                   <Plus className="h-4 w-4" />
                 </button>
+
+                {mozeNaruciti(product) && (
+                  <a
+                    href={`${locale === "en" ? "/en" : ""}/narudzba?proizvod=${encodeURIComponent(product.slug)}`}
+                    className="inline-flex h-9 flex-1 items-center justify-center gap-2 bg-ink px-4 text-sm font-semibold text-white transition-colors hover:bg-brand-green hover:text-ink"
+                  >
+                    <ShoppingCart className="h-4 w-4" />
+                    {t.order}
+                  </a>
+                )}
 
                 {product.downloadUrl && (
                   <a
