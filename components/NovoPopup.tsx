@@ -63,25 +63,11 @@ export function NovoPopup() {
 
   useEffect(() => {
     if (preskoci || procitaj()) return;
-    let id: number;
-    const start = Date.now();
-    // Googleov prozor za privolu (AdSense CMP) učitava se sporije od stranice. Popup čeka dok
-    // posjetitelj ne odluči o privoli (kolačić FCCDCF), a ako prozora nema ni nakon 10 s, ide bez njega.
-    const pokusaj = (cekanje: number) => {
-      id = window.setTimeout(() => {
-        if (window.location.hash === "#puls") return;
-        // Prozor je position: fixed, pa offsetParent ne vrijedi; gleda se ima li ga na ekranu.
-        const cmp = document.querySelector<HTMLElement>(".fc-consent-root, .fc-dialog-container");
-        const cmpVidljiv = !!cmp && cmp.getClientRects().length > 0 && getComputedStyle(cmp).display !== "none";
-        const odlucio = document.cookie.includes("FCCDCF=");
-        if (cmpVidljiv || (!odlucio && Date.now() - start < 15000)) {
-          pokusaj(1000);
-          return;
-        }
-        setOpen(true);
-      }, cekanje);
-    };
-    pokusaj(ODGODA_MS);
+    // (25.11.2026. AdSense je maknut, pa se više ne čeka Googleov prozor za privolu)
+    const id = window.setTimeout(() => {
+      if (window.location.hash === "#puls") return;
+      setOpen(true);
+    }, ODGODA_MS);
     return () => window.clearTimeout(id);
   }, [preskoci]);
 
