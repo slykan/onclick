@@ -58,6 +58,7 @@ $slug = (string) ($d['proizvod'] ?? '');
 if (!isset($popis[$slug])) odgovor(false, ['poruka' => $P['proizvod']], 422);
 $proizvod = $popis[$slug][$j] ?? $popis[$slug]['hr'];
 $iznos = (float) $popis[$slug]['cijena'];
+$napomenaStavke = (string) ($popis[$slug]['napomena_' . $j] ?? $popis[$slug]['napomena_hr'] ?? '');
 
 $tip = ($d['tip'] ?? '') === 'osoba' ? 'osoba' : 'tvrtka';
 $k = [
@@ -105,7 +106,7 @@ $broj = "$dan-$n";
 
 $ponuda = [
 	'broj' => $broj, 'datum' => date('d.m.Y.'), 'rok' => date('d.m.Y.', strtotime('+' . ROK_DANA . ' days')),
-	'proizvod' => $proizvod, 'slug' => $slug, 'iznos' => $iznos, 'kupac' => $k, 'napomena' => $napomena,
+	'proizvod' => $proizvod, 'slug' => $slug, 'iznos' => $iznos, 'stavka_napomena' => $napomenaStavke, 'kupac' => $k, 'napomena' => $napomena,
 	'poziv' => $broj, 'model' => MODEL, 'iban' => PRODAVATELJ['iban'], 'primatelj' => PRODAVATELJ['naziv'] . ', ' . PRODAVATELJ['adresa'],
 	'opis' => ($j === 'en' ? 'Offer ' : 'Ponuda ') . $broj, 'jezik' => $j,
 ];
@@ -129,7 +130,7 @@ $html = '<!doctype html><html><body style="margin:0;background:#f6f4ef"><table r
 	. '<tr><td style="padding:14px 30px"><table width="100%"><tr><td valign="top" style="font-size:13px;color:#6b6b66">' . h($L['kupac']) . '<br><span style="color:#111110;font-size:14px">' . $kupacHtml . '</span></td>'
 	. '<td valign="top" align="right" style="font-size:13px;color:#6b6b66">' . h(PRODAVATELJ['naziv']) . '<br>' . h(PRODAVATELJ['adresa']) . '<br>OIB: ' . PRODAVATELJ['oib'] . '<br>' . h($L['datum']) . ': ' . $ponuda['datum'] . '<br>' . h($L['rok']) . ': ' . $ponuda['rok'] . '</td></tr></table></td></tr>'
 	. '<tr><td style="padding:10px 30px"><table width="100%" cellpadding="0" cellspacing="0" style="border-collapse:collapse"><tr style="color:#6b6b66;font-size:13px"><td style="padding:8px 0;border-bottom:1px solid #e4e0d6">' . h($L['stavka']) . '</td><td align="center" style="border-bottom:1px solid #e4e0d6">' . h($L['kol']) . '</td><td align="right" style="border-bottom:1px solid #e4e0d6">' . h($L['cijena']) . '</td></tr>'
-	. '<tr><td style="padding:10px 10px 10px 0;border-bottom:1px solid #e4e0d6">' . h($proizvod) . '<br><span style="font-size:12px;color:#6b6b66">' . h($L['jednokratno']) . '</span></td><td align="center" style="border-bottom:1px solid #e4e0d6">1</td><td align="right" style="border-bottom:1px solid #e4e0d6;font-family:monospace">' . eur($iznos, $j) . '</td></tr>'
+	. '<tr><td style="padding:10px 10px 10px 0;border-bottom:1px solid #e4e0d6">' . h($proizvod) . '<br><span style="font-size:12px;color:#6b6b66">' . h($napomenaStavke) . '</span></td><td align="center" style="border-bottom:1px solid #e4e0d6">1</td><td align="right" style="border-bottom:1px solid #e4e0d6;font-family:monospace">' . eur($iznos, $j) . '</td></tr>'
 	. '<tr><td colspan="2" align="right" style="padding:12px 10px 0 0"><b>' . h($L['ukupno']) . '</b></td><td align="right" style="padding-top:12px;font:bold 16px monospace">' . eur($iznos, $j) . '</td></tr></table>'
 	. '<p style="text-align:right;font-size:12px;color:#6b6b66;margin:6px 0 0">' . h($L['pdv']) . '</p>'
 	. ($napomena !== '' ? '<p style="font-size:13px;color:#444">' . h($L['napomena']) . ': ' . nl2br(h($napomena)) . '</p>' : '') . '</td></tr>'

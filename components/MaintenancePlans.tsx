@@ -26,6 +26,9 @@ type Labels = {
   anchorPrice: string;
   cta: string;
   contactHref: string;
+  /** gumb Naruči za planove sa slugom (npr. godišnje održavanje) */
+  order?: string;
+  orderHref?: string;
 };
 
 /** Maintenance packages on the price list (HR and EN pages share it). */
@@ -127,6 +130,14 @@ export function MaintenancePlans({ plans, labels }: { plans: MaintenancePlan[]; 
             >
               {labels.cta}
             </Link>
+            {plan.slug && labels.order && labels.orderHref && (
+              <Link
+                href={labels.orderHref + plan.slug}
+                className="mt-2 inline-flex items-center justify-center gap-2 rounded-none border border-current px-5 py-3 text-sm font-semibold transition-colors hover:bg-brand-green hover:text-ink"
+              >
+                {labels.order}
+              </Link>
+            )}
           </div>
         );
       })}

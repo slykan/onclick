@@ -1,6 +1,6 @@
 import type { Metadata } from "next";
 import Link from "next/link";
-import { Check, Sparkles } from "lucide-react";
+import { Check, Sparkles, ShoppingCart } from "lucide-react";
 import { Container } from "@/components/Container";
 import { PageHero } from "@/components/PageHero";
 import { MaintenancePlans } from "@/components/MaintenancePlans";
@@ -139,7 +139,7 @@ export default function CijenePageEn() {
       <section className="border-t border-line bg-muted py-16 sm:py-20">
         <Container>
           <h2 className="text-center text-2xl font-semibold tracking-tight text-ink sm:text-3xl">
-            Web server <span className="text-brand-green-dark">cPanel</span>
+            Web hosting <span className="text-brand-green-dark">with control panel</span>
           </h2>
 
           <div className="mt-10 grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-4">
@@ -157,20 +157,25 @@ export default function CijenePageEn() {
                   </ul>
                 </div>
                 <div className="bg-ink px-6 py-4 text-center text-sm font-semibold text-white">
-                  Price: {plan.price}
+                  Price: {plan.price} / year
                   {/\d/.test(plan.price) && (
                     <p className="mt-0.5 text-xs font-normal text-white/70">
                       Anchor price: {plan.price}
                     </p>
                   )}
                 </div>
+                <Link
+                  href={`/en/narudzba?proizvod=${plan.slug}`}
+                  className="inline-flex items-center justify-center gap-2 bg-brand-green px-6 py-3 text-sm font-semibold text-ink transition-colors hover:bg-brand-green-dark hover:text-white"
+                >
+                  <ShoppingCart className="h-4 w-4" /> Order
+                </Link>
               </div>
             ))}
           </div>
 
           <p className="mt-8 text-center text-sm text-ink-light/70">
-            Backup is included with every plan — created automatically
-            once every 7 days.
+            Included in every plan: control panel for domains, e-mail and databases, SSL certificates and a daily backup kept for 7 days. Plan prices are per year.
           </p>
         </Container>
       </section>
@@ -189,7 +194,7 @@ export default function CijenePageEn() {
           </div>
           <MaintenancePlans
             plans={maintenancePlans}
-            labels={{ anchorPrice: "Anchor price", cta: "Let's set up maintenance", contactHref: "/en/kontakt" }}
+            labels={{ anchorPrice: "Anchor price", cta: "Let's set up maintenance", contactHref: "/en/kontakt", order: "Order", orderHref: "/en/narudzba?proizvod=" }}
           />
         </Container>
       </section>

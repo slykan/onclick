@@ -870,47 +870,27 @@ export const products: Product[] = [
 
 export const hostingPlans: HostingPlan[] = [
   {
-    name: "cPanel server 5GB",
-    specs: [
-      "5 GB storage",
-      "5 add-on domains",
-      "5 subdomains",
-      "5 parked domains",
-      "Unlimited bandwidth",
-    ],
+    slug: "hosting-start",
+    name: "Start 5 GB",
+    specs: ["5 GB storage", "2 websites (domains)", "5 e-mail accounts", "2 databases", "Free SSL certificate", "Unlimited bandwidth"],
     price: "80 €",
   },
   {
-    name: "cPanel server 20GB",
-    specs: [
-      "20 GB storage",
-      "10 add-on domains",
-      "10 subdomains",
-      "10 parked domains",
-      "Unlimited bandwidth",
-    ],
+    slug: "hosting-biznis",
+    name: "Business 20 GB",
+    specs: ["20 GB storage", "5 websites (domains)", "25 e-mail accounts", "5 databases", "Free SSL certificate", "Unlimited bandwidth"],
     price: "150 €",
   },
   {
-    name: "cPanel server 40GB",
-    specs: [
-      "40 GB storage",
-      "15 add-on domains",
-      "15 subdomains",
-      "15 parked domains",
-      "Unlimited bandwidth",
-    ],
+    slug: "hosting-pro",
+    name: "Pro 50 GB",
+    specs: ["50 GB storage", "10 websites (domains)", "50 e-mail accounts", "10 databases", "Free SSL certificate", "Unlimited bandwidth"],
     price: "200 €",
   },
   {
-    name: "cPanel server 100GB",
-    specs: [
-      "100 GB storage",
-      "25 add-on domains",
-      "25 subdomains",
-      "25 parked domains",
-      "Unlimited bandwidth",
-    ],
+    slug: "hosting-premium",
+    name: "Premium 100 GB",
+    specs: ["100 GB storage", "Unlimited websites (domains)", "Unlimited e-mail accounts", "Unlimited databases", "Free SSL certificate", "Unlimited bandwidth"],
     price: "500 €",
   },
 ];
@@ -1279,6 +1259,8 @@ export const newsPosts: NewsPost[] = [
 export type MaintenanceIcon = "content" | "design" | "cms" | "mail" | "scan" | "shield";
 
 export type MaintenancePlan = {
+  /** ako postoji, plan se može naručiti (gumb Naruči → ponuda) */
+  slug?: string;
   name: string;
   price: string;
   unit: string;
@@ -1292,6 +1274,7 @@ export type MaintenancePlan = {
 
 export const maintenancePlans: MaintenancePlan[] = [
   {
+    slug: "odrzavanje-godisnje",
     name: "Annual maintenance",
     price: "€1,500",
     unit: "per year",

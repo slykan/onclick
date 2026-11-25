@@ -921,6 +921,8 @@ export const products: Product[] = [
 ];
 
 export type HostingPlan = {
+  /** oznaka za narudžbu (/narudzba?proizvod=…), odgovara paketu na Hestia serveru */
+  slug: string;
   name: string;
   specs: string[];
   price: string;
@@ -928,47 +930,27 @@ export type HostingPlan = {
 
 export const hostingPlans: HostingPlan[] = [
   {
-    name: "cPanel server 5GB",
-    specs: [
-      "5 GB prostora",
-      "5 dodatnih domena",
-      "5 poddomena",
-      "5 parkirnih domena",
-      "Neograničen promet",
-    ],
+    slug: "hosting-start",
+    name: "Start 5 GB",
+    specs: ["5 GB prostora", "2 web domene", "5 e-mail adresa", "2 baze podataka", "Besplatni SSL certifikat", "Neograničen promet"],
     price: "80 €",
   },
   {
-    name: "cPanel server 20GB",
-    specs: [
-      "20 GB prostora",
-      "10 dodatnih domena",
-      "10 poddomena",
-      "10 parkirnih domena",
-      "Neograničen promet",
-    ],
+    slug: "hosting-biznis",
+    name: "Biznis 20 GB",
+    specs: ["20 GB prostora", "5 web domena", "25 e-mail adresa", "5 baza podataka", "Besplatni SSL certifikat", "Neograničen promet"],
     price: "150 €",
   },
   {
-    name: "cPanel server 40GB",
-    specs: [
-      "40 GB prostora",
-      "15 dodatnih domena",
-      "15 poddomena",
-      "15 parkirnih domena",
-      "Neograničen promet",
-    ],
+    slug: "hosting-pro",
+    name: "Pro 50 GB",
+    specs: ["50 GB prostora", "10 web domena", "50 e-mail adresa", "10 baza podataka", "Besplatni SSL certifikat", "Neograničen promet"],
     price: "200 €",
   },
   {
-    name: "cPanel server 100GB",
-    specs: [
-      "100 GB prostora",
-      "25 dodatnih domena",
-      "25 poddomena",
-      "25 parkirnih domena",
-      "Neograničen promet",
-    ],
+    slug: "hosting-premium",
+    name: "Premium 100 GB",
+    specs: ["100 GB prostora", "Neograničeno web domena", "Neograničeno e-mail adresa", "Neograničeno baza podataka", "Besplatni SSL certifikat", "Neograničen promet"],
     price: "500 €",
   },
 ];
@@ -1354,6 +1336,8 @@ export const newsPosts: NewsPost[] = [
 export type MaintenanceIcon = "content" | "design" | "cms" | "mail" | "scan" | "shield";
 
 export type MaintenancePlan = {
+  /** ako postoji, plan se može naručiti (gumb Naruči → ponuda) */
+  slug?: string;
   name: string;
   price: string;
   unit: string;
@@ -1369,6 +1353,7 @@ export type MaintenancePlan = {
 
 export const maintenancePlans: MaintenancePlan[] = [
   {
+    slug: "odrzavanje-godisnje",
     name: "Godišnje održavanje",
     price: "1.500 €",
     unit: "godišnje",

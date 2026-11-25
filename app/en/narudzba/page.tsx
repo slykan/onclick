@@ -3,7 +3,8 @@ import { Suspense } from "react";
 import { Container } from "@/components/Container";
 import { PageHero } from "@/components/PageHero";
 import { NarudzbaForm } from "@/components/NarudzbaForm";
-import { products } from "@/lib/data.en";
+import { products, hostingPlans, maintenancePlans } from "@/lib/data.en";
+import { stavkeZaNarudzbu } from "@/lib/narudzba";
 
 export const metadata: Metadata = {
   title: "Order",
@@ -23,7 +24,7 @@ export default function OrderPage() {
       <section className="py-16 sm:py-20">
         <Container>
           <Suspense>
-            <NarudzbaForm products={products} locale="en" />
+            <NarudzbaForm stavke={stavkeZaNarudzbu(products, hostingPlans, maintenancePlans, "en")} locale="en" />
           </Suspense>
         </Container>
       </section>

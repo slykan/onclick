@@ -3,8 +3,7 @@
 import { useMemo, useState, useEffect } from "react";
 import { useSearchParams } from "next/navigation";
 import { Printer, ShoppingCart, Check } from "lucide-react";
-import type { Product } from "@/lib/data";
-import { mozeNaruciti, iznos, eur, prodavatelj } from "@/lib/narudzba";
+import { iznos, eur, prodavatelj, type Stavka } from "@/lib/narudzba";
 
 type Ponuda = {
   broj: string; datum: string; rok: string; proizvod: string; iznos: number;
@@ -16,7 +15,7 @@ const T = {
   hr: {
     proizvod: "Proizvod", tip: "Kupac", tvrtka: "Tvrtka / obrt", osoba: "Privatna osoba", naziv: "Naziv tvrtke / obrta", oib: "OIB",
     adresa: "Ulica i kućni broj", mjesto: "Poštanski broj i mjesto", ime: "Ime i prezime", email: "E-mail", telefon: "Telefon",
-    napomena: "Napomena (npr. adresa webshopa)", privola: "Prihvaćam da se navedeni podaci koriste za izradu ponude i računa.",
+    napomena: "Napomena (npr. domena za hosting ili adresa webshopa)", privola: "Prihvaćam da se navedeni podaci koriste za izradu ponude i računa.",
     posalji: "Naruči i preuzmi ponudu", saljem: "Šaljem…", obavezno: "obavezno",
     greska: "Narudžbu nije moguće poslati. Pokušajte ponovno ili nam pišite na info@on-click.hr.",
     iznos: "Iznos", ponuda: "Ponuda", broj: "Broj ponude", datum: "Datum", vrijediDo: "Rok plaćanja", kupac: "Kupac",
@@ -28,7 +27,7 @@ const T = {
   en: {
     proizvod: "Product", tip: "Buyer", tvrtka: "Company", osoba: "Private person", naziv: "Company name", oib: "Croatian OIB / VAT ID",
     adresa: "Street and number", mjesto: "Postcode and city", ime: "Full name", email: "E-mail", telefon: "Phone",
-    napomena: "Note (e.g. webshop address)", privola: "I agree that this data is used to prepare the offer and the invoice.",
+    napomena: "Note (e.g. domain for hosting or webshop address)", privola: "I agree that this data is used to prepare the offer and the invoice.",
     posalji: "Order and get the offer", saljem: "Sending…", obavezno: "required",
     greska: "The order could not be sent. Please try again or email us at info@on-click.hr.",
     iznos: "Amount", ponuda: "Offer", broj: "Offer no.", datum: "Date", vrijediDo: "Payment due", kupac: "Buyer",
@@ -39,10 +38,10 @@ const T = {
   },
 };
 
-export function NarudzbaForm({ products, locale = "hr" }: { products: Product[]; locale?: "hr" | "en" }) {
+export function NarudzbaForm({ stavke, locale = "hr" }: { stavke: Stavka[]; locale?: "hr" | "en" }) {
   const t = T[locale];
   const params = useSearchParams();
-  const ponudivi = useMemo(() => products.filter(mozeNaruciti), [products]);
+  const ponudivi = useMemo(() => stavke, [stavke]);
   const [slug, setSlug] = useState(ponudivi[0]?.slug ?? "");
   const [tip, setTip] = useState<"tvrtka" | "osoba">("tvrtka");
   const [salje, setSalje] = useState(false);
@@ -114,7 +113,7 @@ export function NarudzbaForm({ products, locale = "hr" }: { products: Product[];
           </div>
           <table className="mt-6 w-full text-sm">
             <thead><tr className="border-b border-line text-left text-ink-light/60"><th className="py-2 font-medium">{t.stavka}</th><th className="py-2 text-center font-medium">{t.kolicina}</th><th className="py-2 text-right font-medium">{t.cijena}</th></tr></thead>
-            <tbody><tr className="border-b border-line"><td className="py-3 pr-4 text-ink">{ponuda.proizvod}<br /><span className="text-xs text-ink-light/60">{t.jos}</span></td><td className="py-3 text-center">1</td><td className="py-3 text-right font-mono">{eur(ponuda.iznos, locale)}</td></tr></tbody>
+            <tbody><tr className="border-b border-line"><td className="py-3 pr-4 text-ink">{ponuda.proizvod}<br /><span className="text-xs text-ink-light/60">{ponudivi.find((p) => p.title === ponuda.proizvod)?.napomena ?? t.jos}</span></td><td className="py-3 text-center">1</td><td className="py-3 text-right font-mono">{eur(ponuda.iznos, locale)}</td></tr></tbody>
             <tfoot><tr><td colSpan={2} className="pt-4 text-right font-semibold text-ink">{t.ukupno}</td><td className="pt-4 text-right font-mono text-lg font-semibold text-ink">{eur(ponuda.iznos, locale)}</td></tr></tfoot>
           </table>
           <p className="mt-2 text-right text-xs text-ink-light/60">{t.pdv}</p>
@@ -146,7 +145,7 @@ export function NarudzbaForm({ products, locale = "hr" }: { products: Product[];
         <select id="n-proizvod" className={polje} value={slug} onChange={(e) => setSlug(e.target.value)}>
           {ponudivi.map((p) => <option key={p.slug} value={p.slug}>{p.title} — {eur(iznos(p.price), locale)}</option>)}
         </select>
-        {odabran && <p className="mt-2 text-sm text-ink-light/70">{t.iznos}: <span className="font-mono font-semibold text-ink">{eur(iznos(odabran.price), locale)}</span> · {t.jos}</p>}
+        {odabran && <p className="mt-2 text-sm text-ink-light/70">{t.iznos}: <span className="font-mono font-semibold text-ink">{eur(iznos(odabran.price), locale)}</span> · {odabran.napomena}</p>}
       </div>
 
       <fieldset>

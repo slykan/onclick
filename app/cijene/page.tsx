@@ -1,6 +1,6 @@
 import type { Metadata } from "next";
 import Link from "next/link";
-import { Check, Sparkles } from "lucide-react";
+import { Check, Sparkles, ShoppingCart } from "lucide-react";
 import { Container } from "@/components/Container";
 import { PageHero } from "@/components/PageHero";
 import { MaintenancePlans } from "@/components/MaintenancePlans";
@@ -139,7 +139,7 @@ export default function CijenePage() {
       <section className="border-t border-line bg-muted py-16 sm:py-20">
         <Container>
           <h2 className="text-center text-2xl font-semibold tracking-tight text-ink sm:text-3xl">
-            Web server <span className="text-brand-green-dark">cPanel</span>
+            Web hosting <span className="text-brand-green-dark">s panelom</span>
           </h2>
 
           <div className="mt-10 grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-4">
@@ -157,19 +157,25 @@ export default function CijenePage() {
                   </ul>
                 </div>
                 <div className="bg-ink px-6 py-4 text-center text-sm font-semibold text-white">
-                  Cijena: {plan.price}
+                  Cijena: {plan.price} / godišnje
                   {/\d/.test(plan.price) && (
                     <p className="mt-0.5 text-xs font-normal text-white/70">
                       Sidrena cijena: {plan.price}
                     </p>
                   )}
                 </div>
+                <Link
+                  href={`/narudzba?proizvod=${plan.slug}`}
+                  className="inline-flex items-center justify-center gap-2 bg-brand-green px-6 py-3 text-sm font-semibold text-ink transition-colors hover:bg-brand-green-dark hover:text-white"
+                >
+                  <ShoppingCart className="h-4 w-4" /> Naruči
+                </Link>
               </div>
             ))}
           </div>
 
           <p className="mt-8 text-center text-sm text-ink-light/70">
-            Backup je uključen u svaki paket — automatski se izrađuje 1x u 7 dana.
+            Uključeno u svaki paket: panel za upravljanje domenama, e-mailom i bazama, SSL certifikati te dnevni backup koji se čuva 7 dana. Cijene paketa su godišnje.
           </p>
         </Container>
       </section>
@@ -188,7 +194,7 @@ export default function CijenePage() {
           </div>
           <MaintenancePlans
             plans={maintenancePlans}
-            labels={{ anchorPrice: "Sidrena cijena", cta: "Dogovorimo održavanje", contactHref: "/kontakt" }}
+            labels={{ anchorPrice: "Sidrena cijena", cta: "Dogovorimo održavanje", contactHref: "/kontakt", order: "Naruči", orderHref: "/narudzba?proizvod=" }}
           />
         </Container>
       </section>
