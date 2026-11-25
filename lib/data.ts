@@ -755,9 +755,10 @@ export const products: Product[] = [
       "Testni i produkcijski način rada, upute za registraciju u Ministarstvu",
     ],
     note: [
+      "Cijena je jednokratna.",
       "Za rad je potrebna registracija web shopa u Ministarstvu gospodarstva (client_id dodjeljuje MPUDT) — pomažemo s obrascem, podešavanjem i testiranjem.",
     ],
-    price: "Na upit",
+    price: "150,00 €",
   },
   {
     slug: "corvuspay-prestashop",

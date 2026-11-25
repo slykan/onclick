@@ -705,9 +705,10 @@ export const products: Product[] = [
       "Test and production modes, registration guide for the Ministry",
     ],
     note: [
+      "One-time price.",
       "The webshop must be registered with the Ministry of Economy (client_id is issued by the Ministry of Justice, Administration and Digital Transformation) — we help with the form, setup and testing.",
     ],
-    price: "On request",
+    price: "150,00 €",
   },
   {
     slug: "corvuspay-prestashop",
