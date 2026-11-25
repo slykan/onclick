@@ -33,7 +33,16 @@ export function ProductAccordion({
             </div>
 
             <div className="p-5">
-              <h3 className="font-semibold text-ink">{product.title}</h3>
+              <h3 className="font-semibold text-ink">
+                <button
+                  type="button"
+                  onClick={() => setOpenSlug(isOpen ? null : product.slug)}
+                  aria-expanded={isOpen}
+                  className="text-left transition-colors hover:text-brand-green-dark"
+                >
+                  {product.title}
+                </button>
+              </h3>
               <p className="mt-1 font-mono text-sm text-brand-green-dark">
                 {product.price}
               </p>
