@@ -29,7 +29,9 @@ export default function UslugePageEn() {
         description="We provide complete IT solutions tailored to your business — from building your site to long-term support."
       />
 
-      <section className="py-16 sm:py-20">
+      <CijeneSekcijeEn />
+
+      <section className="border-t border-line py-16 sm:py-20">
         <Container className="space-y-10">
           {services.map((service, i) => (
             <div
@@ -68,8 +70,6 @@ export default function UslugePageEn() {
           ))}
         </Container>
       </section>
-
-      <CijeneSekcijeEn />
 
       <CTASection locale="en" />
     </>
