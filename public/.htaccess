@@ -13,6 +13,9 @@ RewriteEngine On
 # --- 301 redirect sa starih Joomla URL-ova (SEO kontinuitet) ---
 RewriteRule ^our-services/?$ /usluge [R=301,L]
 RewriteRule ^contact/?$ /kontakt [R=301,L]
+# Cijene su od 25.11.2026. dio stranice Usluge
+RewriteRule ^cijene/?$ /usluge#cijene [R=301,NE,L]
+RewriteRule ^en/cijene/?$ /en/usluge#cijene [R=301,NE,L]
 
 # --- /ruta/ (s kosom crtom na kraju) kad postoji ruta.html -> makni crtu ---
 # (npr. Google/Cloudflare je mogao indeksirati /cijene/ dok je stari .htaccess

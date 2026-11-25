@@ -40,7 +40,6 @@ export const navItems: NavItem[] = [
   { label: "O nama", href: "/o-nama" },
   { label: "Portfolio", href: "/portfolio" },
   { label: "Proizvodi", href: "/proizvodi" },
-  { label: "Cijene", href: "/cijene" },
   { label: "Novosti", href: "/novosti" },
   { label: "Kontakt", href: "/kontakt" },
 ];

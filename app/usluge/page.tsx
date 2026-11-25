@@ -3,6 +3,7 @@ import { Check } from "lucide-react";
 import { Container } from "@/components/Container";
 import { PageHero } from "@/components/PageHero";
 import { CTASection } from "@/components/CTASection";
+import { CijeneSekcije } from "@/components/CijeneSekcije";
 import { Icon } from "@/components/Icon";
 import { services } from "@/lib/data";
 
@@ -67,6 +68,8 @@ export default function UslugePage() {
           ))}
         </Container>
       </section>
+
+      <CijeneSekcije />
 
       <CTASection />
     </>

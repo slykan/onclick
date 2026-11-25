@@ -1,32 +1,20 @@
-import type { Metadata } from "next";
 import Link from "next/link";
 import { Check, Sparkles, ShoppingCart } from "lucide-react";
 import { Container } from "@/components/Container";
-import { PageHero } from "@/components/PageHero";
 import { MaintenancePlans } from "@/components/MaintenancePlans";
-import { pricingPlans, hostingPlans, maintenancePlans } from "@/lib/data";
+import { pricingPlans, hostingPlans, maintenancePlans } from "@/lib/data.en";
 
-export const metadata: Metadata = {
-  title: "Cijene",
-  description:
-    "Fleksibilni paketi izrade web stranica, webshopova i mobilnih aplikacija bez skrivenih troškova.",
-  alternates: {
-    canonical: "https://www.on-click.hr/cijene",
-    languages: {
-      hr: "https://www.on-click.hr/cijene",
-      en: "https://www.on-click.hr/en/cijene",
-    },
-  },
-};
-
-export default function CijenePage() {
+/** Pricing (moved from /en/cijene to /en/usluge#cijene on 25.11.2026) */
+export function CijeneSekcijeEn() {
   return (
     <>
-      <PageHero
-        eyebrow="Cijene"
-        title="Poštene cijene, bez skrivenih troškova"
-        description="Svaki projekt je drugačiji, zato je ovo orijentacijski cjenik. Konačnu ponudu radimo prema opsegu i potrebama vašeg projekta."
-      />
+      <section id="cijene" className="scroll-mt-24 border-t border-line bg-paper pt-16 sm:pt-20">
+        <Container>
+          <p className="text-xs font-semibold uppercase tracking-widest text-brand-green-dark">Pricing</p>
+          <h2 className="mt-2 max-w-3xl text-3xl font-semibold tracking-tight text-ink sm:text-4xl">Fair pricing, no hidden costs</h2>
+          <p className="mt-4 max-w-2xl text-base leading-relaxed text-ink-light/70">Every project is different, so this is a reference price list. We put together the final quote based on your project's scope and needs.</p>
+        </Container>
+      </section>
 
       <section className="py-16 sm:py-20">
         <Container className="grid grid-cols-1 gap-6 lg:grid-cols-3">
@@ -53,7 +41,7 @@ export default function CijenePage() {
                     plan.highlighted ? "text-white/70" : "text-ink"
                   }`}
                 >
-                  Sidrena cijena: {plan.anchorPrice ?? plan.price}
+                  Anchor price: {plan.anchorPrice ?? plan.price}
                 </p>
               )}
               <p
@@ -76,14 +64,14 @@ export default function CijenePage() {
                 ))}
               </ul>
               <Link
-                href="/kontakt"
+                href="/en/kontakt"
                 className={`mt-8 inline-flex items-center justify-center rounded-none px-5 py-3 text-sm font-semibold transition-colors ${
                   plan.highlighted
                     ? "bg-brand-green text-ink hover:bg-brand-green-dark hover:text-white"
                     : "bg-ink text-white hover:bg-ink-light"
                 }`}
               >
-                Zatraži ponudu
+                Request a quote
               </Link>
             </div>
           ))}
@@ -92,22 +80,22 @@ export default function CijenePage() {
             <div className="max-w-3xl">
               <p className="inline-flex items-center gap-2 text-xs font-semibold uppercase tracking-widest">
                 <Sparkles className="h-4 w-4" />
-                Po mjeri
+                Tailor-made
               </p>
               <h3 className="mt-3 text-2xl font-semibold tracking-tight sm:text-3xl">
-                AI driven custom CMS za webshopove i stranice
+                AI-driven custom CMS for webshops and websites
               </h3>
               <p className="mt-3 text-base leading-relaxed text-ink/80">
-                Vlastiti CMS izrađen točno prema vašem poslovanju ili kombinacija
-                provjerenog enginea (WooCommerce, Shopify, Laravel…) s brzim
-                AI front stranicama. Povezujemo sve što koristite.
+                A CMS built exactly around your business, or a proven engine
+                (WooCommerce, Shopify, Laravel…) combined with fast AI-built
+                front pages. We connect everything you already use.
               </p>
               <ul className="mt-5 flex flex-wrap gap-2 text-sm font-medium">
                 {[
                   "Custom CMS",
-                  "Provjereni engine + AI front",
-                  "Povezivost i integracije",
-                  "ERP, fiskalizacija, plaćanja, dostava",
+                  "Proven engine + AI front",
+                  "Connectivity and integrations",
+                  "ERP, fiscalization, payments, shipping",
                 ].map((item) => (
                   <li key={item} className="inline-flex items-center gap-1.5 bg-ink/10 px-3 py-1.5">
                     <Check className="h-4 w-4 shrink-0" />
@@ -117,19 +105,19 @@ export default function CijenePage() {
               </ul>
             </div>
             <div className="shrink-0 lg:text-right">
-              <p className="text-sm font-medium text-ink/70">Cijena</p>
-              <p className="text-3xl font-semibold">Po dogovoru</p>
+              <p className="text-sm font-medium text-ink/70">Price</p>
+              <p className="text-3xl font-semibold">On request</p>
               <Link
-                href="/kontakt"
+                href="/en/kontakt"
                 className="mt-4 inline-flex items-center justify-center rounded-none bg-ink px-5 py-3 text-sm font-semibold text-white transition-colors hover:bg-ink-light"
               >
-                Razgovarajmo o projektu
+                Let&apos;s talk about your project
               </Link>
               <Link
-                href="/novosti/ai-webshop-ili-provjereni-engine-s-ai-frontom"
+                href="/en/novosti/ai-webshop-ili-provjereni-engine-s-ai-frontom"
                 className="mt-3 block text-sm font-semibold underline underline-offset-4 hover:text-white"
               >
-                Pročitajte zašto engine + AI front →
+                Read why engine + AI front →
               </Link>
             </div>
           </div>
@@ -139,7 +127,7 @@ export default function CijenePage() {
       <section className="border-t border-line bg-muted py-16 sm:py-20">
         <Container>
           <h2 className="text-center text-2xl font-semibold tracking-tight text-ink sm:text-3xl">
-            Web hosting <span className="text-brand-green-dark">s panelom</span>
+            Web hosting <span className="text-brand-green-dark">with control panel</span>
           </h2>
 
           <div className="mt-10 grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-4">
@@ -157,25 +145,25 @@ export default function CijenePage() {
                   </ul>
                 </div>
                 <div className="bg-ink px-6 py-4 text-center text-sm font-semibold text-white">
-                  Cijena: {plan.price} / godišnje
+                  Price: {plan.price} / year
                   {/\d/.test(plan.price) && (
                     <p className="mt-0.5 text-xs font-normal text-white/70">
-                      Sidrena cijena: {plan.price}
+                      Anchor price: {plan.price}
                     </p>
                   )}
                 </div>
                 <Link
-                  href={`/narudzba?proizvod=${plan.slug}`}
+                  href={`/en/narudzba?proizvod=${plan.slug}`}
                   className="inline-flex items-center justify-center gap-2 bg-brand-green px-6 py-3 text-sm font-semibold text-ink transition-colors hover:bg-brand-green-dark hover:text-white"
                 >
-                  <ShoppingCart className="h-4 w-4" /> Naruči
+                  <ShoppingCart className="h-4 w-4" /> Order
                 </Link>
               </div>
             ))}
           </div>
 
           <p className="mt-8 text-center text-sm text-ink-light/70">
-            Uključeno u svaki paket: panel za upravljanje domenama, e-mailom i bazama, SSL certifikati te dnevni backup koji se čuva 7 dana. Cijene paketa su godišnje.
+            Included in every plan: control panel for domains, e-mail and databases, SSL certificates and a daily backup kept for 7 days. Plan prices are per year.
           </p>
         </Container>
       </section>
@@ -184,17 +172,17 @@ export default function CijenePage() {
         <Container>
           <div className="mx-auto max-w-2xl text-center">
             <h2 className="text-2xl font-semibold tracking-tight text-ink sm:text-3xl">
-              Održavanje <span className="text-brand-green-dark">web stranica</span>
+              Website <span className="text-brand-green-dark">maintenance</span>
             </h2>
             <p className="mt-4 text-base leading-relaxed text-ink-light/70">
-              Svaki sustav treba redovitu pažnju. Brinemo se da vaša stranica,
-              webshop ili aplikacija radi glatko, sigurno i ažurno — uz stalno
-              održavanje na godinu dana ili jednokratno, kad vam zatreba.
+              Every system needs regular attention. We make sure your website,
+              webshop or app runs smoothly, securely and stays up to date — with
+              ongoing annual maintenance or one-off help whenever you need it.
             </p>
           </div>
           <MaintenancePlans
             plans={maintenancePlans}
-            labels={{ anchorPrice: "Sidrena cijena", cta: "Dogovorimo održavanje", contactHref: "/kontakt", order: "Naruči", orderHref: "/narudzba?proizvod=" }}
+            labels={{ anchorPrice: "Anchor price", cta: "Let's set up maintenance", contactHref: "/en/kontakt", order: "Order", orderHref: "/en/narudzba?proizvod=" }}
           />
         </Container>
       </section>

@@ -3,6 +3,7 @@ import { Check } from "lucide-react";
 import { Container } from "@/components/Container";
 import { PageHero } from "@/components/PageHero";
 import { CTASection } from "@/components/CTASection";
+import { CijeneSekcijeEn } from "@/components/CijeneSekcijeEn";
 import { Icon } from "@/components/Icon";
 import { services } from "@/lib/data.en";
 
@@ -67,6 +68,8 @@ export default function UslugePageEn() {
           ))}
         </Container>
       </section>
+
+      <CijeneSekcijeEn />
 
       <CTASection locale="en" />
     </>

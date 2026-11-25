@@ -9,7 +9,6 @@ const pagePaths = [
   "/o-nama",
   "/portfolio",
   "/proizvodi",
-  "/cijene",
   "/kontakt",
   "/novosti",
 ];
