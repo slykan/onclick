@@ -58,8 +58,8 @@ export function NovoPopup() {
   const [open, setOpen] = useState(false);
   const closeRef = useRef<HTMLButtonElement>(null);
 
-  // Ne smeta na stranici za kontakt ni kad je posjetitelj već kod Pulsa.
-  const preskoci = pathname.endsWith("/kontakt");
+  // Ne smeta na kontaktu i narudžbi (obrazac) ni kad je posjetitelj već kod Pulsa.
+  const preskoci = pathname.endsWith("/kontakt") || pathname.includes("/narudzba");
 
   useEffect(() => {
     if (preskoci || procitaj()) return;
